@@ -61,7 +61,7 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/recuperopass"
+        android:id="@+id/haigiaaccount"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/password"
-        android:layout_below="@+id/recuperopass"
+        android:layout_below="@+id/haigiaaccount"
         android:text="Non sei ancora registrato?"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault"
         android:textSize="8sp" />
