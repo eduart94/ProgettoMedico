@@ -4,8 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ProgettoMedico.iml" filepath="$PROJECT_DIR$/ProgettoMedico.iml" />
       <module fileurl="file://C:\Users\User\Documents\ProgettoMedico\Activity\ProgettoMedico\ProgettoMedico.iml" filepath="C:\Users\User\Documents\ProgettoMedico\Activity\ProgettoMedico\ProgettoMedico.iml" />
+      <module fileurl="file://C:\Users\Alvin Margjeci\Desktop\ProgettoMedico\Activity\ProgettoMedico\ProgettoMedico.iml" filepath="C:\Users\Alvin Margjeci\Desktop\ProgettoMedico\Activity\ProgettoMedico\ProgettoMedico.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://C:\Users\User\Documents\ProgettoMedico\Activity\ProgettoMedico\app\app.iml" filepath="C:\Users\User\Documents\ProgettoMedico\Activity\ProgettoMedico\app\app.iml" />
+      <module fileurl="file://C:\Users\Alvin Margjeci\Desktop\ProgettoMedico\Activity\ProgettoMedico\app\app.iml" filepath="C:\Users\Alvin Margjeci\Desktop\ProgettoMedico\Activity\ProgettoMedico\app\app.iml" />
     </modules>
   </component>
 </project>
