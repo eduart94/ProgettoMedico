@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 public class Login extends Activity {
 
-    public class MainActivity1 extends Activity {
+   public class MainActivity1 extends Activity {
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
