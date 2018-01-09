@@ -11,7 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/login"
-        android:layout_below="@+id/noregistrazione"
+        android:layout_below="@+id/haigiaaccount"
+        android:layout_marginTop="17dp"
         android:text="Accedi" />
 
     <TextView
@@ -67,7 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/noregistrazione"
         android:layout_below="@+id/password"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="14dp"
         android:text="non ricordi la password?"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault"
         android:textSize="8sp" />
@@ -78,7 +79,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/password"
-        android:layout_below="@+id/haigiaaccount"
+        android:layout_centerVertical="true"
         android:text="Non sei ancora registrato?"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault"
         android:textSize="8sp" />
