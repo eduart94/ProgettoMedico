@@ -3,18 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AppMedica.iml" filepath="$PROJECT_DIR$/AppMedica.iml" />
-      <module fileurl="file://C:\Users\Alvin Margjeci\Desktop\ProgettoMedico\Activity\AppMedica\AppMedica.iml" filepath="C:\Users\Alvin Margjeci\Desktop\ProgettoMedico\Activity\AppMedica\AppMedica.iml" />
-      <module fileurl="file://C:\Users\User\Documents\ProgettoMedico\Activity\AppMedica\AppMedica.iml" filepath="C:\Users\User\Documents\ProgettoMedico\Activity\AppMedica\AppMedica.iml" />
-<<<<<<< HEAD
-      <module fileurl="file://C:\Users\JB Mani\Desktop\ProgettoMedico\Activity\AppMedica\AppMedica.iml" filepath="C:\Users\JB Mani\Desktop\ProgettoMedico\Activity\AppMedica\AppMedica.iml" />
-=======
-      <module fileurl="file://C:\Users\User\Desktop\ProgettoMedico\Activity\AppMedica\AppMedica.iml" filepath="C:\Users\User\Desktop\ProgettoMedico\Activity\AppMedica\AppMedica.iml" />
->>>>>>> 32cb0e7d35f4df997738b6ed1a037e4f79fedae7
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\User\Documents\ProgettoMedico\Activity\AppMedica\app\app.iml" filepath="C:\Users\User\Documents\ProgettoMedico\Activity\AppMedica\app\app.iml" />
-      <module fileurl="file://C:\Users\User\Desktop\ProgettoMedico\Activity\AppMedica\app\app.iml" filepath="C:\Users\User\Desktop\ProgettoMedico\Activity\AppMedica\app\app.iml" />
-      <module fileurl="file://C:\Users\Alvin Margjeci\Desktop\ProgettoMedico\Activity\AppMedica\app\app.iml" filepath="C:\Users\Alvin Margjeci\Desktop\ProgettoMedico\Activity\AppMedica\app\app.iml" />
-      <module fileurl="file://C:\Users\JB Mani\Desktop\ProgettoMedico\Activity\AppMedica\app\app.iml" filepath="C:\Users\JB Mani\Desktop\ProgettoMedico\Activity\AppMedica\app\app.iml" />
     </modules>
   </component>
 </project>
