@@ -25,8 +25,15 @@
         </intent-filter>
         </activity>
         <activity android:name=".RecuperaPassword">
+<<<<<<< HEAD
 >>>>>>> c392f63a19f207805e57e8a522663651f5a804d2
+=======
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+>>>>>>> parent of 8eb8931... fatto gli intent dei bottoni
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".Profilo"></activity>
     <activity android:name=".Registrati"></activity>

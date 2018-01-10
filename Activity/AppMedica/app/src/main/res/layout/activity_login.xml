@@ -18,10 +18,14 @@
 =======
         android:layout_alignEnd="@+id/login"
 <<<<<<< HEAD
+<<<<<<< HEAD
         android:layout_below="@+id/noregistrazione"
         android:layout_marginTop="42dp"
 =======
         android:layout_below="@+id/nonricordipassword"
+=======
+        android:layout_below="@+id/haigiaaccount"
+>>>>>>> parent of 8eb8931... fatto gli intent dei bottoni
         android:layout_marginTop="15dp"
 >>>>>>> c392f63a19f207805e57e8a522663651f5a804d2
 >>>>>>> e68f76fff79e38b4a47f9a8c604726a81415ad45
@@ -84,10 +88,14 @@
 
     <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
         android:id="@+id/passlost"
 =======
         android:id="@+id/nonricordipassword"
 >>>>>>> c392f63a19f207805e57e8a522663651f5a804d2
+=======
+        android:id="@+id/haigiaaccount"
+>>>>>>> parent of 8eb8931... fatto gli intent dei bottoni
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
