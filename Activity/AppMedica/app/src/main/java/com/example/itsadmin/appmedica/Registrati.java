@@ -1,7 +1,9 @@
 package com.example.itsadmin.appmedica;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -21,7 +23,21 @@ public class Registrati extends Activity {
         final EditText conferma=(EditText)findViewById(R.id.id_conferma);
         final RadioButton autorizzo=(RadioButton)findViewById(R.id.id_autorizzo);
         final Button button1=(Button)findViewById(R.id.id_button1);
-        final TextView haigiaaccount=(TextView)findViewById(R.id.haigiaaccount);
+        final TextView haigiaaccount=(TextView)findViewById(R.id.nonricordipassword);
+
+
+        Button haiGiaAccount = findViewById(R.id.haigiaaccount);
+        haiGiaAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent haiGiaAccountIntent = new Intent(Registrati.this, Login.class);
+                startActivity(haiGiaAccountIntent);
+            }
+        });
 
     }
+
+
+
+
 }
