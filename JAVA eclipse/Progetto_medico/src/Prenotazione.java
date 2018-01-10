@@ -3,15 +3,16 @@ import java.util.Date;
 public class Prenotazione {
 
 	private int idPrenotazione;
-	private String nome_dottore;
-	private String nome_ambulatorio;
+	private String nomeDottore;
+	private String nomeAmbulatorio;
 	private Date data;
 	private Date ora;
-	private String tipologia_prenotazione;
+	private String tipologiaPrenotazione;
 	private String motivazione;
 	private Ambulatorio ambulatorio;
 	private Utente utente;
 	private Medico medico;
+	
 	
 	public int getIdPrenotazione() {
 		return idPrenotazione;
@@ -19,17 +20,17 @@ public class Prenotazione {
 	public void setIdPrenotazione(int idPrenotazione) {
 		this.idPrenotazione = idPrenotazione;
 	}
-	public String getNome_dottore() {
-		return nome_dottore;
+	public String getNomeDottore() {
+		return nomeDottore;
 	}
-	public void setNome_dottore(String nome_dottore) {
-		this.nome_dottore = nome_dottore;
+	public void setNomeDottore(String nomeDottore) {
+		this.nomeDottore = nomeDottore;
 	}
-	public String getNome_ambulatorio() {
-		return nome_ambulatorio;
+	public String getNomeAmbulatorio() {
+		return nomeAmbulatorio;
 	}
-	public void setNome_ambulatorio(String nome_ambulatorio) {
-		this.nome_ambulatorio = nome_ambulatorio;
+	public void setNomeAmbulatorio(String nomeAmbulatorio) {
+		this.nomeAmbulatorio = nomeAmbulatorio;
 	}
 	public Date getData() {
 		return data;
@@ -43,11 +44,11 @@ public class Prenotazione {
 	public void setOra(Date ora) {
 		this.ora = ora;
 	}
-	public String getTipologia_prenotazione() {
-		return tipologia_prenotazione;
+	public String getTipologiaPrenotazione() {
+		return tipologiaPrenotazione;
 	}
-	public void setTipologia_prenotazione(String tipologia_prenotazione) {
-		this.tipologia_prenotazione = tipologia_prenotazione;
+	public void setTipologiaPrenotazione(String tipologiaPrenotazione) {
+		this.tipologiaPrenotazione = tipologiaPrenotazione;
 	}
 	public String getMotivazione() {
 		return motivazione;
@@ -73,6 +74,8 @@ public class Prenotazione {
 	public void setMedico(Medico medico) {
 		this.medico = medico;
 	}
+	
+	
 	
 	
 }

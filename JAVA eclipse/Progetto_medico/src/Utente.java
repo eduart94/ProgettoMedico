@@ -1,16 +1,17 @@
 import java.util.Date;
 
+
 public class Utente {
 
 private int idUtente;
-private String nome_utente;
-private String cognome_utente;
-private Date data_Nascita_utente;
-private String codice_fiscale_utente;
-private String numero_telefono_utente;
-private String email_utente;
-private String username_utente;
-private String password_utente;
+private String nomeUtente;
+private String cognomeUtente;
+private Date dataNascitaUtente;
+private String codiceFiscaleUtente;
+private String numeroTelefonoUtente;
+private String emailUtente;
+private String usernameUtente;
+private String passwordUtente;
 
 public int getIdUtente() {
 	return idUtente;
@@ -18,53 +19,56 @@ public int getIdUtente() {
 public void setIdUtente(int idUtente) {
 	this.idUtente = idUtente;
 }
-public String getNome_utente() {
-	return nome_utente;
+public String getNomeUtente() {
+	return nomeUtente;
 }
-public void setNome_utente(String nome_utente) {
-	this.nome_utente = nome_utente;
+public void setNomeUtente(String nomeUtente) {
+	this.nomeUtente = nomeUtente;
 }
-public String getCognome_utente() {
-	return cognome_utente;
+public String getCognomeUtente() {
+	return cognomeUtente;
 }
-public void setCognome_utente(String cognome_utente) {
-	this.cognome_utente = cognome_utente;
+public void setCognomeUtente(String cognomeUtente) {
+	this.cognomeUtente = cognomeUtente;
 }
-public Date getData_Nascita_utente() {
-	return data_Nascita_utente;
+public Date getDataNascitaUtente() {
+	return dataNascitaUtente;
 }
-public void setData_Nascita_utente(Date data_Nascita_utente) {
-	this.data_Nascita_utente = data_Nascita_utente;
+public void setDataNascitaUtente(Date dataNascitaUtente) {
+	this.dataNascitaUtente = dataNascitaUtente;
 }
-public String getCodice_fiscale_utente() {
-	return codice_fiscale_utente;
+public String getCodiceFiscaleUtente() {
+	return codiceFiscaleUtente;
 }
-public void setCodice_fiscale_utente(String codice_fiscale_utente) {
-	this.codice_fiscale_utente = codice_fiscale_utente;
+public void setCodiceFiscaleUtente(String codiceFiscaleUtente) {
+	this.codiceFiscaleUtente = codiceFiscaleUtente;
 }
-public String getNumero_telefono_utente() {
-	return numero_telefono_utente;
+public String getNumeroTelefonoUtente() {
+	return numeroTelefonoUtente;
 }
-public void setNumero_telefono_utente(String numero_telefono_utente) {
-	this.numero_telefono_utente = numero_telefono_utente;
+public void setNumeroTelefonoUtente(String numeroTelefonoUtente) {
+	this.numeroTelefonoUtente = numeroTelefonoUtente;
 }
-public String getEmail_utente() {
-	return email_utente;
+public String getEmailUtente() {
+	return emailUtente;
 }
-public void setEmail_utente(String email_utente) {
-	this.email_utente = email_utente;
+public void setEmailUtente(String emailUtente) {
+	this.emailUtente = emailUtente;
 }
-public String getUsername_utente() {
-	return username_utente;
+public String getUsernameUtente() {
+	return usernameUtente;
 }
-public void setUsername_utente(String username_utente) {
-	this.username_utente = username_utente;
+public void setUsernameUtente(String usernameUtente) {
+	this.usernameUtente = usernameUtente;
 }
-public String getPassword_utente() {
-	return password_utente;
+public String getPasswordUtente() {
+	return passwordUtente;
 }
-public void setPassword_utente(String password_utente) {
-	this.password_utente = password_utente;
+public void setPasswordUtente(String passwordUtente) {
+	this.passwordUtente = passwordUtente;
 }
 
+
+
 }
+

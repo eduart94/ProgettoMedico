@@ -12,7 +12,7 @@ public class Medico {
 	private String numero_telefono_medico;
 	private String email_medico;
 	private String password_medico;
-	private List<Ambulatorio> ambulatori;
+	private List<Ambulatorio>ambulatori;
 	
 	public int getIdMedico() {
 		return idMedico;
