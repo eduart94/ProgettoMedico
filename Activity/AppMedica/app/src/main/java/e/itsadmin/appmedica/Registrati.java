@@ -22,6 +22,9 @@ public class Registrati extends Activity {
         final RadioButton autorizzo=(RadioButton)findViewById(R.id.id_autorizzo);
         final Button button1=(Button)findViewById(R.id.id_button1);
 <<<<<<< HEAD:Activity/AppMedica/app/src/main/java/e/itsadmin/appmedica/Registrati.java
+<<<<<<< HEAD:Activity/AppMedica/app/src/main/java/e/itsadmin/appmedica/Registrati.java
+=======
+>>>>>>> 41a2349d61294f78a4d71cda60d08b53f7ffcd9b:Activity/AppMedica/app/src/main/java/e/itsadmin/appmedica/Registrati.java
 <<<<<<< HEAD:Activity/appmedica/app/src/main/java/e/itsadmin/appmedica/Registrati.java
         final TextView haigiaaccount=(TextView)findViewById(R.id.passlost);
 =======
@@ -37,9 +40,12 @@ public class Registrati extends Activity {
             }
         });
 >>>>>>> c392f63a19f207805e57e8a522663651f5a804d2:Activity/AppMedica/app/src/main/java/com/example/itsadmin/appmedica/Registrati.java
+<<<<<<< HEAD:Activity/AppMedica/app/src/main/java/e/itsadmin/appmedica/Registrati.java
 =======
         final TextView haigiaaccount=(TextView)findViewById(R.id.haigiaaccount);
 >>>>>>> parent of 8eb8931... fatto gli intent dei bottoni:Activity/AppMedica/app/src/main/java/com/example/itsadmin/appmedica/Registrati.java
+=======
+>>>>>>> 41a2349d61294f78a4d71cda60d08b53f7ffcd9b:Activity/AppMedica/app/src/main/java/e/itsadmin/appmedica/Registrati.java
 
     }
 }

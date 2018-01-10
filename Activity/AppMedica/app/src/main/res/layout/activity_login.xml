@@ -87,15 +87,13 @@
         android:textStyle="bold" />
 
     <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
         android:id="@+id/passlost"
-=======
+
         android:id="@+id/nonricordipassword"
->>>>>>> c392f63a19f207805e57e8a522663651f5a804d2
-=======
+
+
         android:id="@+id/haigiaaccount"
->>>>>>> parent of 8eb8931... fatto gli intent dei bottoni
+  parent of 8eb8931... fatto gli intent dei bottoni
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
