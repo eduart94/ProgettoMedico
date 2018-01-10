@@ -1,4 +1,4 @@
-package com.example.itsadmin.appmedica;
+package e.itsadmin.appmedica;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -23,6 +23,9 @@ public class Registrati extends Activity {
         final EditText conferma=(EditText)findViewById(R.id.id_conferma);
         final RadioButton autorizzo=(RadioButton)findViewById(R.id.id_autorizzo);
         final Button button1=(Button)findViewById(R.id.id_button1);
+<<<<<<< HEAD:Activity/appmedica/app/src/main/java/e/itsadmin/appmedica/Registrati.java
+        final TextView haigiaaccount=(TextView)findViewById(R.id.passlost);
+=======
         final TextView haigiaaccount=(TextView)findViewById(R.id.nonricordipassword);
 
 
@@ -34,6 +37,7 @@ public class Registrati extends Activity {
                 startActivity(haiGiaAccountIntent);
             }
         });
+>>>>>>> c392f63a19f207805e57e8a522663651f5a804d2:Activity/AppMedica/app/src/main/java/com/example/itsadmin/appmedica/Registrati.java
 
     }
 

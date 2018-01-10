@@ -1,4 +1,4 @@
-package com.example.itsadmin.appmedica;
+package e.itsadmin.appmedica;
 
 import org.junit.Test;
 

@@ -1,13 +1,13 @@
-package com.example.itsadmin.appmedica;
+package e.itsadmin.appmedica;
 
 import android.app.Activity;
 import android.os.Bundle;
 
-public class RecuperaPassword extends Activity {
+public class Profilo extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recupera_password);
+        setContentView(R.layout.activity_profilo);
     }
 }
