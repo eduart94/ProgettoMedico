@@ -27,7 +27,7 @@ public class RecuperaPassword extends Activity {
                 Intent button = new Intent(RecuperaPassword.this,Login.class);
                 // passo all'attivazione dell'activity Recpass.java
                 startActivity(button);
-                Toast.makeText(RecuperaPassword.this,"Ti abbiamo inviato un'email con le informazioni di recupero password",Toast.LENGTH_LONG).show();
+                Toast.makeText(RecuperaPassword.this,"Ti abbiamo inviato un'email per resettare la password",Toast.LENGTH_LONG).show();
 
     }
 });
