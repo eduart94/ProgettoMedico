@@ -1,7 +1,10 @@
-package it.appmedica;
+package it.appmedica.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import it.appmedica.model.Disponibilita;
+
 import java.sql.Time;
 import java.util.Date;
 
@@ -18,21 +21,29 @@ public class Prenotazione implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idPrenotazione;
-
+    
+	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date data;
-
+    
+	@Column(nullable = false)
 	private String motivazione;
+	
+	@JoinColumn(nullable=false)
+	@ManyToOne(cascade=CascadeType.ALL)
+	private Disponibilita disponibilita;
+	
 
-	@Column(name="nome_ambulatorio")
+	@Column(name="nome_ambulatorio", nullable = false)
 	private String nomeAmbulatorio;
 
-	@Column(name="nome_dottore")
+	@Column(name="nome_dottore", nullable = false)
 	private String nomeDottore;
-
+    
+	@Column(nullable = false)
 	private Time ora;
 
-	@Column(name="tipologia_prenotazione")
+	@Column(name="tipologia_prenotazione", nullable = false)
 	private String tipologiaPrenotazione;
 
 	//bi-directional many-to-one association to Ambulatorio

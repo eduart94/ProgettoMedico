@@ -1,4 +1,4 @@
-package it.appmedica;
+package it.appmedica.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
@@ -18,29 +18,31 @@ public class Medico implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idMedico;
-
-	@Column(name="codice_fiscale_medico")
+    
+	
+	@Column(name="codice_fiscale_medico", nullable = false)
 	private String codiceFiscaleMedico;
 
-	@Column(name="cognome_medico")
+	@Column(name="cognome_medico", nullable = false)
 	private String cognomeMedico;
 
 	@Temporal(TemporalType.DATE)
 	@Column(name="data_nascita_medico")
 	private Date dataNascitaMedico;
 
-	@Column(name="email_medico")
+	@Column(name="email_medico", nullable = false)
 	private String emailMedico;
 
-	@Column(name="nome_medico")
+	@Column(name="nome_medico", nullable = false)
 	private String nomeMedico;
 
-	@Column(name="numero_telefono_medico")
+	@Column(name="numero_telefono_medico", nullable = false)
 	private String numeroTelefonoMedico;
 
-	@Column(name="password_medico")
+	@Column(name="password_medico", nullable = false)
 	private String passwordMedico;
-
+    
+	@Column(nullable = false)
 	private String tipologia;
 
 	//bi-directional many-to-many association to Ambulatorio

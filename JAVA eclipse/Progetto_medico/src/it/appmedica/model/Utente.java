@@ -1,4 +1,4 @@
-package it.appmedica;
+package it.appmedica.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
@@ -19,34 +19,44 @@ public class Utente implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idUtente;
 
-	@Column(name="codice_fiscale_utente")
+	@Column(name="codice_fiscale_utente", nullable = false)
 	private String codiceFiscaleUtente;
 
-	@Column(name="cognome_utente")
+	@Column(name="cognome_utente", nullable = false)
 	private String cognomeUtente;
 
 	@Temporal(TemporalType.DATE)
 	@Column(name="data_nascita_utente")
 	private Date dataNascitaUtente;
 
-	@Column(name="email_utente")
+	@Column(name="email_utente", nullable = false)
 	private String emailUtente;
 
-	@Column(name="nome_utente")
+	@Column(name="nome_utente", nullable = false)
 	private String nomeUtente;
 
 	@Column(name="numero_telefono_utente")
 	private String numeroTelefonoUtente;
 
-	@Column(name="password_utente")
+	@Column(name="password_utente", nullable = false)
 	private String passwordUtente;
 
-	@Column(name="username_utente")
+	@Column(name="username_utente", nullable = false)
 	private String usernameUtente;
 
 	//bi-directional many-to-one association to Prenotazione
 	@OneToMany(mappedBy="utente")
 	private List<Prenotazione> prenotaziones;
+	
+	private boolean attivo;
+
+	public boolean isAttivo() {
+		return attivo;
+	}
+
+	public void setAttivo(boolean attivo) {
+		this.attivo = attivo;
+	}
 
 	public Utente() {
 	}

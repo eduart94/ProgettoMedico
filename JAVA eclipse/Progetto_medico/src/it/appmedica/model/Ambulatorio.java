@@ -1,7 +1,11 @@
-package it.appmedica;
+package it.appmedica.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import it.appmedica.model.Citta;
+import it.appmedica.model.Disponibilita;
+
 import java.util.List;
 
 
@@ -17,8 +21,16 @@ public class Ambulatorio implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idAmbulatorio;
-
-	private String luogo;
+    
+	@Column(nullable=false)
+	private double longitudine;
+	
+	
+	@Column(nullable=false)
+	private double latitudine;
+	
+	@ManyToOne(cascade=CascadeType.ALL)
+	private Citta citta;
 
 	//bi-directional many-to-many association to Medico
 	@ManyToMany(mappedBy="ambulatorios")
@@ -27,8 +39,45 @@ public class Ambulatorio implements Serializable {
 	//bi-directional many-to-one association to Prenotazione
 	@OneToMany(mappedBy="ambulatorio")
 	private List<Prenotazione> prenotaziones;
+	
+	@OneToMany(mappedBy="ambulatorio", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+	private List<Disponibilita> disponibilita;
+	
 
+	
+	
 	public Ambulatorio() {
+	}
+	public double getLongitudine() {
+		return longitudine;
+	}
+
+
+
+	public void setLongitudine(double longitudine) {
+		this.longitudine = longitudine;
+	}
+
+
+
+	public double getLatitudine() {
+		return latitudine;
+	}
+
+
+
+	public void setLatitudine(double latitudine) {
+		this.latitudine = latitudine;
+	}
+
+	
+	
+	public Citta getCitta() {
+		return citta;
+	}
+
+	public void setCitta(Citta citta) {
+		this.citta = citta;
 	}
 
 	public int getIdAmbulatorio() {
@@ -39,13 +88,7 @@ public class Ambulatorio implements Serializable {
 		this.idAmbulatorio = idAmbulatorio;
 	}
 
-	public String getLuogo() {
-		return this.luogo;
-	}
 
-	public void setLuogo(String luogo) {
-		this.luogo = luogo;
-	}
 
 	public List<Medico> getMedicos() {
 		return this.medicos;
