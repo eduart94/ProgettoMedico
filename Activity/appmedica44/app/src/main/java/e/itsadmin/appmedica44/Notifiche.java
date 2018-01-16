@@ -5,45 +5,56 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
-public class Profilo extends Activity {
+public class Notifiche extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profilo);
-
+        setContentView(R.layout.activity_notifiche);
         Button notifiche=(Button)findViewById(R.id.notifiche);
         Button profilo=(Button)findViewById(R.id.profilo);
         Button ricerca=(Button)findViewById(R.id.ricerca);
-
+        Button recensisci=(Button)findViewById(R.id.recensisci);
 
 
         ricerca.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 // definisco l'intenzione
-                Intent ricerca = new Intent(Profilo.this,Ricerca.class);
-                // passo all'attivazione dell'activity
+                Intent ricerca = new Intent(Notifiche.this,Ricerca.class);
+                // passo all'attivazione dell'activity Recpass.java
                 startActivity(ricerca);
             }
 
         });
 
-        notifiche.setOnClickListener(new View.OnClickListener(){
+        profilo.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 // definisco l'intenzione
-                Intent notifiche = new Intent(Profilo.this,Notifiche.class);
+                Intent profilo = new Intent(Notifiche.this,Profilo.class);
                 // passo all'attivazione dell'activity
-                startActivity(notifiche);
+                startActivity(profilo);
             }
 
 
 
         });
 
+        recensisci.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                // definisco l'intenzione
+                Intent recensione = new Intent(Notifiche.this,Recensione.class);
+                // passo all'attivazione dell'activity
+                startActivity(recensione);
+            }
 
+
+
+        });
 
     }
 }
