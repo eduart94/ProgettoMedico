@@ -39,7 +39,7 @@ public class GestioneAccount {
 		return false;
 	}
 	
-    public boolean registrazioneUtente(String codiceFiscale,Date dataDiNascita, String numeroDiTelefono, String cognome, String nome, String email, String username, String password) {
+    public boolean registrazioneUtente(String codiceFiscale, String numeroDiTelefono, String cognome, String nome, String email, String username, String password) {
     	 EntityManager em = JPAUtility.emf.createEntityManager();
     	 
     	 Utente utente = utentePeremail(email, em);
@@ -60,7 +60,7 @@ public class GestioneAccount {
  		u.setEmailUtente(email);
  		u.setCodiceFiscaleUtente(codiceFiscale);
  		u.setAttivo(true);
- 		u.setDataNascitaUtente(dataDiNascita);
+ 		
  		u.setNumeroTelefonoUtente(numeroDiTelefono);
  		em.getTransaction().begin();
  		em.persist(u);
@@ -72,7 +72,7 @@ public class GestioneAccount {
  	private Utente utentePerUsername(String username, EntityManager em) {
  		Utente utente = null;
  		try {
- 			utente = em.createQuery("select u from Utente u where u.username=:username", Utente.class)
+ 			utente = em.createQuery("select u from Utente u where u.usernameUtente=:username", Utente.class)
  					.setParameter("username", username)
  					.getSingleResult();
  		} catch (NoResultException ex) {
@@ -83,8 +83,8 @@ public class GestioneAccount {
  	private Utente utentePeremail(String email, EntityManager em) {
  		Utente utente = null;
  		try {
- 			utente = em.createQuery("select u from Utente u where u.email=:email", Utente.class)
- 					.setParameter("username", email)
+ 			utente = em.createQuery("select u from Utente u where u.emailUtente=:email", Utente.class)
+ 					.setParameter("email", email)
  					.getSingleResult();
  		} catch (NoResultException ex) {
  			ex.printStackTrace();

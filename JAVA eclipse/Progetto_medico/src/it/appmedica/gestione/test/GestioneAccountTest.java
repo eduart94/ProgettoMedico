@@ -28,5 +28,25 @@ public class GestioneAccountTest {
 		assertFalse("Login errato in errore", esito);	
 		
 	}
+	@Test
+	public void testRegistrazioneUtente() {
+		
+		GestioneAccount ga = new GestioneAccount();
+		
+		boolean esito = ga.registrazioneUtente("", "", "", "", "ok@test", "oktr", "oky");
+		assertFalse("esito registrazione errato(email gia esistente)", esito);
+		
+		esito = ga.registrazioneUtente("", "", "", "", "ok@testfg", "ok", "oky");
+		assertFalse("esito registrazione errato(username gia esistente)", esito);
+		
+		esito = ga.registrazioneUtente("", "", "", "", "ok@test", "ok", "oky");
+		assertFalse("esito registrazione errato(email e username gia esistente)", esito);
+		
+		esito = ga.registrazioneUtente("", "", "", "", "mario@rossi", "mario", "oky");
+		assertFalse("esito registrazione errato(username gia esistente)", esito);
+		
+		
+		
+		}
 
 }
