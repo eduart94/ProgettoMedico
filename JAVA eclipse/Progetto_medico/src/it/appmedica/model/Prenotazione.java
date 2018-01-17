@@ -7,6 +7,7 @@ import it.appmedica.model.Disponibilita;
 
 import java.sql.Time;
 import java.util.Date;
+import java.util.List;
 
 
 /**
@@ -21,10 +22,22 @@ public class Prenotazione implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idPrenotazione;
+	
+	@Column(nullable=false)
+	private int recensione;
     
+	public int getRecensione() {
+		return recensione;
+	}
+
+	public void setRecensione(int recensione) {
+		this.recensione = recensione;
+	}
+
 	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date data;
+	
     
 	@Column(nullable = false)
 	private String motivazione;
@@ -33,6 +46,28 @@ public class Prenotazione implements Serializable {
 	@ManyToOne(cascade=CascadeType.ALL)
 	private Disponibilita disponibilita;
 	
+	@OneToMany(mappedBy= "prenotazione")
+	private List<SlotCalendar> slotCalendar;
+
+	public Disponibilita getDisponibilita() {
+		return disponibilita;
+	}
+
+	public void setDisponibilita(Disponibilita disponibilita) {
+		this.disponibilita = disponibilita;
+	}
+
+	public List<SlotCalendar> getSlotCalendar() {
+		return slotCalendar;
+	}
+
+	public void setSlotCalendar(List<SlotCalendar> slotCalendar) {
+		this.slotCalendar = slotCalendar;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 
 	@Column(name="nome_ambulatorio", nullable = false)
 	private String nomeAmbulatorio;

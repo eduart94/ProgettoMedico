@@ -61,6 +61,21 @@ public class Medico implements Serializable {
 	//bi-directional many-to-one association to Prenotazione
 	@OneToMany(mappedBy="medico")
 	private List<Prenotazione> prenotaziones;
+	
+	@OneToMany(mappedBy="medico")
+	private List<SlotCalendar> slotCalendar;
+
+	public List<SlotCalendar> getSlotCalendar() {
+		return slotCalendar;
+	}
+
+	public void setSlotCalendar(List<SlotCalendar> slotCalendar) {
+		this.slotCalendar = slotCalendar;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 
 	public Medico() {
 	}
