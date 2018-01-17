@@ -24,8 +24,8 @@ public class Login extends Activity {
         final EditText InsEmail=(EditText)findViewById(R.id.insmail);
         final EditText InsPass=(EditText)findViewById(R.id.inspass);
 
-        Button button2=(Button)findViewById(R.id.passlost);
-        button2.setOnClickListener(new View.OnClickListener(){
+
+        passLost.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 // definisco l'intenzione
@@ -36,8 +36,8 @@ public class Login extends Activity {
 
             });
 
-        Button Button3=(Button)findViewById(R.id.noregistrazione);
-        Button3.setOnClickListener(new View.OnClickListener(){
+
+        NoReg.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 // definisco l'intenzione
@@ -49,8 +49,8 @@ public class Login extends Activity {
 
 
 
-            Button accedi=(Button)findViewById(R.id.accedi);
-            accedi.setOnClickListener(new View.OnClickListener(){
+
+            Accesso.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {
                     // definisco l'intenzione
