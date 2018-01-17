@@ -21,5 +21,7 @@ public class GestionePrenotazione {
 	public boolean nuovaPrenotazione() {
 		return false;
 	}
+	
+	
 
 }

@@ -47,6 +47,7 @@ public class Prenotazione implements Serializable {
 	private Disponibilita disponibilita;
 	
 	@OneToMany(mappedBy= "prenotazione")
+	@JoinColumn(nullable=false)
 	private List<SlotCalendar> slotCalendar;
 
 	public Disponibilita getDisponibilita() {
@@ -83,14 +84,17 @@ public class Prenotazione implements Serializable {
 
 	//bi-directional many-to-one association to Ambulatorio
 	@ManyToOne
+	@JoinColumn(nullable=false)
 	private Ambulatorio ambulatorio;
 
 	//bi-directional many-to-one association to Medico
 	@ManyToOne
+	@JoinColumn(nullable=false)
 	private Medico medico;
 
 	//bi-directional many-to-one association to Utente
 	@ManyToOne
+	@JoinColumn(nullable=false)
 	private Utente utente;
 
 	public Prenotazione() {

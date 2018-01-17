@@ -13,7 +13,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import org.eclipse.persistence.jpa.jpql.parser.DateTime;
+
 
 
 @Entity
@@ -45,11 +45,11 @@ public class SlotCalendar {
 		this.data = data;
 	}
 
-	public DateTime getOra() {
+	public Date getOra() {
 		return ora;
 	}
 
-	public void setOra(DateTime ora) {
+	public void setOra(Date ora) {
 		this.ora = ora;
 	}
 
@@ -71,13 +71,14 @@ public class SlotCalendar {
 
 	@Column(nullable=false)
 	@Temporal(TemporalType.TIME)
-	private DateTime ora;
+	private Date ora;
 	
 	@JoinColumn(nullable = false)
     @ManyToOne(cascade= CascadeType.ALL)
     private Prenotazione prenotazione;
 	
 	@ManyToOne(cascade=CascadeType.ALL)
+	@JoinColumn(nullable=false)
 	private Medico medico;
 	
 

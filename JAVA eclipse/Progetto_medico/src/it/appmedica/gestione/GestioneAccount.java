@@ -30,14 +30,9 @@ public class GestioneAccount {
 	}
 
 
-	private boolean checkPassword(String passwordUtente, Utente utente) {
-		return utente.getPasswordUtente().equals(passwordUtente);
-	}
+	
 	    
-	public boolean registraUtente(String nome, String cognome, String codiceFiscale, String email, String password, String username) {
-		
-		return false;
-	}
+	
 	
     public boolean registrazioneUtente(String codiceFiscale, String numeroDiTelefono, String cognome, String nome, String email, String username, String password) {
     	 EntityManager em = JPAUtility.emf.createEntityManager();
@@ -68,7 +63,36 @@ public class GestioneAccount {
  		
  		return true;
  	}
+    
+  
+    
+    public boolean cancellazioneUtente(int id){
+    	
+    	EntityManager em = JPAUtility.emf.createEntityManager();
+    	 
+    	Utente utente = em.find(Utente.class, id);
+    	
+    	if(utente == null)
+    		return false;
+    	
+    		
+    	em.getTransaction().begin();
+    	em.remove(utente);
+    	em.getTransaction().commit();
+    	
+    	
+    	return true;
+    }
+      
+        private boolean checkPassword(String passwordUtente, Utente utente) {
+		return utente.getPasswordUtente().equals(passwordUtente);
+	}
+    
+    
+    
  	
+    
+    
  	private Utente utentePerUsername(String username, EntityManager em) {
  		Utente utente = null;
  		try {

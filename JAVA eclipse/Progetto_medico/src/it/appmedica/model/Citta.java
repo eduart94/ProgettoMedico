@@ -10,6 +10,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -26,6 +27,7 @@ public class Citta {
 	private String paese;
 	
 	@OneToMany(mappedBy="citta", cascade= CascadeType.ALL, fetch= FetchType.LAZY)
+	@JoinColumn(nullable=false )
 	private List<Ambulatorio> ambulatori;
 	
 	public int getIdCitta() {

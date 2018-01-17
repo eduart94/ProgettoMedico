@@ -30,17 +30,21 @@ public class Ambulatorio implements Serializable {
 	private double latitudine;
 	
 	@ManyToOne(cascade=CascadeType.ALL)
+	@JoinColumn(nullable=false)
 	private Citta citta;
 
 	//bi-directional many-to-many association to Medico
 	@ManyToMany(mappedBy="ambulatorios")
+	@JoinColumn(nullable=false)
 	private List<Medico> medicos;
 
 	//bi-directional many-to-one association to Prenotazione
 	@OneToMany(mappedBy="ambulatorio")
+	@JoinColumn(nullable=false)
 	private List<Prenotazione> prenotaziones;
 	
 	@OneToMany(mappedBy="ambulatorio", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+	@JoinColumn(nullable=false)
 	private List<Disponibilita> disponibilita;
 	
 

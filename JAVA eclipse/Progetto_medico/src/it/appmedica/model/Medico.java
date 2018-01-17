@@ -50,19 +50,21 @@ public class Medico implements Serializable {
 	@JoinTable(
 		name="medico_has_ambulatorio"
 		, joinColumns={
-			@JoinColumn(name="Medico_idMedico")
+			@JoinColumn(name="Medico_idMedico", nullable=false)
 			}
 		, inverseJoinColumns={
-			@JoinColumn(name="Ambulatorio_idAmbulatorio")
+			@JoinColumn(name="Ambulatorio_idAmbulatorio", nullable=false)
 			}
 		)
 	private List<Ambulatorio> ambulatorios;
 
 	//bi-directional many-to-one association to Prenotazione
 	@OneToMany(mappedBy="medico")
+	@JoinColumn(nullable=false)
 	private List<Prenotazione> prenotaziones;
 	
 	@OneToMany(mappedBy="medico")
+	@JoinColumn(nullable=false)
 	private List<SlotCalendar> slotCalendar;
 
 	public List<SlotCalendar> getSlotCalendar() {
