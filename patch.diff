@@ -1,0 +1,187 @@
+From 8eb8931b5514b49bfe2dedc79b3086d5df251d6d Mon Sep 17 00:00:00 2001
+From: "1ITS-master\\itsadmin" <eduart1994@libero.it>
+Date: Wed, 10 Jan 2018 14:43:17 +0100
+Subject: [PATCH] fatto gli intent dei bottoni
+
+---
+ .../AppMedica/app/src/main/AndroidManifest.xml     |  4 --
+ .../java/com/example/itsadmin/appmedica/Login.java | 73 +++++-----------------
+ .../com/example/itsadmin/appmedica/Registrati.java | 18 +++++-
+ .../app/src/main/res/layout/activity_login.xml     |  4 +-
+ 4 files changed, 35 insertions(+), 64 deletions(-)
+
+diff --git a/Activity/AppMedica/app/src/main/AndroidManifest.xml b/Activity/AppMedica/app/src/main/AndroidManifest.xml
+index ae206a1..f5d1091 100644
+--- a/Activity/AppMedica/app/src/main/AndroidManifest.xml
++++ b/Activity/AppMedica/app/src/main/AndroidManifest.xml
+@@ -25,11 +25,7 @@
+         </intent-filter>
+         </activity>
+         <activity android:name=".RecuperaPassword">
+-            <intent-filter>
+-                <action android:name="android.intent.action.MAIN" />
+ 
+-                <category android:name="android.intent.category.LAUNCHER" />
+-            </intent-filter>
+         </activity>
+     </application>
+ 
+diff --git a/Activity/AppMedica/app/src/main/java/com/example/itsadmin/appmedica/Login.java b/Activity/AppMedica/app/src/main/java/com/example/itsadmin/appmedica/Login.java
+index 04e3323..097efeb 100644
+--- a/Activity/AppMedica/app/src/main/java/com/example/itsadmin/appmedica/Login.java
++++ b/Activity/AppMedica/app/src/main/java/com/example/itsadmin/appmedica/Login.java
+@@ -8,76 +8,35 @@ import android.widget.Button;
+ 
+ public class Login extends Activity {
+ 
+-<<<<<<< HEAD
+-=======
+-   public class MainActivity1 extends Activity {
+-        @Override
+-        public void onCreate(Bundle savedInstanceState) {
+-            super.onCreate(savedInstanceState);
+-            setContentView(R.layout.activity_recupera_password);
+-            Button button2=(Button)findViewById(R.id.recuperapassword);
+-            button2.setOnClickListener(new OnClickListener(){
+-                @Override
+-                public void onClick(View arg0) {
+-                    // definisco l'intenzione
+-                    Intent Recpass = new Intent(MainActivity1.this,RecuperaPassword.class);
+-                    // passo all'attivazione dell'activity Recpass.java
+-                    startActivity(Recpass);
+-                }
+-            });
+-        }
+-    }
+ 
+-    public class MainActivity2 extends Activity {
++
+         @Override
+         public void onCreate(Bundle savedInstanceState) {
+             super.onCreate(savedInstanceState);
+-            setContentView(R.layout.activity_registrati);
+-            Button Button3=(Button)findViewById(R.id.noregistrazione);
+-            Button3.setOnClickListener(new OnClickListener(){
++            setContentView(R.layout.activity_login);
++            Button nonRicordiPassword = findViewById(R.id.nonricordipassword);
++            nonRicordiPassword.setOnClickListener(new View.OnClickListener() {
+                 @Override
+-                public void onClick(View arg0) {
+-                    // definisco l'intenzione
+-                    Intent NoReg = new Intent(MainActivity2.this,Registrati.class);
+-                    // passo all'attivazione dell'activity Pagina.java
+-                    startActivity(NoReg);
++                public void onClick(View v) {
++                    Intent nonRicordiPasswordIntent = new Intent(Login.this, RecuperaPassword.class);
++                    startActivity(nonRicordiPasswordIntent);
+                 }
+             });
+-        }
+-    }
+ 
+-    public class MainActivity3 extends Activity {
+-        @Override
+-        public void onCreate(Bundle savedInstanceState) {
+-            super.onCreate(savedInstanceState);
+-            setContentView(R.layout.main);
+-            Button login=(Button)findViewById(R.id.accedi);
+-            login.setOnClickListener(new OnClickListener(){
++            Button noRegistrazione = findViewById(R.id.noregistrazione);
++            noRegistrazione.setOnClickListener(new View.OnClickListener() {
+                 @Override
+-                public void onClick(View arg0) {
+-                    // definisco l'intenzione
+-                    Intent Profile = new Intent(MainActivity3.this,Profilo.class);
+-                    // passo all'attivazione dell'activity Pagina.java
+-                    startActivity(Profile);
++                public void onClick(View v) {
++                    Intent noRegistrazioneIntent = new Intent(Login.this, Registrati.class);
++                    startActivity(noRegistrazioneIntent);
+                 }
+             });
++
++
+         }
+     }
+ 
+->>>>>>> 69cc123106d82fed0a58bc52dd54258659af31ef
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_login);
+ 
+-        Button haigiaaccount = findViewById(R.id.haigiaaccount);
+-        haigiaaccount.setOnClickListener(new View.OnClickListener() {
+-            @Override
+-            public void onClick(View v) {
+-                Intent recupPasswordIntent = new Intent(Login.this, RecuperaPassword.class);
+-                startActivity(recupPasswordIntent);
+-            }
+-        });
+ 
+-    }
+-}
++
++
+diff --git a/Activity/AppMedica/app/src/main/java/com/example/itsadmin/appmedica/Registrati.java b/Activity/AppMedica/app/src/main/java/com/example/itsadmin/appmedica/Registrati.java
+index 0b07fec..692b6ef 100644
+--- a/Activity/AppMedica/app/src/main/java/com/example/itsadmin/appmedica/Registrati.java
++++ b/Activity/AppMedica/app/src/main/java/com/example/itsadmin/appmedica/Registrati.java
+@@ -1,7 +1,9 @@
+ package com.example.itsadmin.appmedica;
+ 
+ import android.app.Activity;
++import android.content.Intent;
+ import android.os.Bundle;
++import android.view.View;
+ import android.widget.Button;
+ import android.widget.EditText;
+ import android.widget.RadioButton;
+@@ -21,7 +23,21 @@ public class Registrati extends Activity {
+         final EditText conferma=(EditText)findViewById(R.id.id_conferma);
+         final RadioButton autorizzo=(RadioButton)findViewById(R.id.id_autorizzo);
+         final Button button1=(Button)findViewById(R.id.id_button1);
+-        final TextView haigiaaccount=(TextView)findViewById(R.id.haigiaaccount);
++        final TextView haigiaaccount=(TextView)findViewById(R.id.nonricordipassword);
++
++
++        Button haiGiaAccount = findViewById(R.id.haigiaaccount);
++        haiGiaAccount.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                Intent haiGiaAccountIntent = new Intent(Registrati.this, Login.class);
++                startActivity(haiGiaAccountIntent);
++            }
++        });
+ 
+     }
++
++
++
++
+ }
+diff --git a/Activity/AppMedica/app/src/main/res/layout/activity_login.xml b/Activity/AppMedica/app/src/main/res/layout/activity_login.xml
+index a61952d..e0b4a1d 100644
+--- a/Activity/AppMedica/app/src/main/res/layout/activity_login.xml
++++ b/Activity/AppMedica/app/src/main/res/layout/activity_login.xml
+@@ -11,7 +11,7 @@
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignEnd="@+id/login"
+-        android:layout_below="@+id/haigiaaccount"
++        android:layout_below="@+id/nonricordipassword"
+         android:layout_marginTop="15dp"
+         android:text="Accedi" />
+ 
+@@ -62,7 +62,7 @@
+         android:textStyle="bold" />
+ 
+     <Button
+-        android:id="@+id/haigiaaccount"
++        android:id="@+id/nonricordipassword"
+         style="?android:attr/borderlessButtonStyle"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-- 
+2.14.1.windows.1
+
