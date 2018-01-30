@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.eduartbiba.mybrowser.MainActivity">
+
+
+    <TextView
+        android:id="@+id/textPreferiti"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/listaPreferiti"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:text="Lista Preferiti "
+        android:textAlignment="center"
+        />
+
+    <ListView
+        android:id="@+id/listaPreferiti"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_alignStart="@+id/textPreferiti"
+        android:layout_centerVertical="true" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@+id/listaPreferiti"
+        android:layout_below="@+id/listaPreferiti"
+        android:layout_marginTop="17dp"
+        android:background="#76448A"
+        android:clickable="true"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+    </RelativeLayout>
