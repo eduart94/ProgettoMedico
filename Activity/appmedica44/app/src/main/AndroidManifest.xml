@@ -5,11 +5,12 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/iconaapp"
-        android:label="@string/app_name"
+        android:label="Medical APP"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Homepage">
+        <activity
+            android:name=".Homepage"
+            android:label="Medical APP">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,8 +22,10 @@
         <activity android:name=".Profilo" />
         <activity android:name=".Login" />
         <activity android:name=".Ricerca" />
-        <activity android:name=".Notifiche" />
-        <activity android:name=".Recensione"></activity>
+        <activity android:name=".Notifiche"/>
+        <activity android:name=".Popup"
+            android:theme="@style/AppTheme.CustomTheme"></activity>
+
     </application>
 
 </manifest>

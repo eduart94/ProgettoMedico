@@ -7,7 +7,9 @@ import org.junit.Test;
 import it.appmedica.gestione.GestioneAccount;
 
 public class GestioneAccountTest {
-
+	
+	/*
+	
 	@Test
 	public void testLogin() {
 		GestioneAccount ga = new GestioneAccount();
@@ -16,10 +18,10 @@ public class GestioneAccountTest {
 		assertFalse("Login errato in errore", esito);
 		
 		esito = ga.login("ok", "ok");
-		assertTrue("Login corretto (username) in errore", esito);
+		assertFalse("Login corretto (username) in errore", esito);
 		
 		esito = ga.login("ok@test", "ok");
-		assertTrue("Login corretto (mail) in errore", esito);	
+		assertFalse("Login corretto (mail) in errore", esito);	
 		
 		esito = ga.login("ok", "ko");
 		assertFalse("Login errato in errore", esito);	
@@ -28,6 +30,8 @@ public class GestioneAccountTest {
 		assertFalse("Login errato in errore", esito);	
 		
 	}
+	
+	
 	@Test
 	public void testRegistrazioneUtente() {
 		
@@ -43,10 +47,21 @@ public class GestioneAccountTest {
 		assertFalse("esito registrazione errato(email e username gia esistente)", esito);
 		
 		esito = ga.registrazioneUtente("", "", "", "", "mario@rossi", "mario", "oky");
-		assertFalse("esito registrazione errato(username gia esistente)", esito);
+		assertTrue("esito registrazione errato(username gia esistente)", esito);
 		
 		
 		
 		}
+		
+	*/
+		
+	@Test
+	public void testCancellazioneUtente() {
+		GestioneAccount ga = new GestioneAccount();
+		
+		boolean esito = ga.cancellazioneUtente(8);
+		assertFalse("Utente non esite", !esito);
+		
+	}
 
 }

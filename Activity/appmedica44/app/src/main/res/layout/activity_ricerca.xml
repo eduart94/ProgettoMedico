@@ -8,21 +8,29 @@
     android:backgroundTintMode="add"
     tools:context="e.itsadmin.appmedica44.Ricerca">
 
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView10"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/Verde" />
+
     <Button
         android:id="@+id/profilo"
         android:layout_width="61dp"
         android:layout_height="58dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginStart="20dp"
         android:background="@mipmap/profilo" />
 
     <Button
         android:id="@+id/notifiche"
         android:layout_width="61dp"
         android:layout_height="58dp"
-        android:layout_alignBottom="@+id/profilo"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:background="@mipmap/notifica" />
 
@@ -30,38 +38,18 @@
         android:id="@+id/ricerca"
         android:layout_width="61dp"
         android:layout_height="58dp"
-        android:layout_alignBaseline="@+id/notifiche"
-        android:layout_alignBottom="@+id/notifiche"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="17dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="20dp"
         android:background="@mipmap/ricerca" />
-
-    <EditText
-        android:id="@+id/cercaMedico"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/profilo"
-        android:layout_below="@+id/ricerca"
-        android:layout_marginTop="50dp"
-        android:ems="12"
-        android:hint="Cerca medico..."
-        android:inputType="textPersonName" />
-
-    <Button
-        android:id="@+id/buttonCercaTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/cercaMedico"
-        android:layout_alignEnd="@+id/ricerca"
-        android:text="Cerca" />
 
     <TextView
         android:id="@+id/ricercaCampi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/cercaMedico"
+        android:layout_alignStart="@+id/multiAutoCompleteTextView2"
         android:layout_below="@+id/oppure"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="40dp"
         android:text="Ricerca per campi"
         android:textSize="20sp" />
 
@@ -89,18 +77,11 @@
         android:id="@+id/spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/ricerca"
-        android:layout_alignTop="@+id/tipologia"
-        android:layout_toEndOf="@+id/ricercaCampi" />
-
-    <MultiAutoCompleteTextView
-        android:id="@+id/multiAutoCompleteTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/spinner"
-        android:layout_alignTop="@+id/dove"
-        android:hint="Luogo"
-        android:textColorHint="@android:color/black" />
+        android:layout_alignBaseline="@+id/tipologia"
+        android:layout_alignBottom="@+id/tipologia"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/ricercaCampi"
+        android:background="@android:drawable/btn_dropdown" />
 
     <Button
         android:id="@+id/buttonCercaBottom"
@@ -115,9 +96,9 @@
         android:id="@+id/oppure"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/cercaMedico"
+        android:layout_below="@+id/multiAutoCompleteTextView2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="23dp"
         android:text="Oppure"
         android:textSize="16sp" />
 
@@ -127,6 +108,27 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/ricerca"
-        android:background="@android:drawable/dark_header" />
+        android:background="@android:drawable/dark_header"
+        android:id="@+id/textView10" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/multiAutoCompleteTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/ricerca"
+        android:layout_alignStart="@+id/profilo"
+        android:layout_below="@+id/textView10"
+        android:layout_marginTop="28dp"
+        android:hint="Ricerca medico" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/multiAutoCompleteTextView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/dove"
+        android:layout_toEndOf="@+id/ricercaCampi"
+        android:hint="Luogo" />
+
 
 </RelativeLayout>
