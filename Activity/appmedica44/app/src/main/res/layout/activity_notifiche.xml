@@ -6,42 +6,14 @@
     android:layout_height="match_parent"
     tools:context="e.itsadmin.appmedica44.Notifiche">
 
-    <Button
-        android:id="@+id/profilo"
-        android:layout_width="61dp"
-        android:layout_height="58dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="11dp"
-        android:background="@mipmap/profilo" />
-
-    <Button
-        android:id="@+id/notifiche"
-        android:layout_width="61dp"
-        android:layout_height="58dp"
-        android:layout_alignBaseline="@+id/profilo"
-        android:layout_alignBottom="@+id/profilo"
-        android:layout_centerHorizontal="true"
-        android:background="@mipmap/notifica" />
-
-    <Button
-        android:id="@+id/ricerca"
-        android:layout_width="61dp"
-        android:layout_height="58dp"
-        android:layout_alignBaseline="@+id/notifiche"
-        android:layout_alignBottom="@+id/notifiche"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="18dp"
-        android:background="@mipmap/ricerca" />
-
     <TextView
         android:id="@+id/data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:layout_alignStart="@+id/faiunarec"
-        android:layout_below="@+id/profilo"
-        android:layout_marginTop="18dp"
+        android:layout_below="@+id/sfondo"
+        android:layout_marginTop="20dp"
         android:text="Data: "
         android:textSize="18sp" />
 
@@ -49,8 +21,9 @@
         android:layout_width="match_parent"
         android:layout_height="5dp"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/ricerca"
-        android:background="@android:drawable/dark_header" />
+        android:layout_below="@+id/profilo"
+        android:background="@android:drawable/dark_header"
+        android:id="@+id/textView9" />
 
     <TextView
         android:id="@+id/nome"
@@ -101,13 +74,49 @@
         android:text="Recensisci" />
 
     <RatingBar
+        android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/recensisci"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="17dp"
+        android:layout_marginBottom="18dp"
         android:numStars="5"
-        android:rating="5"
-        android:id="@+id/ratingBar" />
+        android:rating="5" />
+
+    <TextView
+        android:id="@+id/sfondo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView9"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/Verde" />
+
+    <Button
+        android:id="@+id/profilo"
+        android:layout_width="61dp"
+        android:layout_height="58dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:background="@mipmap/profilo" />
+
+    <Button
+        android:id="@+id/notifiche"
+        android:layout_width="61dp"
+        android:layout_height="58dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/notifica" />
+
+    <Button
+        android:id="@+id/ricerca"
+        android:layout_width="61dp"
+        android:layout_height="58dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="20dp"
+        android:background="@mipmap/ricerca" />
+
 
 </RelativeLayout>

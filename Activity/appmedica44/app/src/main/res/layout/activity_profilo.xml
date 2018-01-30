@@ -4,25 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="e.itsadmin.appmedica44.Profilo">
+    android:textAlignment="center"
+    tools:context="e.itsadmin.appmedica44.Profilo"
+    tools:textAlignment="center">
+
+
+    <TextView
+        android:id="@+id/sfondo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView7"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/Verde" />
 
     <Button
         android:id="@+id/profilo"
         android:layout_width="61dp"
         android:layout_height="58dp"
-        android:layout_alignBottom="@+id/ricerca"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="18dp"
-        android:background="@mipmap/profilo"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="83dp" />
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:background="@mipmap/profilo" />
 
     <Button
         android:id="@+id/notifiche"
         android:layout_width="61dp"
         android:layout_height="58dp"
-        android:layout_alignBaseline="@+id/profilo"
-        android:layout_alignBottom="@+id/profilo"
         android:layout_centerHorizontal="true"
         android:background="@mipmap/notifica"
         tools:layout_editor_absoluteX="154dp"
@@ -34,18 +42,16 @@
         android:layout_height="58dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_marginEnd="17dp"
-        android:layout_marginTop="11dp"
-        android:background="@mipmap/ricerca"
-        tools:layout_editor_absoluteX="301dp"
-        tools:layout_editor_absoluteY="4dp" />
+        android:layout_marginEnd="20dp"
+        android:background="@mipmap/ricerca" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="135dp"
         android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
         android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
         android:background="@android:drawable/spinner_background"
         android:text="Tipologia"
         android:textAlignment="center" />
@@ -54,8 +60,7 @@
         android:id="@+id/textView2"
         android:layout_width="130dp"
         android:layout_height="40dp"
-        android:layout_alignBaseline="@+id/textView"
-        android:layout_alignBottom="@+id/textView"
+        android:layout_below="@+id/textView3"
         android:layout_centerHorizontal="true"
         android:background="@android:drawable/spinner_background"
         android:text="Data"
@@ -65,28 +70,27 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView2"
-        android:layout_alignEnd="@+id/textView2"
-        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/cellnum"
+        android:layout_below="@+id/textView11"
+        android:layout_marginTop="20dp"
         android:text="Le mie prenotazioni"
-        android:textAlignment="center"
         android:textSize="18sp" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="65dp"
         android:layout_height="65dp"
-        android:layout_above="@+id/textView3"
         android:layout_alignStart="@+id/profilo"
-        android:layout_marginBottom="26dp"
-        android:layout_marginStart="11dp"
+        android:layout_below="@+id/textView7"
+        android:layout_marginTop="24dp"
         android:src="@mipmap/iconaapp" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/imageView3"
+        android:layout_below="@+id/textView7"
+        android:layout_marginTop="12dp"
         android:layout_toEndOf="@+id/textView"
         android:text="Nome"
         android:textSize="16sp" />
@@ -95,9 +99,8 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView4"
-        android:layout_alignBottom="@+id/textView4"
-        android:layout_alignEnd="@+id/textView3"
+        android:layout_above="@+id/textView6"
+        android:layout_alignEnd="@+id/textView2"
         android:text="Cognome"
         android:textSize="16sp" />
 
@@ -105,19 +108,20 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/imageView3"
         android:layout_alignStart="@+id/textView4"
-        android:layout_marginBottom="14dp"
-        android:text="Posizione" />
+        android:layout_below="@+id/textView4"
+        android:layout_marginTop="12dp"
+        android:text="Posizione"
+        android:textSize="12sp" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView"
         android:layout_toStartOf="@+id/textView2"
-        android:orientation="vertical"
-        android:id="@+id/linearLayout">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tip2"
@@ -156,18 +160,30 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/textView7"
         android:layout_width="match_parent"
         android:layout_height="5dp"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/notifiche"
+        android:layout_below="@+id/profilo"
         android:background="@android:drawable/dark_header" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/textView11"
+        android:layout_width="match_parent"
         android:layout_height="5dp"
-        android:layout_above="@+id/textView3"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageView3"
+        android:layout_marginTop="14dp"
         android:background="@android:drawable/dark_header" />
+
+    <TextView
+        android:id="@+id/cellnum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_alignStart="@+id/textView6"
+        android:text="Num Cellulare"
+        android:textSize="12sp" />
+
 
 </RelativeLayout>
