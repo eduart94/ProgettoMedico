@@ -96,7 +96,8 @@ public class GestioneAccount {
  	private Utente utentePerUsername(String username, EntityManager em) {
  		Utente utente = null;
  		try {
- 			utente = em.createQuery("select u from Utente u where u.usernameUtente=:username", Utente.class)
+ 			utente = em.createQuery("select u from Utente u where u.usernameUtente=:username", 
+ 					Utente.class)
  					.setParameter("username", username)
  					.getSingleResult();
  		} catch (NoResultException ex) {
