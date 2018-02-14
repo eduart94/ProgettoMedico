@@ -4,45 +4,34 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.AdapterView;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class Profilo extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profilo);
+        setContentView(R.layout.activity_profilo_p);
 
-        Button notifiche=(Button)findViewById(R.id.notifiche);
-        Button profilo=(Button)findViewById(R.id.profilo);
-        Button ricerca=(Button)findViewById(R.id.ricerca);
+       final ListView prenotazioni = (ListView)findViewById(R.id.listViewPrenotazioni);
 
+       final ArrayList<ModelProfilo> lista = new ArrayList<ModelProfilo>();
 
+        final AdapterProfilo ap = new AdapterProfilo(this, lista);
+        prenotazioni.setAdapter((ListAdapter) ap);
 
-        ricerca.setOnClickListener(new View.OnClickListener(){
+        prenotazioni.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
-                // definisco l'intenzione
-                Intent ricerca = new Intent(Profilo.this,Ricerca.class);
-                // passo all'attivazione dell'activity
-                startActivity(ricerca);
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent dettagli = new Intent(Profilo.this,Dettagli.class);
+               // dettagli.putExtra
+                startActivity(dettagli);
             }
-
         });
-
-        notifiche.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                // definisco l'intenzione
-                Intent notifiche = new Intent(Profilo.this,Notifiche.class);
-                // passo all'attivazione dell'activity
-                startActivity(notifiche);
-            }
-
-
-
-        });
-
 
 
     }
