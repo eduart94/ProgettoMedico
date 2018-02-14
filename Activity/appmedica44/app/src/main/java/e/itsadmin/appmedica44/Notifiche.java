@@ -46,7 +46,7 @@ public class Notifiche extends Activity {
             @Override
             public void onClick(View v) {
                 // definisco l'intenzione
-                Intent recensione = new Intent(Notifiche.this,Recensione.class);
+                Intent recensione = new Intent(Notifiche.this,Popup.class);
                 // passo all'attivazione dell'activity
                 startActivity(recensione);
             }
