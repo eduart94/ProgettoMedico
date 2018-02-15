@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/colorBack1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="e.itsadmin.appmedica44.Notifiche">
@@ -101,13 +102,13 @@
         android:text="Recensisci" />
 
     <RatingBar
+        android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/recensisci"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="17dp"
         android:numStars="5"
-        android:rating="5"
-        android:id="@+id/ratingBar" />
+        android:rating="5" />
 
 </RelativeLayout>

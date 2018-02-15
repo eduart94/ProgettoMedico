@@ -18,12 +18,14 @@ public class Ricerca extends Activity {
         setContentView(R.layout.activity_ricerca);
         Button notifiche=(Button)findViewById(R.id.notifiche);
         Button profilo=(Button)findViewById(R.id.profilo);
+
   //      Button ricerca=(Button)findViewById(R.id.ricerca);
+
         Button butcertop=(Button)findViewById(R.id.buttonCercaTop);
         Button butcerbott=(Button)findViewById(R.id.buttonCercaBottom);
-        EditText cercaMedico=(EditText)findViewById(R.id.cercaMedico);
+        MultiAutoCompleteTextView cercaMedico=(MultiAutoCompleteTextView)findViewById(R.id.textCercoMedico);
         Spinner spinner=(Spinner)findViewById(R.id.spinner);
-        MultiAutoCompleteTextView completamento=(MultiAutoCompleteTextView)findViewById(R.id.multiAutoCompleteTextView);
+        MultiAutoCompleteTextView logo=(MultiAutoCompleteTextView)findViewById(R.id.textLogo);
 
         notifiche.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -46,6 +48,18 @@ public class Ricerca extends Activity {
             }
 
         });
+        ArrayAdapter<String> aa = new ArrayAdapter<String>(this,
+                android.R.layout.simple_dropdown_item_1line, new String[] {"Inglese", "Spagnolo", "Tedesco",
+                "Italiano"});
+
+        AutoCompleteTextView actv = (AutoCompleteTextView) findViewById(R.id.txtauto);
+        actv.setAdapter(aa);
+
+        MultiAutoCompleteTextView mactv =
+                (MultiAutoCompleteTextView)this.findViewById(R.id.txtmulti);
+        mactv.setAdapter(aa);
+        mactv.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
+    }
 
 
     }
