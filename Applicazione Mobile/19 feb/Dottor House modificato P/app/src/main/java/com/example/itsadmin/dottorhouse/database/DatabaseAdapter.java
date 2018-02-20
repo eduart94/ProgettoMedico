@@ -95,5 +95,17 @@ public class DatabaseAdapter {
         return visiteFatte;
     }
 
+    public Cursor getAllTipologie(){
+
+
+        String selectQuery = "SELECT DISTINCT tipologia FROM " + DatabaseHelper.TABLE_MEDICO;
+
+        open();
+        Cursor cursor = database.rawQuery(selectQuery, null);
+
+        close();
+        return cursor;
+    }
+
 
 }
