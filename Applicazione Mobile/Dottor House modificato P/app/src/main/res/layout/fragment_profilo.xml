@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/profilePic"
+        android:layout_width="100dp"
+        android:layout_height="110dp"
+        android:layout_margin="20dp"
+        android:background="#eeeeee"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+
+        android:layout_alignStart="@+id/profilePic"
+        android:layout_alignTop="@+id/profilePic"
+        android:layout_marginStart="102dp"
+        android:paddingLeft="20dp"
+        android:text="Nome"
+        android:id="@+id/nome" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="7dp"
+        android:layout_alignStart="@+id/nome"
+        android:layout_below="@+id/nome"
+        android:paddingLeft="20dp"
+        android:text="Cognome"
+        android:id="@+id/cognome" />
+
+    <TextView
+        android:id="@+id/mail"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/cognome"
+        android:layout_below="@+id/cognome"
+        android:layout_marginTop="7dp"
+        android:paddingLeft="20dp"
+        android:text="Email" />
+
+    <ListView
+        android:id="@+id/listaPren"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_below="@id/profilePic">
+
+    </ListView>
+
+
+
+</RelativeLayout>

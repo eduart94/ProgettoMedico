@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <EditText
+        android:id="@+id/text_tipologia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/text_nome_medico"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Tipoligia"
+        android:inputType="textPersonName"
+        android:textStyle="italic"
+
+        />
+
+    <EditText
+        android:id="@+id/text_luogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/text_nome_medico"
+        android:layout_marginTop="46dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Luogo"
+        android:inputType="textPersonName"
+        android:textStyle="italic" />
+
+    <ListView
+        android:id="@+id/lista_medico"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/text_luogo" />
+
+    <Button
+        android:id="@+id/cerca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="37dp"
+        android:layout_marginTop="22dp"
+        android:text="CERCA" />
+</RelativeLayout>

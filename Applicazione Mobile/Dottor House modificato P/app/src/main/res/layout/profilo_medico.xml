@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/profilo_medico"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/profilePic"
+        android:layout_width="100dp"
+        android:layout_height="135dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#eeeeee" />
+
+    <TextView
+        android:id="@+id/nome"
+        android:layout_width="wrap_content"
+
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/profilePic"
+        android:layout_alignTop="@+id/profilePic"
+        android:layout_marginStart="102dp"
+        android:paddingLeft="20dp"
+        android:text="Nome" />
+
+    <TextView
+        android:id="@+id/cognome"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/nome"
+        android:layout_below="@+id/nome"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="20dp"
+        android:text="Cognome" />
+
+    <TextView
+        android:id="@+id/mail"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/cognome"
+        android:layout_below="@+id/cognome"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="20dp"
+        android:text="Email" />
+
+    <TextView
+        android:id="@+id/telefono"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/mail"
+        android:layout_below="@+id/mail"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="20dp"
+        android:text="Tel" />
+
+    <TextView
+        android:id="@+id/tipologia_medico"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/profilePic"
+        android:layout_below="@+id/profilePic"
+        android:layout_marginTop="7dp"
+        android:text="Tipologia" />
+
+    <TextView
+        android:id="@+id/luogo_medico"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/tipologia_medico"
+        android:layout_below="@+id/tipologia_medico"
+        android:layout_marginTop="7dp"
+        android:text="Citta/Indirizzo"
+        android:layout_marginBottom="20dp"/>
+
+
+</RelativeLayout>
