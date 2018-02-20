@@ -1,0 +1,40 @@
+
+h1{
+    text-align: center;
+    
+}
+h2{
+    text-align: center;
+}
+
+#divcercamedico{
+    text-align: center;
+    background-image: url(https://blog.dottori.it/wp-content/uploads/2015/05/dottorini-top-header-e1432138968199.png);
+    background-repeat: no-repeat;
+    background-position:left;
+    padding-top: 17px;
+    position: relative;
+    border-top-width: 258px;
+    background-color: rgba(0,0,0,.1);
+    }
+ 
+    
+    
+ 
+    
+#forminput{
+    padding-right: 400px;
+    padding-left: 400px;
+}
+.btn{
+    border-right-width: 1px;
+    margin-left: 247px;
+}
+.navbar{
+    background-color:rgb(143, 145, 143);
+   
+}
+#loginnav{
+    margin-left: 1050px;
+}
+
