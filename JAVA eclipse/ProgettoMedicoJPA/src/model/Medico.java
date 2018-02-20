@@ -3,6 +3,9 @@ package model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.Date;
 import java.util.List;
 
@@ -48,6 +51,7 @@ public class Medico implements Serializable {
 
 	//bi-directional many-to-many association to Ambulatorio
 	@ManyToMany
+	@JsonIgnore
 	@JoinTable(
 		name="medico_has_ambulatorio"
 		, joinColumns={
@@ -61,10 +65,12 @@ public class Medico implements Serializable {
 
 	//bi-directional many-to-one association to Prenotazione
 	@OneToMany(mappedBy="medico")
+	@JsonIgnore
 	@JoinColumn(nullable=false)
 	private List<Prenotazione> prenotaziones;
 	
 	@OneToMany(mappedBy="medico")
+	@JsonIgnore
 	@JoinColumn(nullable=false)
 	private List<SlotCalendar> slotCalendar;
 
