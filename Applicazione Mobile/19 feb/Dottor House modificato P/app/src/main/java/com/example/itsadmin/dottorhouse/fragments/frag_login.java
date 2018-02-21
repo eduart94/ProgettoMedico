@@ -33,7 +33,7 @@ public class frag_login extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        final View view = inflater.inflate(R.layout.ricerca, container, false);
+        final View view = inflater.inflate(R.layout.fragment_login, container, false);
 
         TextView textLogin = (TextView)view.findViewById(R.id.testLogin);
         final EditText editTextlogin = (EditText)view.findViewById(R.id.textEmailLogin);
@@ -47,7 +47,7 @@ public class frag_login extends Fragment {
         textregis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((login)parent).cambiaFragment(new frag_registrazione());
+                ((login)getActivity()).cambiaFragment(new frag_registrazione());
             }
         });
 

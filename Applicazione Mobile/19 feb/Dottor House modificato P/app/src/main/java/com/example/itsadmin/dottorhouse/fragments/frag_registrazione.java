@@ -14,21 +14,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.itsadmin.dottorhouse.R;
+import com.example.itsadmin.dottorhouse.login;
 
 public class frag_registrazione extends Fragment {
+    Activity parent;
+
+    public frag_registrazione() {
+        parent = getActivity();
+    }
 
     @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
     final View view = inflater.inflate(R.layout.frag_registrazione, container, false);
-
-        TextView nome = (TextView)view.findViewById(R.id.nome);
-        TextView cognome = (TextView)view.findViewById(R.id.cognome);
-        TextView citta = (TextView)view.findViewById(R.id.citta);
-        TextView dataDiNascita = (TextView)view.findViewById(R.id.dataDiNascita);
-        TextView telefono = (TextView)view.findViewById(R.id.telefono);
-        TextView email = (TextView)view.findViewById(R.id.email);
-        TextView password = (TextView)view.findViewById(R.id.password);
-        TextView confermaPassword = (TextView)view.findViewById(R.id.confermaPassword);
 
         final EditText editNome = (EditText) view.findViewById(R.id.editNome);
         final EditText editCognome = (EditText) view.findViewById(R.id.editCognome);
@@ -45,6 +42,12 @@ public class frag_registrazione extends Fragment {
         Button registrati = (Button)view.findViewById(R.id.buttonRegistrati);
 
         // Fragment transaction fragment login
+        registrati.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((login)getActivity()).cambiaFragment(new frag_login());
+            }
+        });
 
         return view;
 
