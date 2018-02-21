@@ -16,7 +16,11 @@
             ]
         },
         {
+<<<<<<< HEAD
             "outputFile": "C:\\Users\\User\\Documents\\ProgettoMedico\\Applicazione Mobile\\19 feb\\Dottor House modificato P\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-ldltr-v21\\values-ldltr-v21.xml",
+=======
+            "outputFile": "C:\\Users\\User\\Desktop\\PROGETTO MEDICO\\Applicazione Mobile\\19 feb\\Dottor House modificato P\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-ldltr-v21\\values-ldltr-v21.xml",
+>>>>>>> d7a937ea9d9e37645df2aba0f9d3174017032fe6
             "map": [
                 {
                     "source": "C:\\Users\\User\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\319f45e2d8f9279a40bf7b1355422924\\res\\values-ldltr-v21\\values-ldltr-v21.xml",

@@ -3389,6 +3389,7 @@ public final class R {
     public static final int snackbar_text=0x7f0800a8;
     public static final int snap=0x7f0800a9;
     public static final int spacer=0x7f0800aa;
+<<<<<<< HEAD
     public static final int split_action_bar=0x7f0800ab;
     public static final int spread=0x7f0800ac;
     public static final int spread_inside=0x7f0800ad;
@@ -3437,6 +3438,54 @@ public final class R {
     public static final int withText=0x7f0800d8;
     public static final int wrap=0x7f0800d9;
     public static final int wrap_content=0x7f0800da;
+=======
+    public static final int spinner=0x7f0800ab;
+    public static final int split_action_bar=0x7f0800ac;
+    public static final int spread=0x7f0800ad;
+    public static final int spread_inside=0x7f0800ae;
+    public static final int src_atop=0x7f0800af;
+    public static final int src_in=0x7f0800b0;
+    public static final int src_over=0x7f0800b1;
+    public static final int start=0x7f0800b2;
+    public static final int status_bar_latest_event_content=0x7f0800b3;
+    public static final int submenuarrow=0x7f0800b4;
+    public static final int submit_area=0x7f0800b5;
+    public static final int tabMode=0x7f0800b6;
+    public static final int telefono=0x7f0800b7;
+    public static final int telefonoMedico=0x7f0800b8;
+    public static final int testLogin=0x7f0800b9;
+    public static final int text=0x7f0800ba;
+    public static final int text2=0x7f0800bb;
+    public static final int textEmailLogin=0x7f0800bc;
+    public static final int textLoginPass=0x7f0800bd;
+    public static final int textPrenotazioni=0x7f0800be;
+    public static final int textRegis=0x7f0800bf;
+    public static final int textSpacerNoButtons=0x7f0800c0;
+    public static final int textSpacerNoTitle=0x7f0800c1;
+    public static final int text_input_password_toggle=0x7f0800c2;
+    public static final int textinput_counter=0x7f0800c3;
+    public static final int textinput_error=0x7f0800c4;
+    public static final int time=0x7f0800c5;
+    public static final int tipologia=0x7f0800c6;
+    public static final int tipologia_medico=0x7f0800c7;
+    public static final int title=0x7f0800c8;
+    public static final int titleDividerNoCustom=0x7f0800c9;
+    public static final int title_template=0x7f0800ca;
+    public static final int toolbar=0x7f0800cb;
+    public static final int top=0x7f0800cc;
+    public static final int topPanel=0x7f0800cd;
+    public static final int touch_outside=0x7f0800ce;
+    public static final int transition_current_scene=0x7f0800cf;
+    public static final int transition_scene_layoutid_cache=0x7f0800d0;
+    public static final int txtNonP=0x7f0800d1;
+    public static final int up=0x7f0800d2;
+    public static final int useLogo=0x7f0800d3;
+    public static final int view_offset_helper=0x7f0800d4;
+    public static final int visible=0x7f0800d5;
+    public static final int withText=0x7f0800d6;
+    public static final int wrap=0x7f0800d7;
+    public static final int wrap_content=0x7f0800d8;
+>>>>>>> d7a937ea9d9e37645df2aba0f9d3174017032fe6
   }
   public static final class integer {
     public static final int abc_config_activityDefaultDur=0x7f090000;
@@ -3522,6 +3571,7 @@ public final class R {
     public static final int select_dialog_multichoice_material=0x7f0a0045;
     public static final int select_dialog_singlechoice_material=0x7f0a0046;
     public static final int support_simple_spinner_dropdown_item=0x7f0a0047;
+    public static final int tipologia=0x7f0a0048;
   }
   public static final class menu {
     public static final int bottom_nav=0x7f0b0000;

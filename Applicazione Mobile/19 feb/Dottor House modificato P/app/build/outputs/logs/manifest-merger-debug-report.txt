@@ -1,9 +1,16 @@
 -- Merging decision tree log ---
 manifest
+<<<<<<< HEAD
 ADDED from C:\Users\User\Documents\ProgettoMedico\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:2:1-24:12
 INJECTED from C:\Users\User\Documents\ProgettoMedico\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:2:1-24:12
 INJECTED from C:\Users\User\Documents\ProgettoMedico\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:2:1-24:12
 INJECTED from C:\Users\User\Documents\ProgettoMedico\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:2:1-24:12
+=======
+ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:2:1-29:12
+>>>>>>> d7a937ea9d9e37645df2aba0f9d3174017032fe6
 MERGED from [com.android.support:design:25.4.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\design-25.4.0.aar\ce68348b93d574e3b4dd70aafd76fafb\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:appcompat-v7:25.4.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.4.0.aar\319f45e2d8f9279a40bf7b1355422924\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\User\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\bb4b0cc15b8c9fa4acb77101e9a03140\AndroidManifest.xml:2:1-11:12
@@ -17,6 +24,7 @@ MERGED from [com.android.support:support-media-compat:25.4.0] C:\Users\User\.gra
 MERGED from [com.android.support:support-core-utils:25.4.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.4.0.aar\bfbde9bbecc9af9e5608d850cf3bbc0e\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-core-ui:25.4.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.4.0.aar\4ee503a1986000c032ed4eff57c6fef9\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:25.4.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\support-compat-25.4.0.aar\784f9908f835b9fa41af01c7c974050a\AndroidManifest.xml:17:1-31:12
+<<<<<<< HEAD
 INJECTED from C:\Users\User\Documents\ProgettoMedico\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:2:1-24:12
 INJECTED from C:\Users\User\Documents\ProgettoMedico\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:2:1-24:12
 INJECTED from C:\Users\User\Documents\ProgettoMedico\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:2:1-24:12
@@ -36,6 +44,27 @@ INJECTED from C:\Users\User\Documents\ProgettoMedico\Applicazione Mobile\19 feb\
 		ADDED from C:\Users\User\Documents\ProgettoMedico\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:2:11-69
 application
 ADDED from C:\Users\User\Documents\ProgettoMedico\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:5:5-22:19
+=======
+INJECTED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:2:1-29:12
+	package
+		ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:3:5-47
+		INJECTED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:2:1-29:12
+		INJECTED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:2:1-29:12
+		INJECTED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:5:5-27:19
+>>>>>>> d7a937ea9d9e37645df2aba0f9d3174017032fe6
 MERGED from [com.android.support:design:25.4.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\design-25.4.0.aar\ce68348b93d574e3b4dd70aafd76fafb\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:25.4.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\design-25.4.0.aar\ce68348b93d574e3b4dd70aafd76fafb\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:25.4.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.4.0.aar\319f45e2d8f9279a40bf7b1355422924\AndroidManifest.xml:25:5-29:19
@@ -63,6 +92,7 @@ MERGED from [com.android.support:support-core-ui:25.4.0] C:\Users\User\.gradle\c
 MERGED from [com.android.support:support-compat:25.4.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\support-compat-25.4.0.aar\784f9908f835b9fa41af01c7c974050a\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-compat:25.4.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\support-compat-25.4.0.aar\784f9908f835b9fa41af01c7c974050a\AndroidManifest.xml:25:5-29:19
 	android:supportsRtl
+<<<<<<< HEAD
 		ADDED from C:\Users\User\Documents\ProgettoMedico\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:10:9-35
 	android:label
 		ADDED from C:\Users\User\Documents\ProgettoMedico\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:8:9-41
@@ -96,6 +126,51 @@ uses-sdk
 INJECTED from C:\Users\User\Documents\ProgettoMedico\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\User\Documents\ProgettoMedico\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\User\Documents\ProgettoMedico\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml
+=======
+		ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.example.itsadmin.dottorhouse.MainActivity
+ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:12:19-47
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:16:27-74
+activity#com.example.itsadmin.dottorhouse.prfiloMedico
+ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:19:9-59
+	android:name
+		ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:19:19-47
+activity#com.example.itsadmin.dottorhouse.login
+ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:20:9-26:20
+	android:name
+		ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:20:19-40
+intent-filter#android.intent.action.MAIN+android.intent.category.DEFAULT
+ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:21:4-25:29
+category#android.intent.category.DEFAULT
+ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:24:17-76
+	android:name
+		ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml:24:27-73
+uses-sdk
+INJECTED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml
+>>>>>>> d7a937ea9d9e37645df2aba0f9d3174017032fe6
 MERGED from [com.android.support:design:25.4.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\design-25.4.0.aar\ce68348b93d574e3b4dd70aafd76fafb\AndroidManifest.xml:21:5-23:62
 MERGED from [com.android.support:design:25.4.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\design-25.4.0.aar\ce68348b93d574e3b4dd70aafd76fafb\AndroidManifest.xml:21:5-23:62
 MERGED from [com.android.support:appcompat-v7:25.4.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.4.0.aar\319f45e2d8f9279a40bf7b1355422924\AndroidManifest.xml:21:5-23:78
@@ -122,6 +197,7 @@ MERGED from [com.android.support:support-core-ui:25.4.0] C:\Users\User\.gradle\c
 MERGED from [com.android.support:support-core-ui:25.4.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.4.0.aar\4ee503a1986000c032ed4eff57c6fef9\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-compat:25.4.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\support-compat-25.4.0.aar\784f9908f835b9fa41af01c7c974050a\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-compat:25.4.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\support-compat-25.4.0.aar\784f9908f835b9fa41af01c7c974050a\AndroidManifest.xml:21:5-23:58
+<<<<<<< HEAD
 INJECTED from C:\Users\User\Documents\ProgettoMedico\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\User\Documents\ProgettoMedico\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml
 	tools:overrideLibrary
@@ -134,6 +210,20 @@ INJECTED from C:\Users\User\Documents\ProgettoMedico\Applicazione Mobile\19 feb\
 		INJECTED from C:\Users\User\Documents\ProgettoMedico\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml
 		ADDED from C:\Users\User\Documents\ProgettoMedico\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\User\Documents\ProgettoMedico\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml
+=======
+INJECTED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.4.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\design-25.4.0.aar\ce68348b93d574e3b4dd70aafd76fafb\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\User\Desktop\PROGETTO MEDICO\Applicazione Mobile\19 feb\Dottor House modificato P\app\src\main\AndroidManifest.xml
+>>>>>>> d7a937ea9d9e37645df2aba0f9d3174017032fe6
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:25.4.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\design-25.4.0.aar\ce68348b93d574e3b4dd70aafd76fafb\AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:appcompat-v7:25.4.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.4.0.aar\319f45e2d8f9279a40bf7b1355422924\AndroidManifest.xml:26:9-28:38

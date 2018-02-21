@@ -1,50 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/citta"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp" />
 
     <EditText
-        android:id="@+id/text_tipologia"
-        android:layout_width="wrap_content"
+        android:id="@+id/citta"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/text_nome_medico"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Tipoligia"
-        android:inputType="textPersonName"
-        android:textStyle="italic"
+        android:layout_below="@+id/cerca"
+        android:layout_toStartOf="@+id/cerca"
+        android:hint="Città" />
 
-        />
-
-    <EditText
-        android:id="@+id/text_luogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/text_nome_medico"
-        android:layout_marginTop="46dp"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Luogo"
-        android:inputType="textPersonName"
-        android:textStyle="italic" />
 
     <ListView
         android:id="@+id/lista_medico"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/text_luogo" />
+        android:layout_below="@+id/citta" />
 
     <Button
         android:id="@+id/cerca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="37dp"
-        android:layout_marginTop="22dp"
+        android:layout_alignTop="@+id/spinner"
+        android:layout_marginEnd="39dp"
         android:text="CERCA" />
+
+
+
 </RelativeLayout>
