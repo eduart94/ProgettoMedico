@@ -4,6 +4,8 @@ package model;
 import java.io.Serializable;
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import model.Disponibilita;
 
 import java.sql.Time;
@@ -45,10 +47,12 @@ public class Prenotazione implements Serializable {
 	
 	@JoinColumn(nullable=false)
 	@ManyToOne(cascade=CascadeType.ALL)
+	@JsonIgnore
 	private Disponibilita disponibilita;
 	
 	@OneToMany(mappedBy= "prenotazione")
 	@JoinColumn(nullable=false)
+	@JsonIgnore
 	private List<SlotCalendar> slotCalendar;
 
 	public Disponibilita getDisponibilita() {
@@ -81,16 +85,19 @@ public class Prenotazione implements Serializable {
 	//bi-directional many-to-one association to Ambulatorio
 	@ManyToOne
 	@JoinColumn(nullable=false)
+	@JsonIgnore
 	private Ambulatorio ambulatorio;
 
 	//bi-directional many-to-one association to Medico
 	@ManyToOne
 	@JoinColumn(nullable=false)
+	@JsonIgnore
 	private Medico medico;
 
 	//bi-directional many-to-one association to Utente
 	@ManyToOne
 	@JoinColumn(nullable=false)
+	@JsonIgnore
 	private Utente utente;
 
 	public Prenotazione() {

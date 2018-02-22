@@ -16,6 +16,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 /**
  * The persistent class for the ambulatorio database table.
@@ -44,15 +46,18 @@ public class Ambulatorio implements Serializable {
 	//bi-directional many-to-many association to Medico
 	@ManyToMany(mappedBy="ambulatorios", cascade=CascadeType.ALL)
 	@JoinColumn(nullable=false)
+	@JsonIgnore
 	private List<Medico> medicos;
 
 	//bi-directional many-to-one association to Prenotazione
 	@OneToMany(mappedBy="ambulatorio", cascade=CascadeType.ALL)
 	@JoinColumn(nullable=false)
+	@JsonIgnore
 	private List<Prenotazione> prenotaziones;
 	
 	@OneToMany(mappedBy="ambulatorio", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	@JoinColumn(nullable=false)
+	@JsonIgnore
 	private List<Disponibilita> disponibilita;
 	
 

@@ -2,62 +2,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
-<style type="text/css">
-
-body{
-
-background-image: url(img/medicoBG.jpg);
-
-background-repeat: no-repeat;
-background-size: cover;
-}
-.filter:after{
-background: rgba(101, 47, 142, 0.64) !important;
-background: linear-gradient(135deg, rgba(101, 47, 0, 0.88) 0%, rgba(125, 46, 185, 0.45) 100%)!important;
-background: -moz-linear-gradient(135deg, rgba(101, 47, 0, 0.88) 0%, rgba(125, 46, 185, 0.45) 100%) !important;
-background: -webkit-linear-grad !important;
-}
-.text-success {
-  color: black;
-}
-
-.btn-danger {
-
-
-  color:black;
-  background-color: #ccc;
-  border-color: #ccc;
-}
-.form-control{
-    background-color: rgba(255,255,255,0.5);
-    }
-.btn-danger:hover{
-
-  color: #fff;
-  background-color: #337ab7;
-  border-color: #337ab7;
-
-}
-
-.btn-success {
-  color:black;
-  background-color: #ccc;
-  border-color: #ccc;
-}
-.btn-success:hover{
-  color: #fff;
-  background-color: #337ab7;
-  border-color: #337ab7;
-
-}
-</style>
-
-
-
+<link rel="stylesheet" href="css/login.css" >
 </head>
 <body class="filter">
 
@@ -73,13 +18,9 @@ background: -webkit-linear-grad !important;
 
 <ul class="nav nav-pills" >
 
-
-
   <li class="" style="width:50%"><a class="btn btn-lg btn-default" data-toggle="tab" href="#home">Medico</a></li>
  
   <li class=" " style="width:48%"><a class=" btn btn-lg btn-default" data-toggle="tab" href="#menu1">Paziente</a></li>
-
-
 
 </ul>
 
@@ -89,52 +30,49 @@ background: -webkit-linear-grad !important;
 <div class="tab-content">
   <div id="home" class="tab-pane fade in active">
     
-<form action="#" class="frmLogin">
+<form action="#" id="frmLoginMedico">
 
 
 <div class="form-group">
   <label for="email">Email:</label>
-  <input type="email" class="form-control" id="emailMedico">
+  <input type="email" class="form-control" id="emailMedico" name="email">
 </div>
 
 <div class="form-group">
   <label for="pwd">Password:</label>
-  <input type="password" class="form-control" id="pwdDoc">
+  <input type="password" class="form-control" id="pwdDoc" name="password">
 </div>
 
 </form>
 <br>
-<a href="#" class="pull-right btn btn-block btn-danger" class="btnLogin"> Login  </a>
+<a href="#" class="pull-right btn btn-block btn-danger" id="btnLoginMedico"> Login  </a>
 
 <br>
 
-<button type="submit" class=" pull-right btn-link" ><a href="file:///C:/Users/User/Desktop/appMedica/registerPage.html"><strong>Registrati</strong></a></button>
-
-
-
+<button type="submit" class=" pull-right btn-link" ><a href="registerPage.html"><strong>Registrati</strong></a></button>
 
   </div>
 
   <div id="menu1" class="tab-pane fade">
 
-<form action="#" class="frmLogin">
+<form action="#" id="frmLoginPaziente">
 
 <div class="form-group">
   <label for="email">Email:</label>
-  <input type="email" class="form-control" id="emailPaziente">
+  <input type="email" class="form-control" id="emailPaziente" name="email">
 </div>
 
 <div class="form-group">
   <label for="pwd">Password:</label>
-  <input type="password" class="form-control" id="pwdPz">
+  <input type="password" class="form-control" id="pwdPz" name="password">
 </div>
 
 </form>
 
 <br>
-<a href="#" class="pull-right btn btn-block btn-success" class="btnLogin">Login </a>
+<a href="#" class="pull-right btn btn-block btn-success" id="btnLoginPaziente">Login </a>
 <br>
-<button type="submit" class=" pull-right btn-link"><a href="file:///C:/Users/User/Desktop/appMedica/registerPage.html"><strong>Registrati</strong></a></button>
+<button type="submit" class=" pull-right btn-link"><a href="registerPage.html"><strong>Registrati</strong></a></button>
 <div id="pnlErrLogin" class="alert alert-danger"
 		 	style="display: none" role="alert">
 		  <strong>Problemi di accesso!</strong> L'accesso non è riuscito.
@@ -144,5 +82,8 @@ background: -webkit-linear-grad !important;
 </div>
 </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/account.js"></script>
 </body>
 </html> 
