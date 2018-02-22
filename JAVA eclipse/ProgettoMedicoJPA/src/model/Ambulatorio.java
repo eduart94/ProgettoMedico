@@ -42,12 +42,12 @@ public class Ambulatorio implements Serializable {
 	private Citta citta;
 
 	//bi-directional many-to-many association to Medico
-	@ManyToMany(mappedBy="ambulatorios")
+	@ManyToMany(mappedBy="ambulatorios", cascade=CascadeType.ALL)
 	@JoinColumn(nullable=false)
 	private List<Medico> medicos;
 
 	//bi-directional many-to-one association to Prenotazione
-	@OneToMany(mappedBy="ambulatorio")
+	@OneToMany(mappedBy="ambulatorio", cascade=CascadeType.ALL)
 	@JoinColumn(nullable=false)
 	private List<Prenotazione> prenotaziones;
 	

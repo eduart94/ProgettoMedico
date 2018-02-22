@@ -11,20 +11,21 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import model.Citta;
+import model.Prenotazione;
+import model.Utente;
 import programma.JPAUtil;
 
 /**
- * Servlet implementation class elencoCitta
+ * Servlet implementation class PrenotazioniUtente
  */
-@WebServlet("/elencoCitta")
-public class ElencoCittaServlet extends HttpServlet {
+@WebServlet("/PrenotazioniUtente")
+public class PrenotazioniUtenteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ElencoCittaServlet() {
+    public PrenotazioniUtenteServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,18 +34,24 @@ public class ElencoCittaServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		List<Citta> elenco = JPAUtil.getInstance().getEm()
-				.createQuery("select c from Citta c", Citta.class)
+	
+		List<Prenotazione> elenco = JPAUtil.getInstance().getEm()
+				.createQuery("select p from Prenotazione p where p.utente = ?", Prenotazione.class)
+				.setParameter(1, request.getParameter("utente"))
 				.getResultList();
 		
 		ObjectMapper mapper = new ObjectMapper();
 		String json = mapper.writeValueAsString(elenco);
-		response.setContentType("application/json");
+		response.setContentType("appplication/json");
 		response.getWriter().append(json);
-				
 	}
 
-	
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
 
 }

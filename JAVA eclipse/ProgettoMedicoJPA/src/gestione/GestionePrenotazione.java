@@ -12,7 +12,7 @@ public class GestionePrenotazione {
 	
 	public List<Prenotazione> elencoPrenotazioni(Utente utente){
 		
-		EntityManager em = JPAUtil.getEm();
+		EntityManager em = JPAUtil.getInstance().getEm();
 		return em.createQuery("select p from Prenotazione p where p.utente = :utente",Prenotazione.class)
 				.setParameter("utente", utente)
 				.getResultList();
@@ -23,9 +23,9 @@ public class GestionePrenotazione {
 	}
 	
 	public boolean cancellaPrenotazione(Utente utente, Prenotazione prenotazione) {
-		EntityManager em = JPAUtil.getEm();
-		Prenotazione p = em.find(Prenotazione.class, prenotazione.getIdPrenotazione());
-		if(utente.getIdUtente()==prenotazione.getUtente().getIdUtente()) {
+		EntityManager em = JPAUtil.getInstance().getEm();
+		Prenotazione p = em.find(Prenotazione.class, prenotazione.getId());
+		if(utente.getEmail()==prenotazione.getUtente().getEmail()) {
 			em.getTransaction().begin();
 			em.remove(p);
 			em.getTransaction().commit();

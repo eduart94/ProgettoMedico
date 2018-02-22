@@ -1,5 +1,7 @@
 package gestione;
 
+import java.util.Date;
+
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.NonUniqueResultException;
@@ -10,7 +12,7 @@ import programma.JPAUtil;
 
 public class GestioneAccount {
 
-	public boolean login(String mailOrUsername, String passwordUtente) {
+/*	public boolean login(String mailOrUsername, String passwordUtente) {
 		EntityManager em = JPAUtil.getEm();
 		TypedQuery<Utente> q = em.createQuery
 				("select u from Utente u where u.emailUtente=:"
@@ -93,4 +95,98 @@ public class GestioneAccount {
 		}
 		return utente;
 	}
+	// La versione sopra andava bene, ma adesso ne vediamo una piu completa.   */
+	
+	public EsitoOperazione login(String email, String password) {
+		EsitoOperazione _return = new EsitoOperazione();
+		try {
+			EntityManager em = JPAUtil.getInstance().getEm();
+			Utente u = em.find(Utente.class, email);
+			boolean ok = u != null && u.getPassword().equals(password);
+			_return.setSuccess(ok);
+			_return.setMessaggio(!ok ? "Accesso fallito" : "Accesso effettuato");
+			if(ok) {
+				_return.setOggettoRisultante(u);
+			}else {
+				_return.setOggettoRisultante(null);
+			}
+		} catch(Exception ex){
+			_return.setSuccess(false);
+			_return.setMessaggio("Qualcosa è andato male ->" + ex.getMessage());
+			_return.setOggettoRisultante(ex);
+		}
+		return _return;
+	}
+	
+	public EsitoOperazione registraUtente(String email, String password, 
+			String nome, String cognome, 
+			String codiceFiscale, Date dataNascita,
+			String numeroTelefono, boolean attivo) {
+		EsitoOperazione _return = new EsitoOperazione();
+		Utente u = new Utente();
+		u.setEmail(email);
+		u.setPassword(password);
+		u.setNome(nome);
+		u.setCognome(cognome);
+		u.setDataNascita(dataNascita);
+		u.setNumeroTelefono(numeroTelefono);
+		u.setCodiceFiscale(codiceFiscale);
+		u.setAttivo(attivo);
+		
+		_return = registraUtente(u);
+		return _return;
+	}
+	
+	public EsitoOperazione registraUtente(Utente nuovoUtente) {
+		EsitoOperazione _return = new EsitoOperazione();
+		try {
+			EntityManager em = JPAUtil.getInstance().getEm();
+			Utente u = em.find(Utente.class, nuovoUtente.getEmail());
+			if(u != null) {
+				_return.setSuccess(false);
+				_return.setMessaggio("L'utente esiste già");
+				_return.setOggettoRisultante(u);
+			}else {
+				em.getTransaction().begin();
+				em.persist(nuovoUtente);
+				em.getTransaction().commit();
+				_return.setSuccess(true);
+				_return.setMessaggio("Utente creato con successo");
+				_return.setOggettoRisultante(nuovoUtente);
+			}
+		}catch(Exception ex) {
+			_return.setSuccess(false);
+			_return.setMessaggio("Qualcosa è andato storto ->" + ex.getMessage());
+		    _return.setOggettoRisultante(ex);
+		}
+		return _return;
+	}
+	
+	public EsitoOperazione rimuoviUtente(String email) {
+		EsitoOperazione _return = new EsitoOperazione();
+		try {
+			EntityManager em = JPAUtil.getInstance().getEm();
+			Utente u = em.find(Utente.class, email);
+			if(u != null) {
+				em.getTransaction().begin();
+				em.remove(u);
+				em.getTransaction().commit();
+				_return.setSuccess(true);
+				_return.setMessaggio("Utente rimosso correttamente");
+				_return.setOggettoRisultante(null);
+			}else {
+				_return.setSuccess(false);
+				_return.setMessaggio("utente non esiste");
+				_return.setOggettoRisultante(null);
+			}
+		}catch(Exception ex) {
+			_return.setSuccess(false);
+			_return.setMessaggio("Qualcosa è andato storto -> " + ex.getMessage());
+			_return.setOggettoRisultante(ex);
+		}
+		return _return;
+		
+	}
 }
+	
+	

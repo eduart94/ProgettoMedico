@@ -22,7 +22,7 @@ public class Prenotazione implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int idPrenotazione;
+	private int id;
 	
 	@Column(nullable=false)
 	private int recensione;
@@ -71,17 +71,12 @@ public class Prenotazione implements Serializable {
 		return serialVersionUID;
 	}
 
-	@Column(name="nome_ambulatorio", nullable = false)
-	private String nomeAmbulatorio;
-
-	@Column(name="nome_dottore", nullable = false)
-	private String nomeDottore;
+	
     
 	@Column(nullable = false)
 	private Time ora;
 
-	@Column(name="tipologia_prenotazione", nullable = false)
-	private String tipologiaPrenotazione;
+	
 
 	//bi-directional many-to-one association to Ambulatorio
 	@ManyToOne
@@ -101,12 +96,12 @@ public class Prenotazione implements Serializable {
 	public Prenotazione() {
 	}
 
-	public int getIdPrenotazione() {
-		return this.idPrenotazione;
+	public int getId() {
+		return this.id;
 	}
 
-	public void setIdPrenotazione(int idPrenotazione) {
-		this.idPrenotazione = idPrenotazione;
+	public void setIdPrenotazione(int id) {
+		this.id = id;
 	}
 
 	public Date getData() {
@@ -125,21 +120,7 @@ public class Prenotazione implements Serializable {
 		this.motivazione = motivazione;
 	}
 
-	public String getNomeAmbulatorio() {
-		return this.nomeAmbulatorio;
-	}
-
-	public void setNomeAmbulatorio(String nomeAmbulatorio) {
-		this.nomeAmbulatorio = nomeAmbulatorio;
-	}
-
-	public String getNomeDottore() {
-		return this.nomeDottore;
-	}
-
-	public void setNomeDottore(String nomeDottore) {
-		this.nomeDottore = nomeDottore;
-	}
+	
 
 	public Time getOra() {
 		return this.ora;
@@ -149,13 +130,7 @@ public class Prenotazione implements Serializable {
 		this.ora = ora;
 	}
 
-	public String getTipologiaPrenotazione() {
-		return this.tipologiaPrenotazione;
-	}
 
-	public void setTipologiaPrenotazione(String tipologiaPrenotazione) {
-		this.tipologiaPrenotazione = tipologiaPrenotazione;
-	}
 
 	public Ambulatorio getAmbulatorio() {
 		return this.ambulatorio;
