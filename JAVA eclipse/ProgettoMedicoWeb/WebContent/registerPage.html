@@ -1,47 +1,42 @@
-<title> Registrazione</title>
+<title>Registrazione</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <style type="text/css">
-
-body{
-background-image: url(img/medicoBG.jpg);
-background-repeat: no-repeat;
-background-size: cover;
+body {
+	background-image: url(img/medicoBG.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
+
 .text-success {
-  color: black;
+	color: black;
 }
 
 .btn-danger {
-
-
-  color:black;
-  background-color: #ccc;
-  border-color: #ccc;
+	color: black;
+	background-color: #ccc;
+	border-color: #ccc;
 }
-.btn-danger:hover{
 
-  color: #fff;
-  background-color: #337ab7;
-  border-color: #337ab7;
-
+.btn-danger:hover {
+	color: #fff;
+	background-color: #337ab7;
+	border-color: #337ab7;
 }
 
 .btn-success {
-  color:black;
-  background-color: #ccc;
-  border-color: #ccc;
+	color: black;
+	background-color: #ccc;
+	border-color: #ccc;
 }
-.btn-success:hover{
-  color: #fff;
-  background-color: #337ab7;
-  border-color: #337ab7;
 
+.btn-success:hover {
+	color: #fff;
+	background-color: #337ab7;
+	border-color: #337ab7;
 }
 </style>
 
@@ -50,129 +45,139 @@ background-size: cover;
 </head>
 <body>
 
-<div class="container" style="margin-top: 5%;">
-<div class="row">
-  <div class="col-sm-4"> </div>
-<div class="col-md-4">
+	<div class="container" style="margin-top: 5%;">
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-md-4">
 
-<h1 class="text-center text-success"> Registrazione</h1>
-<br/>
+				<h1 class="text-center text-success">Registrazione</h1>
+				<br />
 
-<div class="col-sm-12">
+				<div class="col-sm-12">
 
-<ul class="nav nav-pills" >
+					<ul class="nav nav-pills">
 
+						<li class="" style="width: 50%"><a
+							class="btn btn-lg btn-default" data-toggle="tab" href="#tabMedico">Medico</a></li>
 
+						<li class=" " style="width: 48%"><a
+							class=" btn btn-lg btn-default" data-toggle="tab" href="#tabPaziente">Paziente</a></li>
 
-  <li class="" style="width:50%"><a class="btn btn-lg btn-default" data-toggle="tab" href="#home">Medico</a></li>
- 
-  <li class=" " style="width:48%"><a class=" btn btn-lg btn-default" data-toggle="tab" href="#menu1">Paziente</a></li>
+					</ul>
 
+					<br />
 
+					<div class="tab-content">
+						<div id="tabMedico" class="tab-pane fade in active">
 
-</ul>
+							<form action="#" id="frmRegistrazioneMedico">
 
-<br/>
+								<div class="form-group">
+									<label for="Name">Nome</label> <input type="text"
+										class="form-control" id="nomeDoc" name="nome">
+								</div>
 
-
-<div class="tab-content">
-  <div id="home" class="tab-pane fade in active">
-    
-<form action="#">
-
-<div class="form-group">
-  <label for="Name">Nome</label>
-  <input type="text" class="form-control" id="nomeDoc">
-</div>
-
-<div class="form-group">
-  <label for="Cognome">Cognome</label>
-  <input type="text" class="form-control" id="cognomeDoc">
-</div>
+								<div class="form-group">
+									<label for="Cognome">Cognome</label> <input type="text"
+										class="form-control" id="cognomeDoc" name="cognome">
+								</div>
 
 
 
-<div class="form-group">
-  <label for="email">Email:</label>
-  <input type="email" class="form-control" id="email">
-</div>
+								<div class="form-group">
+									<label for="email">Email:</label> <input type="email"
+										class="form-control" id="emailDoc" name="email">
+								</div>
 
-<div class="form-group">
-    <label for="numeroTelefono">Numero di telefono</label>
-    <input type="text" class="form-control" id="numeroTelefono">
-  </div>
+								<div class="form-group">
+									<label for="numeroTelefono">Numero di telefono</label> <input
+										type="text" class="form-control" id="numeroTelefonoDoc"
+										name="telefono">
+								</div>
 
-<div class="form-group">
-  <label for="pwd">Password:</label>
-  <input type="password" class="form-control" id="pwdDoc">
-</div>
+								<div class="form-group">
+									<label for="pwd">Password:</label> <input type="password"
+										class="form-control" id="pwdDoc" name="password">
+								</div>
 
-<div class="form-group">
-  <label for="pwd">Conferma Password:</label>
-  <input type="password" class="form-control" id="pwdDoc">
-</div>
-</form>
-<br>
-<a href="#" class="pull-right btn btn-block btn-danger" > Registarati  </a>
+								<div class="form-group">
+									<label for="pwd">Conferma Password:</label> <input
+										type="password" class="form-control" id="pwdConfDoc"
+										name="confermapassword">
+								</div>
+							</form>
+							<br> <a href="#" class="pull-right btn btn-block btn-danger"
+								id="btnRegistrazioneMedico"> Registarati </a> <br>
 
-<br>
+							<button type="submit" class=" pull-right btn-link">
+								<a href="Login.html#"><strong>Login</strong></a>
+							</button>
+						</div>
 
-<button type="submit" class=" pull-right btn-link" ><a href="Login.html#"><strong>Login</strong></a></button>
+						<div id="tabPaziente" class="tab-pane fade">
 
+							<form action="#" id="frmRegistrazionePaziente">
 
+								<div class="form-group">
+									<label for="NamePz">Nome</label> <input type="text"
+										class="form-control" id="namePz" name="nome">
+								</div>
 
+								<div class="form-group">
+									<label for="cognomePz">Cognome</label> <input type="text"
+										class="form-control" id="cognomePz" name="cognome">
+								</div>
 
-  </div>
+								<div class="form-group">
+									<label for="dataNascita">Data di nascita</label> <input
+										type="text" class="form-control" id="dataNascitaPz"
+										name="dataNascita">
+								</div>
 
-  <div id="menu1" class="tab-pane fade">
+								<div class="form-group">
+									<label for="email">Email:</label> <input type="email"
+										class="form-control" id="emailPz" name="email">
+								</div>
 
-<form action="#">
+								<div class="form-group">
+									<label for="numeroTelefono">Numero di telefono</label> <input
+										type="text" class="form-control" id="numeroTelefonoPz"
+										name="telefono">
+								</div>
 
-<div class="form-group">
-  <label for="NamePz">Nome</label>
-  <input type="text" class="form-control" id="namePz">
-</div>
+								<div class="form-group">
+									<label for="pwd">Password:</label> <input type="password"
+										class="form-control" id="pwdPz" name="password">
+								</div>
 
-<div class="form-group">
-  <label for="cognomePz">Cognome</label>
-  <input type="text" class="form-control" id="cognomePz">
-</div>
+								<div class="form-group">
+									<label for="pwd">Conferma Password:</label> <input
+										type="password" class="form-control" id="pwdConfPz"
+										name="confermapassword">
+								</div>
+							</form>
 
-<div class="form-group">
-    <label for="dataNascita">Data di nascita</label>
-    <input type="text" class="form-control" id="dataNascita">
-  </div>
+							<br> <a href="#"
+								class="pull-right btn btn-block btn-success"
+								id="btnRegistrazionePaziente">Registrati </a> <br>
+							<button type="submit" class=" pull-right btn-link">
+								<a href="Login.html"><strong>Login</strong></a>
+							</button>
+							<div id="pnlErrRegistrazione" class="alert alert-danger"
+								style="display: none" role="alert">
+								<strong>Problemi con la registrazione!</strong> La registrazione
+								non è riuscita.
+							</div>
 
-<div class="form-group">
-  <label for="email">Email:</label>
-  <input type="email" class="form-control" id="email">
-</div>
-
-<div class="form-group">
-    <label for="numeroTelefono">Numero di telefono</label>
-    <input type="text" class="form-control" id="numeroTelefono">
-  </div>
-
-<div class="form-group">
-  <label for="pwd">Password:</label>
-  <input type="password" class="form-control" id="pwdPz">
-</div>
-
-<div class="form-group">
-  <label for="pwd">Conferma Password:</label>
-  <input type="password" class="form-control" id="pwdPz">
-</div>
-</form>
-
-<br>
-<a href="#" class="pull-right btn btn-block btn-success" >Registrati </a>
-<br>
-<button type="submit" class=" pull-right btn-link"><a href="Login.html"><strong>Login</strong></a></button>
-
-  </div>
- </div>
-</div>
-</div>
-</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/registrazione.js"></script>	
 </body>
-</html> 
+</html>
