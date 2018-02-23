@@ -10,35 +10,28 @@ import javax.servlet.http.HttpServletResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import gestione.EsitoOperazione;
-import gestione.GestioneAccountUtente;
+import gestione.GestioneAccountMedico;
 
 /**
- * Servlet implementation class LoginServlet
+ * Servlet implementation class LoginServletMedico
  */
-@WebServlet("/login")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/loginMedico")
+public class LoginServletMedico extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
-	private GestioneAccountUtente ga = new GestioneAccountUtente();
-	private ObjectMapper mapper = new ObjectMapper();
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public LoginServlet() {
+    private GestioneAccountMedico gam = new GestioneAccountMedico();
+    ObjectMapper mapper = new ObjectMapper();
+    
+    public LoginServletMedico() {
         super();
-        // TODO Auto-generated constructor stub
+      
     }
-
-
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
-		EsitoOperazione eo = ga.login(email, password);
+		EsitoOperazione eo = gam.login(email, password);
 		
 		String json = mapper.writeValueAsString(eo);
 		response.setContentType("application/json");

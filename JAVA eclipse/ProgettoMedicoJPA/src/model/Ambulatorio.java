@@ -34,11 +34,7 @@ public class Ambulatorio implements Serializable {
 	private int idAmbulatorio;
     
 	@Column(nullable=false)
-	private double longitudine;
-	
-	
-	@Column(nullable=false)
-	private double latitudine;
+	private String indirizzo;
 	
 	@ManyToOne(cascade=CascadeType.ALL)
 	@JoinColumn(nullable=false)
@@ -66,28 +62,15 @@ public class Ambulatorio implements Serializable {
 	
 	public Ambulatorio() {
 	}
-	public double getLongitudine() {
-		return longitudine;
+	public String getIndirizzo() {
+		return indirizzo;
 	}
 
 
 
-	public void setLongitudine(double longitudine) {
-		this.longitudine = longitudine;
+	public void setIndirizzo(String indirizzo) {
+		this.indirizzo = indirizzo;
 	}
-
-
-
-	public double getLatitudine() {
-		return latitudine;
-	}
-
-
-
-	public void setLatitudine(double latitudine) {
-		this.latitudine = latitudine;
-	}
-
 	
 	
 	public Citta getCitta() {

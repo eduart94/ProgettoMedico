@@ -10,14 +10,15 @@ $('#btnLoginMedico').click(function(e){
 
 function doLogin(formData, isMedico) {
 	$.ajax({
-		url: 'login',
+		url: (isMedico ? 'loginMedico' : 'login'),
 		method: 'post',
 		data: formData
 	})
 	.done(function(esito){
 		console.log(esito);
 		if(esito.success){
-			localStorage.setItem('utente', JSON.stringify(esito.oggettoRisultante));
+			localStorage.setItem('soggetto', JSON.stringify(esito.oggettoRisultante));
+			localStorage.setItem('isMedico', JSON.stringify(isMedico));
 			if (isMedico) {
 				location.href= 'profilepage.html';
 			} else {

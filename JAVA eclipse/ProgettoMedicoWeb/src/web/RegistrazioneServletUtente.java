@@ -21,7 +21,7 @@ import model.Utente;
  * Servlet implementation class RegistrazioneServlet
  */
 @WebServlet("/registrazione")
-public class RegistrazioneServlet extends HttpServlet {
+public class RegistrazioneServletUtente extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	private GestioneAccountUtente ga = new GestioneAccountUtente();
@@ -30,7 +30,7 @@ public class RegistrazioneServlet extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public RegistrazioneServlet() {
+    public RegistrazioneServletUtente() {
         super();
         // TODO Auto-generated constructor stub
     }
