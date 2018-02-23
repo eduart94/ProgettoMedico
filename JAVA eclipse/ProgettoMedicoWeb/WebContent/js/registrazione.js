@@ -4,8 +4,14 @@ $('#btnRegistrazionePaziente').click(function(e){
 });
 
 $('#btnRegistrazioneMedico').click(function(e){
-	e.preventDefault();
-	doRegistrazione($('#frmRegistrazioneMedico').serialize(), true);
+	$('#frmRegistrazioneMedico').submit(function(e) {
+		e.preventDefault();
+		if ($('#pwdDoc').val() != $('#pwdConfDoc').val()) {
+			$('#lblPwdNoMatch').show('fast').delay(2000).hide('fast');
+		} else {
+			doRegistrazione($('#frmRegistrazioneMedico').serialize(), true);
+		}
+	});
 });
 
 function doRegistrazione(formData, isMedico) {

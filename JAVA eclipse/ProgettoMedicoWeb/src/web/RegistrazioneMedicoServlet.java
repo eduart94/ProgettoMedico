@@ -41,7 +41,7 @@ public class RegistrazioneMedicoServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("application/json");
 		try {
-			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 			Medico m = new Medico();
 			m.setNome(request.getParameter("nome"));
 			m.setCognome(request.getParameter("cognome"));

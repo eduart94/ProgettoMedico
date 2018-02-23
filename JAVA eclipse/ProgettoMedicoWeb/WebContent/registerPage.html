@@ -1,8 +1,7 @@
 <title>Registrazione</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	
 <link rel="stylesheet" href="css/registrazione.css">
 
@@ -33,53 +32,50 @@
 
 					<div class="tab-content">
 						<div id="tabMedico" class="tab-pane fade in active">
+							<form id="frmRegistrazioneMedico">
 
-							<form action="#" id="frmRegistrazioneMedico">
-
+							    <div class="form-group">
+							      <label for="nomeDoc">Nome</label>
+								  <input type="text" class="form-control" id="nomeDoc" name="nome" placeholder="Inserire un nome" required>
+							    </div>
 								<div class="form-group">
-									<label for="Name">Nome</label> <input type="text"
-										class="form-control" id="nomeDoc" name="nome">
+									<label for="cognomeDoc">Cognome</label>
+									<input type="text" class="form-control" id="cognomeDoc" name="cognome" placeholder="Inserire un cognome" required>
+								</div>		
+								
+								<div class="form-group">
+									<label for="emailDoc">Email:</label>
+									<input type="email" class="form-control" id="emailDoc" name="email" placeholder="Inserire un'emal valida" required>
 								</div>
 
-								<div class="form-group">
-									<label for="Cognome">Cognome</label> <input type="text"
-										class="form-control" id="cognomeDoc" name="cognome">
-								</div>
-
-								<div class="form-group">
-									<label for="email">Email:</label> <input type="email"
-										class="form-control" id="emailDoc" name="email">
+							  <div class="form-group">
+									<label for="tipologiaDoc">Tipologia</label>
+									<input type="text" class="form-control" id="tipologiaDoc" name="tipologia" placeholder="Indicare una specializzazione" required>
 								</div>
 								
 								<div class="form-group">
-									<label for="tipologia">Tipologia</label> <input type="text"
-										class="form-control" id="tipologiaDoc" name="tipologia">
+									<label for="nascitaDoc">Data di nascita</label>
+									<input type="date" class="form-control" id="nascitaDoc" name="dataNascita" placeholder="Indicare la data di nascita" required>
 								</div>
 								
 								<div class="form-group">
-									<label for="dataNascita">Data di nascita</label> <input type="text"
-										class="form-control" id="nascitaDoc" name="dataNascita">
+									<label for="numeroTelefonoDoc">Numero di telefono</label>
+									<input type="text" class="form-control" id="numeroTelefonoDoc" name="telefono" placeholder="Indicare un numero di telefono" required>
 								</div>
 
 								<div class="form-group">
-									<label for="numeroTelefono">Numero di telefono</label> <input
-										type="text" class="form-control" id="numeroTelefonoDoc"
-										name="telefono">
+									<label for="pwdDoc">Password:</label>
+									<input type="password" class="form-control" id="pwdDoc" name="password" placeholder="Specificare una password" required>
 								</div>
-
+								
 								<div class="form-group">
-									<label for="pwd">Password:</label> <input type="password"
-										class="form-control" id="pwdDoc" name="password">
-								</div>
-
-								<div class="form-group">
-									<label for="pwd">Conferma Password:</label> <input
-										type="password" class="form-control" id="pwdConfDoc"
-										name="confermapassword">
-								</div>
+									<label for="pwdConfDoc">Conferma Password:</label> 
+									<input type="password" class="form-control" id="pwdConfDoc" name="confermapassword" placeholder="Digita nuovamente la password" required>
+									<div id="lblPwdNoMatch" class="alert alert-warning" role="alert" style="display:none;">Le password digitate non coincidono!</div>
+								</div>								
+							  	<button type="submit" class="pull-right btn btn-block btn-danger" id="btnRegistrazioneMedico"> Registrati </button>
 							</form>
-							<br> <a href="#" class="pull-right btn btn-block btn-danger"
-								id="btnRegistrazioneMedico"> Registrati </a> <br>
+
 
 							<button type="submit" class=" pull-right btn-link">
 								<a href="Login.html#"><strong>Login</strong></a>
@@ -88,7 +84,7 @@
 
 						<div id="tabPaziente" class="tab-pane fade">
 
-							<form action="#" id="frmRegistrazionePaziente">
+							<form id="frmRegistrazionePaziente">
 
 								<div class="form-group">
 									<label for="NamePz">Nome</label> <input type="text"
@@ -146,10 +142,10 @@
 				</div>
 			</div>
 		</div>
-	<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</div>
+		
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="js/registrazione.js"></script>	
 </body>
 </html>
