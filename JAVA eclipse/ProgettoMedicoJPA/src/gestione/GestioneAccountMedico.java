@@ -44,7 +44,7 @@ public class GestioneAccountMedico {
 		m.setCognome(cognome);
 		m.setDataNascita(dataNascita);
 		m.setNumeroTelefono(numeroTelefono);
-		m.setCodiceFiscale(codiceFiscale);
+	
 		m.setTipologia(tipologia);
 		
 		_return = registraMedico(m);

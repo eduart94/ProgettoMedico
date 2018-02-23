@@ -32,8 +32,7 @@ public class Medico implements Serializable {
     @Column(name="cognome", nullable = false)
 	private String cognome;
 	
-	@Column(name="codice_fiscale", nullable = false)
-	private String codiceFiscale;
+
 
 	@Temporal(TemporalType.DATE)
 	@Column(name="data_nascita")
@@ -78,13 +77,7 @@ public class Medico implements Serializable {
 		this.email = email;
 	}
 
-	public String getCodiceFiscale() {
-		return codiceFiscale;
-	}
-
-	public void setCodiceFiscale(String codiceFiscale) {
-		this.codiceFiscale = codiceFiscale;
-	}
+	
 
 	public String getCognome() {
 		return cognome;

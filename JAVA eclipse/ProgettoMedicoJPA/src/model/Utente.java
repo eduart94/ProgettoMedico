@@ -29,9 +29,7 @@ public class Utente implements Serializable {
 	private String cognome;
 
 	
-	@Column(name="codice_fiscale", nullable = false)
-	private String codiceFiscale;
-
+	
 	@Temporal(TemporalType.DATE)
 	@Column(name="data_nascita")
 	private Date dataNascita;
@@ -39,7 +37,7 @@ public class Utente implements Serializable {
 	@Column(name="numero_telefono")
 	private String numeroTelefono;
 	
-	private boolean attivo;
+	
 
 	//bi-directional many-to-one association to Prenotazione
 	@OneToMany(mappedBy="utente")
@@ -48,13 +46,7 @@ public class Utente implements Serializable {
 	
 	
 
-	public boolean isAttivo() {
-		return attivo;
-	}
-
-	public void setAttivo(boolean attivo) {
-		this.attivo = attivo;
-	}
+	
 	public String getEmail() {
 		return email;
 	}
@@ -89,13 +81,6 @@ public class Utente implements Serializable {
 		this.cognome = cognome;
 	}
 
-	public String getCodiceFiscale() {
-		return codiceFiscale;
-	}
-
-	public void setCodiceFiscale(String codiceFiscale) {
-		this.codiceFiscale = codiceFiscale;
-	}
 
 	public Date getDataNascita() {
 		return dataNascita;

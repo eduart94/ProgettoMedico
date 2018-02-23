@@ -53,7 +53,7 @@ public class RegistrazioneServlet extends HttpServlet {
 			u.setEmail(request.getParameter("email"));
 			u.setNumeroTelefono(request.getParameter("telefono"));
 			u.setPassword(request.getParameter("password"));
-			u.setCodiceFiscale(u.getNome() + u.getCognome());
+			
 			
 			EsitoOperazione eo = ga.registraUtente(u);
 			

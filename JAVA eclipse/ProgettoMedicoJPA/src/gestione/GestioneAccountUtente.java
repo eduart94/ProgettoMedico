@@ -130,8 +130,8 @@ public class GestioneAccountUtente {
 		u.setCognome(cognome);
 		u.setDataNascita(dataNascita);
 		u.setNumeroTelefono(numeroTelefono);
-		u.setCodiceFiscale(codiceFiscale);
-		u.setAttivo(attivo);
+		
+	
 		
 		_return = registraUtente(u);
 		return _return;
