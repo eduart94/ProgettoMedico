@@ -120,8 +120,8 @@ public class GestioneAccountUtente {
 	
 	public EsitoOperazione registraUtente(String email, String password, 
 			String nome, String cognome, 
-			String codiceFiscale, Date dataNascita,
-			String numeroTelefono, boolean attivo) {
+		    Date dataNascita,
+			String numeroTelefono) {
 		EsitoOperazione _return = new EsitoOperazione();
 		Utente u = new Utente();
 		u.setEmail(email);

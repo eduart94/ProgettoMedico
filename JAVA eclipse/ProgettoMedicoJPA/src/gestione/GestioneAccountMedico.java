@@ -34,7 +34,7 @@ public class GestioneAccountMedico {
 	
 	public EsitoOperazione registraMedico(String email, String password, 
 			String nome, String cognome, 
-			String codiceFiscale, Date dataNascita,
+		    Date dataNascita,
 			String numeroTelefono, String tipologia) {
 		EsitoOperazione _return = new EsitoOperazione();
 		Medico m = new Medico();
