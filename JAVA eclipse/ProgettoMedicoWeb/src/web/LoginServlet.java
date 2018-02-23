@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import gestione.EsitoOperazione;
-import gestione.GestioneAccount;
+import gestione.GestioneAccountUtente;
 
 /**
  * Servlet implementation class LoginServlet
@@ -19,7 +19,7 @@ import gestione.GestioneAccount;
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	private GestioneAccount ga = new GestioneAccount();
+	private GestioneAccountUtente ga = new GestioneAccountUtente();
 	private ObjectMapper mapper = new ObjectMapper();
        
     /**

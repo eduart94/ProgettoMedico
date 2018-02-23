@@ -10,7 +10,7 @@ import javax.persistence.TypedQuery;
 import model.Utente;
 import programma.JPAUtil;
 
-public class GestioneAccount {
+public class GestioneAccountUtente {
 
 /*	public boolean login(String mailOrUsername, String passwordUtente) {
 		EntityManager em = JPAUtil.getEm();
