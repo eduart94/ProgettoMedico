@@ -13,6 +13,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import model.Ambulatorio;
 import model.Prenotazione;
 
@@ -49,10 +51,12 @@ public class Disponibilita {
 
 	@ManyToOne(cascade=CascadeType.ALL)
 	@JoinColumn(nullable=false)
+	@JsonIgnore
 	private Ambulatorio ambulatorio;
 	
 	@OneToMany(mappedBy="disponibilita", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	@JoinColumn(nullable=false)
+	@JsonIgnore
 	private List<Prenotazione> prenotazione;
 	
 

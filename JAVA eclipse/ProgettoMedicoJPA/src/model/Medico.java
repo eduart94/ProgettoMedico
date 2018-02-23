@@ -65,7 +65,6 @@ public class Medico implements Serializable {
 	private List<Prenotazione> prenotaziones;
 	
 	@OneToMany(mappedBy="medico", cascade=CascadeType.ALL)
-	@JsonIgnore
 	@JoinColumn(nullable=false)
 	private List<SlotCalendar> slotCalendar;
 
