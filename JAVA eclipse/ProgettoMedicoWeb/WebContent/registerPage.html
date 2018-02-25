@@ -1,8 +1,9 @@
 <title>Registrazione</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 <link rel="stylesheet" href="css/registrazione.css">
 
 </head>
@@ -21,10 +22,12 @@
 					<ul class="nav nav-pills">
 
 						<li class="" style="width: 50%"><a
-							class="btn btn-lg btn-default" data-toggle="tab" href="#tabMedico">Medico</a></li>
+							class="btn btn-lg btn-default" data-toggle="tab"
+							href="#tabMedico">Medico</a></li>
 
 						<li class=" " style="width: 48%"><a
-							class=" btn btn-lg btn-default" data-toggle="tab" href="#tabPaziente">Paziente</a></li>
+							class=" btn btn-lg btn-default" data-toggle="tab"
+							href="#tabPaziente">Paziente</a></li>
 
 					</ul>
 
@@ -34,118 +37,143 @@
 						<div id="tabMedico" class="tab-pane fade in active">
 							<form id="frmRegistrazioneMedico">
 
-							    <div class="form-group">
-							      <label for="nomeDoc">Nome</label>
-								  <input type="text" class="form-control" id="nomeDoc" name="nome" placeholder="Inserire un nome" required>
-							    </div>
 								<div class="form-group">
-									<label for="cognomeDoc">Cognome</label>
-									<input type="text" class="form-control" id="cognomeDoc" name="cognome" placeholder="Inserire un cognome" required>
-								</div>		
-								
-								<div class="form-group">
-									<label for="emailDoc">Email:</label>
-									<input type="email" class="form-control" id="emailDoc" name="email" placeholder="Inserire un'emal valida" required>
+									<label for="nomeDoc">Nome</label> <input type="text"
+										class="form-control" id="nomeDoc" name="nome"
+										placeholder="Inserire un nome" required>
 								</div>
-
-							  <div class="form-group">
-									<label for="tipologiaDoc">Tipologia</label>
-									<input type="text" class="form-control" id="tipologiaDoc" name="tipologia" placeholder="Indicare una specializzazione" required>
-								</div>
-								
 								<div class="form-group">
-									<label for="nascitaDoc">Data di nascita</label>
-									<input type="date" class="form-control" id="nascitaDoc" name="dataNascita" placeholder="Indicare la data di nascita" required>
-								</div>
-								
-								<div class="form-group">
-									<label for="numeroTelefonoDoc">Numero di telefono</label>
-									<input type="text" class="form-control" id="numeroTelefonoDoc" name="telefono" placeholder="Indicare un numero di telefono" required>
+									<label for="cognomeDoc">Cognome</label> <input type="text"
+										class="form-control" id="cognomeDoc" name="cognome"
+										placeholder="Inserire un cognome" required>
 								</div>
 
 								<div class="form-group">
-									<label for="pwdDoc">Password:</label>
-									<input type="password" class="form-control" id="pwdDoc" name="password" placeholder="Specificare una password" required>
+									<label for="emailDoc">Email:</label> <input type="email"
+										class="form-control" id="emailDoc" name="email"
+										placeholder="Inserire un'emal valida" required>
 								</div>
-								
+
 								<div class="form-group">
-									<label for="pwdConfDoc">Conferma Password:</label> 
-									<input type="password" class="form-control" id="pwdConfDoc" name="confermapassword" placeholder="Digita nuovamente la password" required>
-									<div id="lblPwdNoMatch" class="alert alert-warning" role="alert" style="display:none;">Le password digitate non coincidono!</div>
-								</div>								
-							  	<button type="submit" class="pull-right btn btn-block btn-danger" id="btnRegistrazioneMedico"> Registrati </button>
+									<label for="tipologiaDoc">Tipologia</label> <input type="text"
+										class="form-control" id="tipologiaDoc" name="tipologia"
+										placeholder="Indicare una specializzazione" required>
+								</div>
+
+								<div class="form-group">
+									<label for="nascitaDoc">Data di nascita</label> <input
+										type="date" class="form-control" id="nascitaDoc"
+										name="dataNascita" placeholder="Indicare la data di nascita"
+										required>
+								</div>
+
+								<div class="form-group">
+									<label for="numeroTelefonoDoc">Numero di telefono</label> <input
+										type="text" class="form-control" id="numeroTelefonoDoc"
+										name="telefono" placeholder="Indicare un numero di telefono"
+										required>
+								</div>
+
+								<div class="form-group">
+									<label for="pwdDoc">Password:</label> <input type="password"
+										class="form-control" id="pwdDoc" name="password"
+										placeholder="Specificare una password" required>
+								</div>
+
+								<div class="form-group">
+									<label for="pwdConfDoc">Conferma Password:</label> <input
+										type="password" class="form-control" id="pwdConfDoc"
+										name="confermapassword"
+										placeholder="Digitare nuovamente la password" required>
+									<div id="lblPwdNoMatch" class="alert alert-danger" role="alert"
+										style="display: none;">
+										<strong>Attenzione!</strong>Le password digitate non
+										coincidono!
+									</div>
+								</div>
+								<button type="submit"
+									class="pull-right btn btn-block btn-danger"
+									id="btnRegistrazioneMedico">Registrati</button>
 							</form>
-
-
 							<button type="submit" class=" pull-right btn-link">
 								<a href="Login.html#"><strong>Login</strong></a>
 							</button>
 						</div>
 
 						<div id="tabPaziente" class="tab-pane fade">
-
 							<form id="frmRegistrazionePaziente">
-
 								<div class="form-group">
 									<label for="NamePz">Nome</label> <input type="text"
-										class="form-control" id="namePz" name="nome">
+										class="form-control" id="nomePz" name="nome"
+										placeholder="Inserire un nome" required>
 								</div>
 
 								<div class="form-group">
 									<label for="cognomePz">Cognome</label> <input type="text"
-										class="form-control" id="cognomePz" name="cognome">
+										class="form-control" id="cognomePz" name="cognome"
+										placeholder="Inserire un cognome" required>
 								</div>
 
 								<div class="form-group">
 									<label for="dataNascita">Data di nascita</label> <input
 										type="text" class="form-control" id="dataNascitaPz"
-										name="dataNascita">
+										name="dataNascita" placeholder="Inserire la data di nascita"
+										required>
 								</div>
 
 								<div class="form-group">
 									<label for="email">Email:</label> <input type="email"
-										class="form-control" id="emailPz" name="email">
+										class="form-control" id="emailPz" name="email"
+										placeholder="Indicare un'email valida" required>
 								</div>
 
 								<div class="form-group">
 									<label for="numeroTelefono">Numero di telefono</label> <input
 										type="text" class="form-control" id="numeroTelefonoPz"
-										name="telefono">
+										name="telefono" placeholder="Indicare un numero di telefono"
+										required>
 								</div>
 
 								<div class="form-group">
 									<label for="pwd">Password:</label> <input type="password"
-										class="form-control" id="pwdPz" name="password">
+										class="form-control" id="pwdPz" name="password"
+										placeholder="Specificare una password" required>
 								</div>
 
 								<div class="form-group">
 									<label for="pwd">Conferma Password:</label> <input
 										type="password" class="form-control" id="pwdConfPz"
-										name="confermapassword">
+										name="confermapassword"
+										placeholder="Digitare nuovamente la password" required>
+									<div id="lblPwdNoMatch" class="alert alert-danger" role="alert"
+										style="display: none;">
+										<strong>Attenzione!</strong>Le password digitate non
+										coincidono!
+									</div>
 								</div>
-							</form>
 
-							<br> <a href="#"
-								class="pull-right btn btn-block btn-success"
-								id="btnRegistrazionePaziente">Registrati </a> <br>
+								<button type="submit"
+									class="pull-right btn btn-block btn-danger"
+									id="btnRegistrazionePaziente">Registrati</button>
+							</form>
 							<button type="submit" class=" pull-right btn-link">
-								<a href="Login.html"><strong>Login</strong></a>
+								<a href="Login.html#"><strong>Login</strong></a>
 							</button>
-							<div id="pnlErrRegistrazione" class="alert alert-danger"
-								style="display: none" role="alert">
-								<strong>Problemi con la registrazione!</strong> La registrazione
-								non è riuscita.
-							</div>
 
 						</div>
+
+
+
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-		
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="js/registrazione.js"></script>	
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/registrazione.js"></script>
 </body>
 </html>
