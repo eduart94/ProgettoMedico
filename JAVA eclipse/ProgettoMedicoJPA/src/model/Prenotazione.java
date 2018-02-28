@@ -27,20 +27,14 @@ public class Prenotazione implements Serializable {
 	@Column(nullable=false)
 	private int recensione;
     
-	public int getRecensione() {
-		return recensione;
-	}
-
-	public void setRecensione(int recensione) {
-		this.recensione = recensione;
-	}
-
 	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date data;
 	
-    
 	@Column(nullable = false)
+	private Time ora;
+
+    @Column(nullable = false)
 	private String motivazione;
 	
 	@JoinColumn(nullable=false)
@@ -77,11 +71,16 @@ public class Prenotazione implements Serializable {
 	@Column(name="nome_dottore", nullable = false)
 	private String nomeDottore;
     
+<<<<<<< HEAD
+	
+	
+=======
 	@Column(nullable = false)
 	private Time ora;
 
 	@Column(name="tipologia_prenotazione", nullable = false)
 	private String tipologiaPrenotazione;
+>>>>>>> branch 'master' of https://github.com/eduart94/ProgettoMedico.git
 
 	//bi-directional many-to-one association to Ambulatorio
 	@ManyToOne
@@ -97,8 +96,19 @@ public class Prenotazione implements Serializable {
 	@ManyToOne
 	@JoinColumn(nullable=false)
 	private Utente utente;
+	
+	public int getRecensione() {
+		return recensione;
+	}
+
+	public void setRecensione(int recensione) {
+		this.recensione = recensione;
+	}
 
 	public Prenotazione() {
+	}
+	public Prenotazione(int id) {
+		this.id = id;
 	}
 
 	public int getIdPrenotazione() {

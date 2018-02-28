@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class prfiloMedico extends Activity {
+public class ProfiloMedico extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

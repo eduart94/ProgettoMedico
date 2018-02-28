@@ -1,6 +1,7 @@
 package com.example.itsadmin.dottorhouse.fragments;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.widget.MultiAutoCompleteTextView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.example.itsadmin.dottorhouse.ProfiloMedico;
 import com.example.itsadmin.dottorhouse.R;
 import com.example.itsadmin.dottorhouse.adapters.AdapterRicerca;
 import com.example.itsadmin.dottorhouse.cursor.TipologiaCursorAdapter;
@@ -87,6 +89,13 @@ public class frag_ricerca extends Fragment {
         risultatiRicerca.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                Intent openProfiloMedico = new Intent(getActivity(), ProfiloMedico.class);
+                EditText nomeMedico = (EditText)view.findViewById(R.id.nomeMedico);
+                EditText cognomeMedico = (EditText)view.findViewById(R.id.cognomeMedico) ;
+                //openProfiloMedico.putExtra("nomeMedico",(nomeMedico.getText()+ "cognomeMedico",cognomeMedico.getText());
+                //startActivity(openProfiloMedico);
+
 
                 // intent activity medico con un putExtra = nomeMedico
             }

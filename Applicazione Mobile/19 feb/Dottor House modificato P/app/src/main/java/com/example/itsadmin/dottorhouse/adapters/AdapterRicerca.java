@@ -39,11 +39,13 @@ public class AdapterRicerca extends ArrayAdapter<ModelRicerca> {
 
         TextView tipologia = (TextView)riga.findViewById(R.id.item_tipologia);
         TextView nomeMedico = (TextView)riga.findViewById(R.id.item_nome_medico);
+        TextView cognomeMedico = (TextView)riga.findViewById(R.id.item_cognome_medico);
         TextView citta = (TextView)riga.findViewById(R.id.item_luogo);
 
 
         tipologia.setText(lista_medico.get(position).getTipologia());
         nomeMedico.setText(lista_medico.get(position).getNomeMedico());
+        cognomeMedico.setText(lista_medico.get(position).getCognomeMedico());
         citta.setText(lista_medico.get(position).getCitta());
 
 

@@ -64,6 +64,11 @@ public class Utente implements Serializable {
 
 	public Utente() {
 	}
+	public Utente(String email, String password) {
+		this.email = email;
+		this.password = password;
+		
+	}
 
 	public int getIdUtente() {
 		return this.idUtente;
