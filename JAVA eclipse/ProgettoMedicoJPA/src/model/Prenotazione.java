@@ -4,6 +4,8 @@ package model;
 import java.io.Serializable;
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import model.Disponibilita;
 
 import java.sql.Time;
@@ -22,27 +24,35 @@ public class Prenotazione implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int idPrenotazione;
+	private int id;
 	
 	@Column(nullable=false)
 	private int recensione;
     
+	public int getRecensione() {
+		return recensione;
+	}
+
+	public void setRecensione(int recensione) {
+		this.recensione = recensione;
+	}
+
 	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date data;
 	
+    
 	@Column(nullable = false)
-	private Time ora;
-
-    @Column(nullable = false)
 	private String motivazione;
 	
 	@JoinColumn(nullable=false)
 	@ManyToOne(cascade=CascadeType.ALL)
+	@JsonIgnore
 	private Disponibilita disponibilita;
 	
 	@OneToMany(mappedBy= "prenotazione")
 	@JoinColumn(nullable=false)
+	@JsonIgnore
 	private List<SlotCalendar> slotCalendar;
 
 	public Disponibilita getDisponibilita() {
@@ -65,58 +75,40 @@ public class Prenotazione implements Serializable {
 		return serialVersionUID;
 	}
 
-	@Column(name="nome_ambulatorio", nullable = false)
-	private String nomeAmbulatorio;
-
-	@Column(name="nome_dottore", nullable = false)
-	private String nomeDottore;
+	
     
-<<<<<<< HEAD
-	
-	
-=======
 	@Column(nullable = false)
 	private Time ora;
 
-	@Column(name="tipologia_prenotazione", nullable = false)
-	private String tipologiaPrenotazione;
->>>>>>> branch 'master' of https://github.com/eduart94/ProgettoMedico.git
+	
 
 	//bi-directional many-to-one association to Ambulatorio
 	@ManyToOne
 	@JoinColumn(nullable=false)
+	@JsonIgnore
 	private Ambulatorio ambulatorio;
 
 	//bi-directional many-to-one association to Medico
 	@ManyToOne
 	@JoinColumn(nullable=false)
+	@JsonIgnore
 	private Medico medico;
 
 	//bi-directional many-to-one association to Utente
 	@ManyToOne
 	@JoinColumn(nullable=false)
+	@JsonIgnore
 	private Utente utente;
-	
-	public int getRecensione() {
-		return recensione;
-	}
-
-	public void setRecensione(int recensione) {
-		this.recensione = recensione;
-	}
 
 	public Prenotazione() {
 	}
-	public Prenotazione(int id) {
+
+	public int getId() {
+		return this.id;
+	}
+
+	public void setIdPrenotazione(int id) {
 		this.id = id;
-	}
-
-	public int getIdPrenotazione() {
-		return this.idPrenotazione;
-	}
-
-	public void setIdPrenotazione(int idPrenotazione) {
-		this.idPrenotazione = idPrenotazione;
 	}
 
 	public Date getData() {
@@ -135,21 +127,7 @@ public class Prenotazione implements Serializable {
 		this.motivazione = motivazione;
 	}
 
-	public String getNomeAmbulatorio() {
-		return this.nomeAmbulatorio;
-	}
-
-	public void setNomeAmbulatorio(String nomeAmbulatorio) {
-		this.nomeAmbulatorio = nomeAmbulatorio;
-	}
-
-	public String getNomeDottore() {
-		return this.nomeDottore;
-	}
-
-	public void setNomeDottore(String nomeDottore) {
-		this.nomeDottore = nomeDottore;
-	}
+	
 
 	public Time getOra() {
 		return this.ora;
@@ -159,13 +137,7 @@ public class Prenotazione implements Serializable {
 		this.ora = ora;
 	}
 
-	public String getTipologiaPrenotazione() {
-		return this.tipologiaPrenotazione;
-	}
 
-	public void setTipologiaPrenotazione(String tipologiaPrenotazione) {
-		this.tipologiaPrenotazione = tipologiaPrenotazione;
-	}
 
 	public Ambulatorio getAmbulatorio() {
 		return this.ambulatorio;

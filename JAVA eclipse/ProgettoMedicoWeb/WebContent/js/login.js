@@ -20,9 +20,9 @@ function doLogin(formData, isMedico) {
 			localStorage.setItem('soggetto', JSON.stringify(esito.oggettoRisultante));
 			localStorage.setItem('isMedico', JSON.stringify(isMedico));
 			if (isMedico) {
-				location.href= 'ricercamedico.html';
+				location.href= 'profilepage.html';
 			} else {
-				location.href= 'ricercamedico.html';
+				location.href= 'profilepage.html';
 			}
 		}else{
 			$('#pnlErrLogin').show('fast').delay(2000).hide('fast');
