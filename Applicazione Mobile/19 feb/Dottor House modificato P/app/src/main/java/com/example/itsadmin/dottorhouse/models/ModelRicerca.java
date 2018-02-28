@@ -4,15 +4,19 @@ package com.example.itsadmin.dottorhouse.models;
 public class ModelRicerca {
     String tipologia;
     String nomeMedico;
+    String cognomeMedico;
     String citta;
     String indirizzo;
 
     public ModelRicerca() {
     }
 
+
+
     public ModelRicerca(String tipologia, String nomeMedico, String citta, String indirizzo) {
         this.tipologia = tipologia;
         this.nomeMedico = nomeMedico;
+        this.cognomeMedico = cognomeMedico;
         this.citta = citta;
         this.indirizzo = indirizzo;
     }
@@ -31,6 +35,14 @@ public class ModelRicerca {
 
     public void setNomeMedico(String nomeMedico) {
         this.nomeMedico = nomeMedico;
+    }
+
+    public String getCognomeMedico() {
+        return cognomeMedico;
+    }
+
+    public void setCognomeMedico(String cognomeMedico) {
+        this.cognomeMedico = cognomeMedico;
     }
 
     public String getCitta() {
