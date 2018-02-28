@@ -50,14 +50,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     private static final String CREATE_PRENOTAZIONE_TABLE = "CREATE TABLE " + TABLE_PRENOTAZIONE + "("
-            + KEY_DATA + " DATE PRIMARY KEY NOT NULL,"
-            + KEY_ORA + " TEXT NOT NULL,"
+            + KEY_DATA + " DATE NOT NULL, "
+            + KEY_ORA + " TEXT NOT NULL, "
             + KEY_MOTIVAZIONE + " TEXT, "
-            + KEY_EMAIL_UTENTE + " TEXT PRIMARY KEY NOT NULL, "
-            + "FOREIGN KEY  (" + KEY_EMAIL_UTENTE + ") REFERENCES "+TABLE_UTENTE+"("+KEY_EMAIL_UTENTE+"), "
-            + KEY_EMAIL_MEDICO + " TEXT PRIMARY KEY NOT NULL,"
-            + "FOREIGN KEY (" + KEY_EMAIL_MEDICO + ") REFERENCES "+TABLE_MEDICO+"("+KEY_EMAIL_MEDICO+"), "
-            + KEY_VISITA_EFFETTUATA + " INTEGER NOT NULL)";
+            + KEY_EMAIL_UTENTE + " TEXT NOT NULL, "
+            + KEY_EMAIL_MEDICO + " TEXT NOT NULL, "
+            + KEY_VISITA_EFFETTUATA + " INTEGER NOT NULL, "
+            + "PRIMARY KEY ("+KEY_DATA+", "+KEY_EMAIL_UTENTE+", "+KEY_EMAIL_MEDICO+"), "
+            + "FOREIGN KEY (" + KEY_EMAIL_UTENTE + ") REFERENCES "+TABLE_UTENTE+"("+KEY_EMAIL_UTENTE+"), "
+            + "FOREIGN KEY (" + KEY_EMAIL_MEDICO + ") REFERENCES "+TABLE_MEDICO+"("+KEY_EMAIL_MEDICO+"));";
 
     private static final String CREATE_UTENTE_TABLE = "CREATE TABLE " + TABLE_UTENTE + "("
             + KEY_NOME + " TEXT NOT NULL,"
@@ -68,7 +69,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + KEY_CITTA + " TEXT,"
             + KEY_PASSWORD + " TEXT NOT NULL)";
 
-    private static final String CREATE_MEDICO_TABLE = "CREATE TABLE" + TABLE_MEDICO + "("
+    private static final String CREATE_MEDICO_TABLE = "CREATE TABLE " + TABLE_MEDICO + "("
     + KEY_NOME + " TEXT NOT NULL,"
     + KEY_COGNOME + " TEXT NOT NULL,"
     + KEY_EMAIL_MEDICO + " TEXT PRIMARY KEY NOT NULL,"
@@ -77,11 +78,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     + KEY_CITTA  + " TEXT NOT NULL,"
     + KEY_INDIRIZZO + " TEXT NOT NULL)";
 
-    private static final String CREATE_RECENSIONE_TABLE = "CREATE TABLE" + TABLE_RECENSIONE + "("
-            + KEY_EMAIL_MEDICO + " TEXT PRIMARY KEY NOT NULL,"
-            + "FOREIGN KEY (" + KEY_EMAIL_MEDICO + ") REFERENCES "+TABLE_MEDICO+"("+KEY_EMAIL_MEDICO+"), "
-            + KEY_VALUTAZIONE + " INTEGER,"
-            + KEY_COMMENTO + " TEXT)";
+    private static final String CREATE_RECENSIONE_TABLE = "CREATE TABLE " + TABLE_RECENSIONE + "("
+            + KEY_EMAIL_MEDICO + " TEXT PRIMARY KEY NOT NULL, "
+            + KEY_VALUTAZIONE + " INTEGER, "
+            + KEY_COMMENTO + " TEXT, "
+            + "FOREIGN KEY (" + KEY_EMAIL_MEDICO + ") REFERENCES "+TABLE_MEDICO+" ("+KEY_EMAIL_MEDICO+"));";
 
 
 

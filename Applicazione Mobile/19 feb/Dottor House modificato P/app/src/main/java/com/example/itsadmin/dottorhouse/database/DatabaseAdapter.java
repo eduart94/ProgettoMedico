@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.example.itsadmin.dottorhouse.models.ModelMedico;
 import com.example.itsadmin.dottorhouse.models.ModelPrenotazione;
 
 import java.sql.Date;
@@ -33,6 +34,21 @@ public class DatabaseAdapter {
     public void close() {
         dbHelper.close();
         database.close();
+    }
+
+    public void addmedico (ModelMedico m){
+
+        ContentValues values = new ContentValues();
+        values.put(DatabaseHelper.KEY_NOME,m.getNome());
+        values.put(DatabaseHelper.KEY_COGNOME,m.getCognome());
+        values.put(DatabaseHelper.KEY_EMAIL_MEDICO,m.getEmailMedico());
+        values.put(DatabaseHelper.KEY_NUMERO_TELEFONO,m.getNumero_telefono());
+        values.put(DatabaseHelper.KEY_TIPOLOGIA,m.getTipologia());
+        values.put(DatabaseHelper.KEY_CITTA,m.getCitta());
+        values.put(DatabaseHelper.KEY_INDIRIZZO,m.getIndirizzo());
+        open();
+        database.insert(DatabaseHelper.TABLE_MEDICO, null, values);
+        close();
     }
 
     void addPrenotazione(ModelPrenotazione modelPrenotazione){
@@ -88,6 +104,7 @@ public class DatabaseAdapter {
                 prenotazione.getData();
                 prenotazione.getOra();
                 prenotazione.getMotivazione();
+
               //  prenotazione.getEmail_utente();
                 //prenotazione.getEmail_medico();
             } while (cursor.moveToNext());
@@ -95,15 +112,35 @@ public class DatabaseAdapter {
         return visiteFatte;
     }
 
+    public ArrayList<ModelMedico> getMedici(String tipologia){
+        ArrayList<ModelMedico> Medici = new ArrayList<ModelMedico>();
+        String selectQuery = "SELECT * FROM " + DatabaseHelper.TABLE_MEDICO + " WHERE "+DatabaseHelper.KEY_TIPOLOGIA+" = "+tipologia;
+
+        open();
+        Cursor cursor = database.rawQuery(selectQuery, null);
+        if (cursor.moveToFirst()){
+            do{
+
+                Medici.add(new ModelMedico(cursor.getString(0),cursor.getString(1),cursor.getString(2),
+                        cursor.getString(3),cursor.getString(4),cursor.getString(5),cursor.getString(6),cursor.getInt(7)));
+                //  prenotazione.getEmail_utente();
+                //prenotazione.getEmail_medico();
+            } while (cursor.moveToNext());
+        }
+
+        close();
+        return Medici;
+    }
+
     public Cursor getAllTipologie(){
 
 
-        String selectQuery = "SELECT DISTINCT tipologia FROM " + DatabaseHelper.TABLE_MEDICO;
+        String selectQuery = "SELECT DISTINCT "+DatabaseHelper.KEY_TIPOLOGIA+" AS _id FROM " + DatabaseHelper.TABLE_MEDICO;
 
         open();
         Cursor cursor = database.rawQuery(selectQuery, null);
 
-        close();
+
         return cursor;
     }
 
