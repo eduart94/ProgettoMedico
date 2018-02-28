@@ -8,9 +8,9 @@ import programma.JPAUtil;
 public class GestioneRecensione {
 	
 	public void aggiungiRecensione(Prenotazione prenotazione, int voto) {
-		EntityManager em = JPAUtil.getInstance().getEm();
+		EntityManager em = JPAUtil.getEm();
 		em.getTransaction().begin();
-		Prenotazione prenotazioneEsistente = em.find(Prenotazione.class, prenotazione.getId());
+		Prenotazione prenotazioneEsistente = em.find(Prenotazione.class, prenotazione.getIdPrenotazione());
 		prenotazioneEsistente.setRecensione(voto);
 		em.getTransaction().commit();
 	}

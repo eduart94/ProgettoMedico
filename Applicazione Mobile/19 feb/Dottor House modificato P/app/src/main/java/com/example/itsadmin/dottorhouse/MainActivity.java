@@ -14,6 +14,7 @@ import com.example.itsadmin.dottorhouse.database.DatabaseAdapter;
 import com.example.itsadmin.dottorhouse.fragments.frag_home;
 import com.example.itsadmin.dottorhouse.fragments.frag_profilo;
 import com.example.itsadmin.dottorhouse.fragments.frag_ricerca;
+import com.example.itsadmin.dottorhouse.models.ModelMedico;
 import com.example.itsadmin.dottorhouse.models.ModelPrenotazione;
 
 public class MainActivity extends AppCompatActivity {
@@ -67,6 +68,11 @@ public class MainActivity extends AppCompatActivity {
                 });
 
         cambiaFragment(0);
+
+        db.addmedico(new ModelMedico("A","B","C","D","dentista","F","G",1));
+        db.addmedico(new ModelMedico("A","B","D","D","pediatra","F","G",1));
+        db.addmedico(new ModelMedico("A","B","SPIA","D","medico di base","F","G",1));
+        db.addmedico(new ModelMedico("A","B","CE","D","panettiere","F","G",1));
     }
 
     public void inizializzaFragment (){

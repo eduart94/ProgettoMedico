@@ -23,11 +23,21 @@
         android:text="itemNomeMedico" />
 
     <TextView
+        android:id="@+id/item_cognome_medico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/item_luogo"
+        android:layout_below="@+id/item_nome_medico"
+        android:layout_marginTop="17dp"
+        android:text="itemCognomeMedico" />
+
+
+    <TextView
         android:id="@+id/item_luogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/item_nome_medico"
+        android:layout_below="@+id/item_cognome_medico"
         android:layout_marginBottom="17dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="17dp"

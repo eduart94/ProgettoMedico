@@ -3,7 +3,6 @@ package model;
 import java.io.Serializable;
 import java.util.List;
 
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,8 +15,6 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 /**
@@ -34,27 +31,28 @@ public class Ambulatorio implements Serializable {
 	private int idAmbulatorio;
     
 	@Column(nullable=false)
-	private String indirizzo;
+	private double longitudine;
+	
+	
+	@Column(nullable=false)
+	private double latitudine;
 	
 	@ManyToOne(cascade=CascadeType.ALL)
 	@JoinColumn(nullable=false)
 	private Citta citta;
 
 	//bi-directional many-to-many association to Medico
-	@ManyToMany(mappedBy="ambulatorios", cascade=CascadeType.ALL)
+	@ManyToMany(mappedBy="ambulatorios")
 	@JoinColumn(nullable=false)
-	@JsonIgnore
 	private List<Medico> medicos;
 
 	//bi-directional many-to-one association to Prenotazione
-	@OneToMany(mappedBy="ambulatorio", cascade=CascadeType.ALL)
+	@OneToMany(mappedBy="ambulatorio")
 	@JoinColumn(nullable=false)
-	@JsonIgnore
 	private List<Prenotazione> prenotaziones;
 	
 	@OneToMany(mappedBy="ambulatorio", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	@JoinColumn(nullable=false)
-	@JsonIgnore
 	private List<Disponibilita> disponibilita;
 	
 
@@ -62,15 +60,28 @@ public class Ambulatorio implements Serializable {
 	
 	public Ambulatorio() {
 	}
-	public String getIndirizzo() {
-		return indirizzo;
+	public double getLongitudine() {
+		return longitudine;
 	}
 
 
 
-	public void setIndirizzo(String indirizzo) {
-		this.indirizzo = indirizzo;
+	public void setLongitudine(double longitudine) {
+		this.longitudine = longitudine;
 	}
+
+
+
+	public double getLatitudine() {
+		return latitudine;
+	}
+
+
+
+	public void setLatitudine(double latitudine) {
+		this.latitudine = latitudine;
+	}
+
 	
 	
 	public Citta getCitta() {

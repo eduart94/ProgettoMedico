@@ -19,28 +19,33 @@ import java.util.List;
 public class Medico implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-    @Id
-	@Column(name="email", nullable = false)
-	private String email;
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int idMedico;
     
-    @Column(name="password", nullable = false)
-	private String password;
-    
-    @Column(name="nome", nullable = false)
-	private String nome;
-    
-    @Column(name="cognome", nullable = false)
-	private String cognome;
 	
+	@Column(name="codice_fiscale_medico", nullable = false)
+	private String codiceFiscaleMedico;
 
+	@Column(name="cognome_medico", nullable = false)
+	private String cognomeMedico;
 
 	@Temporal(TemporalType.DATE)
-	@Column(name="data_nascita")
-	private Date dataNascita;
+	@Column(name="data_nascita_medico")
+	private Date dataNascitaMedico;
 
-	@Column(name="numero_telefono", nullable = false)
-	private String numeroTelefono;
+	@Column(name="email_medico", nullable = false)
+	private String emailMedico;
 
+	@Column(name="nome_medico", nullable = false)
+	private String nomeMedico;
+
+	@Column(name="numero_telefono_medico", nullable = false)
+	private String numeroTelefonoMedico;
+
+	@Column(name="password_medico", nullable = false)
+	private String passwordMedico;
+    
 	@Column(nullable = false)
 	private String tipologia;
 
@@ -50,97 +55,24 @@ public class Medico implements Serializable {
 	@JoinTable(
 		name="medico_has_ambulatorio"
 		, joinColumns={
-			@JoinColumn(name="Medico_email", nullable=false)
+			@JoinColumn(name="Medico_idMedico", nullable=false)
 			}
 		, inverseJoinColumns={
-			@JoinColumn(name="Ambulatorio_id", nullable=false)
+			@JoinColumn(name="Ambulatorio_idAmbulatorio", nullable=false)
 			}
 		)
 	private List<Ambulatorio> ambulatorios;
 
 	//bi-directional many-to-one association to Prenotazione
-	@OneToMany(mappedBy="medico", cascade=CascadeType.ALL)
+	@OneToMany(mappedBy="medico")
 	@JsonIgnore
 	@JoinColumn(nullable=false)
 	private List<Prenotazione> prenotaziones;
 	
-	@OneToMany(mappedBy="medico", cascade=CascadeType.ALL)
+	@OneToMany(mappedBy="medico")
+	@JsonIgnore
 	@JoinColumn(nullable=false)
 	private List<SlotCalendar> slotCalendar;
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	
-
-	public String getCognome() {
-		return cognome;
-	}
-
-	public void setCognome(String cognome) {
-		this.cognome = cognome;
-	}
-
-	public Date getDataNascita() {
-		return dataNascita;
-	}
-
-	public void setDataNascita(Date dataNascita) {
-		this.dataNascita = dataNascita;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getNumeroTelefono() {
-		return numeroTelefono;
-	}
-
-	public void setNumeroTelefono(String numeroTelefono) {
-		this.numeroTelefono = numeroTelefono;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public String getTipologia() {
-		return tipologia;
-	}
-
-	public void setTipologia(String tipologia) {
-		this.tipologia = tipologia;
-	}
-
-	public List<Ambulatorio> getAmbulatorios() {
-		return ambulatorios;
-	}
-
-	public void setAmbulatorios(List<Ambulatorio> ambulatorios) {
-		this.ambulatorios = ambulatorios;
-	}
-
-	public List<Prenotazione> getPrenotaziones() {
-		return prenotaziones;
-	}
-
-	public void setPrenotaziones(List<Prenotazione> prenotaziones) {
-		this.prenotaziones = prenotaziones;
-	}
 
 	public List<SlotCalendar> getSlotCalendar() {
 		return slotCalendar;
@@ -153,6 +85,98 @@ public class Medico implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+
+	public Medico() {
+	}
+
+	public int getIdMedico() {
+		return this.idMedico;
+	}
+
+	public void setIdMedico(int idMedico) {
+		this.idMedico = idMedico;
+	}
+
+	public String getCodiceFiscaleMedico() {
+		return this.codiceFiscaleMedico;
+	}
+
+	public void setCodiceFiscaleMedico(String codiceFiscaleMedico) {
+		this.codiceFiscaleMedico = codiceFiscaleMedico;
+	}
+
+	public String getCognomeMedico() {
+		return this.cognomeMedico;
+	}
+
+	public void setCognomeMedico(String cognomeMedico) {
+		this.cognomeMedico = cognomeMedico;
+	}
+
+	public Date getDataNascitaMedico() {
+		return this.dataNascitaMedico;
+	}
+
+	public void setDataNascitaMedico(Date dataNascitaMedico) {
+		this.dataNascitaMedico = dataNascitaMedico;
+	}
+
+	public String getEmailMedico() {
+		return this.emailMedico;
+	}
+
+	public void setEmailMedico(String emailMedico) {
+		this.emailMedico = emailMedico;
+	}
+
+	public String getNomeMedico() {
+		return this.nomeMedico;
+	}
+
+	public void setNomeMedico(String nomeMedico) {
+		this.nomeMedico = nomeMedico;
+	}
+
+	public String getNumeroTelefonoMedico() {
+		return this.numeroTelefonoMedico;
+	}
+
+	public void setNumeroTelefonoMedico(String numeroTelefonoMedico) {
+		this.numeroTelefonoMedico = numeroTelefonoMedico;
+	}
+
+	public String getPasswordMedico() {
+		return this.passwordMedico;
+	}
+
+	public void setPasswordMedico(String passwordMedico) {
+		this.passwordMedico = passwordMedico;
+	}
+
+	public String getTipologia() {
+		return this.tipologia;
+	}
+
+	public void setTipologia(String tipologia) {
+		this.tipologia = tipologia;
+	}
+
+	public List<Ambulatorio> getAmbulatorios() {
+		return this.ambulatorios;
+	}
+
+	public void setAmbulatorios(List<Ambulatorio> ambulatorios) {
+		this.ambulatorios = ambulatorios;
+	}
+
+	public List<Prenotazione> getPrenotaziones() {
+		return this.prenotaziones;
+	}
+
+	public void setPrenotaziones(List<Prenotazione> prenotaziones) {
+		this.prenotaziones = prenotaziones;
+	}
+
 	public Prenotazione addPrenotazione(Prenotazione prenotazione) {
 		getPrenotaziones().add(prenotazione);
 		prenotazione.setMedico(this);
@@ -166,8 +190,5 @@ public class Medico implements Serializable {
 
 		return prenotazione;
 	}
-
-	
-	
 
 }

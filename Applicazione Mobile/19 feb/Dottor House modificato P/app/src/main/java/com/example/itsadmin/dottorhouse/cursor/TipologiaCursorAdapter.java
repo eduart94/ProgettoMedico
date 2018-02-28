@@ -9,8 +9,10 @@ import android.widget.CursorAdapter;
 import android.widget.TextView;
 
 import com.example.itsadmin.dottorhouse.R;
+import com.example.itsadmin.dottorhouse.database.DatabaseHelper;
 
 public class TipologiaCursorAdapter extends CursorAdapter {
+
     public TipologiaCursorAdapter(Context context, Cursor cursor){
         super(context, cursor);
     }
@@ -27,7 +29,7 @@ public class TipologiaCursorAdapter extends CursorAdapter {
     public void bindView(View view, Context context, Cursor cursor) {
 
         TextView tipologia = (TextView) view.findViewById(R.id.tipologia);
-        tipologia.setText(cursor.getString(cursor.getColumnIndex("tipologia")));
+        tipologia.setText(cursor.getString(cursor.getColumnIndex("_id")));
     }
 
 

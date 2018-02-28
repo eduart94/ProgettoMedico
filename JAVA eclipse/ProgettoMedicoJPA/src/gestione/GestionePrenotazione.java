@@ -17,7 +17,7 @@ public class GestionePrenotazione {
 	
 	public List<Prenotazione> elencoPrenotazioni(Utente utente){
 		
-		EntityManager em = JPAUtil.getInstance().getEm();
+		EntityManager em = JPAUtil.getEm();
 		return em.createQuery("select p from Prenotazione p where p.utente = :utente",Prenotazione.class)
 				.setParameter("utente", utente)
 				.getResultList();
@@ -48,6 +48,7 @@ public class GestionePrenotazione {
 		return eo;
 	}
 	
+<<<<<<< HEAD
 	public EsitoOperazione nuovaPrenotazione(Date data, Time ora, String motivazione,
 			                                 int recensione, Ambulatorio ambulatorio,
 			                                 Medico medico, Disponibilita disponibilita, Utente utente ) {
@@ -85,6 +86,12 @@ public class GestionePrenotazione {
 		Prenotazione p = em.find(Prenotazione.class, prenotazione.getId());
 		if(utente.getEmail()==prenotazione.getUtente().getEmail()) {
 			
+=======
+	public boolean cancellaPrenotazione(Utente utente, Prenotazione prenotazione) {
+		EntityManager em = JPAUtil.getEm();
+		Prenotazione p = em.find(Prenotazione.class, prenotazione.getIdPrenotazione());
+		if(utente.getIdUtente()==prenotazione.getUtente().getIdUtente()) {
+>>>>>>> branch 'master' of https://github.com/eduart94/ProgettoMedico.git
 			em.getTransaction().begin();
 			em.remove(p);
 			em.getTransaction().commit();

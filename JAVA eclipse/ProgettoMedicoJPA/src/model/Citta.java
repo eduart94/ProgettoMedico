@@ -30,6 +30,7 @@ public class Citta {
 	
 	@OneToMany(mappedBy="citta", cascade= CascadeType.ALL, fetch= FetchType.LAZY)
 	@JoinColumn(nullable=false )
+	@JsonIgnore
 	private List<Ambulatorio> ambulatori;
 	
 	public int getIdCitta() {
