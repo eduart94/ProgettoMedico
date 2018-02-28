@@ -29,20 +29,14 @@ public class Prenotazione implements Serializable {
 	@Column(nullable=false)
 	private int recensione;
     
-	public int getRecensione() {
-		return recensione;
-	}
-
-	public void setRecensione(int recensione) {
-		this.recensione = recensione;
-	}
-
 	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date data;
 	
-    
 	@Column(nullable = false)
+	private Time ora;
+
+    @Column(nullable = false)
 	private String motivazione;
 	
 	@JoinColumn(nullable=false)
@@ -77,9 +71,7 @@ public class Prenotazione implements Serializable {
 
 	
     
-	@Column(nullable = false)
-	private Time ora;
-
+	
 	
 
 	//bi-directional many-to-one association to Ambulatorio
@@ -99,8 +91,19 @@ public class Prenotazione implements Serializable {
 	@JoinColumn(nullable=false)
 	@JsonIgnore
 	private Utente utente;
+	
+	public int getRecensione() {
+		return recensione;
+	}
+
+	public void setRecensione(int recensione) {
+		this.recensione = recensione;
+	}
 
 	public Prenotazione() {
+	}
+	public Prenotazione(int id) {
+		this.id = id;
 	}
 
 	public int getId() {
