@@ -36,6 +36,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v9.0"/>
-	<classpathentry kind="lib" path="C:/Users/User/Desktop/mariadb-java-client-2.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/eduar/Downloads/DownloadProgrammiEddy/mariadb-java-client-2.2.1-sources.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
