@@ -34,7 +34,7 @@ public class ElencoCittaServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		List<Citta> elenco = JPAUtil.getEm()
+		List<Citta> elenco = JPAUtil.getInstance().getEm()
 				.createQuery("select c from Citta c", Citta.class)
 				.getResultList();
 		

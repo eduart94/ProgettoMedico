@@ -8,37 +8,18 @@
 
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" href="css/ricercamedico.css">
 <link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-<link rel="stylesheet" href="js/ricercamedico.js">
+<link rel="stylesheet" href="css/ricercamedico.css">
 
 </head>
 <body>
     <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a id="loginnav" class="navbar-brand" href="#">Login</a>
-        <a class="navbar-brand" href="#">Registrazione</a>
+       
+        <a id="loginnav" class="navbar-brand" href="Login.html">Login</a>
+        <a class="navbar-brand" href="registerPage.html">Registrazione</a>
       
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
-      </nav>
+     </nav>
+     
  <main id="content" class="container">
   <div id="divcercamedico">  
  <h1 id="prenotavisita">Prenota una visita</h1>
@@ -46,10 +27,14 @@
     <form id="forminput">
             <div class="form-group">
              
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="nome">
+              <input type="text" class="form-control" id="txtNome" aria-describedby="emailHelp" placeholder="nome">
+             </div>
+               <div class="form-group">
+             
+              <input type="text" class="form-control" id="txtCitta" aria-describedby="emailHelp" placeholder="città">
              </div>
             <div class="form-group">
-              <input list="tipo" type="text" class="form-control" id="exampleInputPassword1" placeholder="tipologia">
+              <input list="tipo" type="text" class="form-control" id="dlTipologia" placeholder="tipologia">
               <datalist id="tipo">
                     <option value="dermatologo"></option>
                     <option value="odontoiatra"></option>
@@ -61,11 +46,14 @@
                     <option value="otorinolaringoiatria "></option>
                 </datalist> <br>
             </div>
-           <button type="submit" class="btn btn-primary">cerca</button>
+           <a class="btn btn-primary" href="#" id="btnCerca">cerca</a>
       </form>
       </div>
      </div> 
-    <div><h2>Tutti i dottori:</h2> <table id="tbldottori"></table></div>
+    <div>
+    	<h2>Tutti i dottori:</h2> 
+    	<table id="tbldottori"></table>
+    </div>
      
 </main>
 
@@ -75,5 +63,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="js/ricercamedico.js"></script>
 </body>
 </html>

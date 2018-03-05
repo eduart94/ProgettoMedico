@@ -14,7 +14,7 @@ h2{
     background-position:left;
     padding-top: 17px;
     position: relative;
-    border-top-width: 258px;
+    border-top-width: 270px;
     background-color: rgba(0,0,0,.1);
     }
  
@@ -35,6 +35,10 @@ h2{
    
 }
 #loginnav{
-    margin-left: 1050px;
+    margin-left: 1250px;
+}
+
+table.dataTable thead th, table.dataTable tfoot th {
+    font-weight: normal;
 }
 
