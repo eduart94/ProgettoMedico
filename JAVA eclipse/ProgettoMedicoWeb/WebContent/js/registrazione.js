@@ -23,7 +23,7 @@ function doRegistrazione(formData, isMedico) {
 			if (isMedico) {
 				location.href= 'profilepage.html';
 			} else {
-				location.href= 'profilepage2.html';
+				location.href= 'profilepage.html';
 			}
 		}else{
 			$('#pnlErrRegistrazione').show('fast').delay(2000).hide('fast');
@@ -48,7 +48,7 @@ $('#btnRegistrazionePaziente').click(function(e){
 
 function doRegistrazionePz(formData, isPaziente){
 $.ajax({
-	url: (isPaziente ? 'registrazionepaziente' : 'registrazione'),
+	url: (isPaziente ? 'registrazione' : 'registrazionemedico'),
 	method: 'post',
 	data: formData
 })
@@ -58,7 +58,7 @@ $.ajax({
 			localStorage.setItem('soggetto', JSON.stringify(esito.oggettoRisultante));
 			localStorage.setItem('isPaziente', JSON.stringify(isPaziente));
 			if (isPaziente) {
-				location.href= 'profilepage2.html';
+				location.href= 'profilepage.html';
 			} else {
 				location.href= 'profilepage.html';
 			}

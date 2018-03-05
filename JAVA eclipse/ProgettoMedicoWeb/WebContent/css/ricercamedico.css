@@ -35,6 +35,10 @@ h2{
    
 }
 #loginnav{
-    margin-left: 1200px;
+    margin-left: 1250px;
+}
+
+table.dataTable thead th, table.dataTable tfoot th {
+    font-weight: normal;
 }
 
