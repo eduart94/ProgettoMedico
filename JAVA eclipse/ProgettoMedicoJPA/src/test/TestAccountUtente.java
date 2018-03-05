@@ -31,31 +31,31 @@ public class TestAccountUtente {
 		assertTrue(eo.isSuccess());
 	}
 	
-//	@Test
-//	public void testRimuovi() {
-//		GestioneAccountUtente gau = new GestioneAccountUtente();
-//		EsitoOperazione eo = gau.rimuoviUtente("paola@");
-//		assertTrue(eo.isSuccess());
-//		
-//		eo = gau.rimuoviUtente("eddi@");
-//		assertFalse(eo.isSuccess());
-//		
-//	}
-//
-//	@Test
-//	public void testLogin() {
-//		GestioneAccountUtente gau = new GestioneAccountUtente();
-//		EsitoOperazione eo = gau.login("luigi99@", "ciao");
-//		assertFalse(eo.isSuccess());
-//		
-//		eo = gau.login("luigi99@", "password4");
-//		assertTrue(eo.isSuccess());
-//		
-//		eo = gau.login("luigi99", "password4");
-//		assertFalse(eo.isSuccess());
-//		
-//	}
-//	
+	@Test
+	public void testRimuovi() {
+		GestioneAccountUtente gau = new GestioneAccountUtente();
+		EsitoOperazione eo = gau.rimuoviUtente("paola@");
+		assertTrue(eo.isSuccess());
+		
+		eo = gau.rimuoviUtente("eddi@");
+		assertFalse(eo.isSuccess());
+		
+	}
+
+	@Test
+	public void testLogin() {
+		GestioneAccountUtente gau = new GestioneAccountUtente();
+		EsitoOperazione eo = gau.login("luigi99@", "ciao");
+		assertFalse(eo.isSuccess());
+		
+		eo = gau.login("luigi99@", "password4");
+		assertTrue(eo.isSuccess());
+		
+		eo = gau.login("luigi99", "password4");
+		assertFalse(eo.isSuccess());
+		
+	}
+	
 	
 
 }
