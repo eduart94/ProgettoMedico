@@ -7,7 +7,6 @@ import javax.persistence.NoResultException;
 import javax.persistence.NonUniqueResultException;
 import javax.persistence.TypedQuery;
 
-import model.Medico;
 import model.Utente;
 import programma.JPAUtil;
 
@@ -118,7 +117,6 @@ public class GestioneAccountUtente {
 		}
 		return _return;
 	}
-		
 	
 	public EsitoOperazione registraUtente(String email, String password, 
 			String nome, String cognome, 
@@ -189,64 +187,6 @@ public class GestioneAccountUtente {
 		return _return;
 		
 	}
-	
-	public EsitoOperazione modificapsw(String email, String password) {
-		EsitoOperazione eo = new EsitoOperazione();
-		try{
-			EntityManager em = JPAUtil.getInstance().getEm();
-			Utente u = em.find(Utente.class, email);
-			if(u != null) {
-				u.setPassword(password);
-				em.getTransaction().begin();
-				em.persist(u);
-				em.getTransaction().commit();
-				eo.setSuccess(true);
-				eo.setMessaggio("Password modificata correttamente");
-				eo.setOggettoRisultante(u);
-			}
-			else {
-				eo.setSuccess(false);
-				eo.setMessaggio("l'utente non esiste");
-				eo.setOggettoRisultante(null);
-			}
-		}
-		catch (Exception ex) {
-			eo.setSuccess(false);
-			eo.setMessaggio("Qualcosa è andato storto" + ex.getMessage());
-			eo.setOggettoRisultante(null);
-		}
-		return eo;
-	}
-	
-	public EsitoOperazione modificadati(String email, String numeroTelefono) {
-		EsitoOperazione eo =new EsitoOperazione();
-		try {
-			EntityManager em = JPAUtil.getInstance().getEm();
-			Utente u = em.find(Utente.class, email);
-			if(u != null) {
-				u.setNumeroTelefono(numeroTelefono);
-				em.getTransaction().begin();
-				em.persist(u);
-				em.getTransaction().commit();
-				eo.setSuccess(true);
-				eo.setMessaggio("Modifica avvenuta con successo");
-				eo.setOggettoRisultante(u);				
-	}
-		else {
-			eo.setSuccess(false);
-			eo.setMessaggio("l'utente non esiste");
-			eo.setOggettoRisultante(null);
-		}
-		
-	}catch(Exception ex) {
-		eo.setSuccess(false);
-		eo.setMessaggio("Qualcosa è andato storto");
-		eo.setOggettoRisultante(null);
-	}
-		return eo;
-		
-	}
-	
 }
 	
 	
