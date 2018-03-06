@@ -55,12 +55,57 @@
 					href="#about"> <strong>PROFILO UTENTE </strong></a></li>
 				<li class="nav-item"><a class="nav-link js-scroll-trigger"
 					href="#experience"><strong> MIE VISITE</strong> </a></li>
+					
 				<li class="nav-item"><a class="nav-link js-scroll-trigger"
-					href=" "><strong> Modifica Profilo</strong> </a></li>
+					data-toggle="modal" data-target="#myModal2"><strong> Modifica Password</strong> </a></li>
+
+				<li class="nav-item"><a class="nav-link js-scroll-trigger"
+					href=" Login.html"><strong> Logout</strong> </a></li>
 
 			</ul>
 		</div>
 	</nav>
+
+	<!-- popup modifica password -->
+
+	<div class="modal fade" id="myModal2" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+
+				</div>
+				<div class="modal-body">
+					<p>
+						Inserisci la tua password attuale: <br> <input
+							type="password" class="form-control" id="passwordAttuale"
+							name="passwordAttuale">
+					</p>
+				</div>
+				<div class="modal-body">
+					<p>
+						Inserisci la nuova password: <br> <input type="password"
+							class="form-control" id="passwordNuova" name="passwordNuova">
+					</p>
+				</div>
+				<div class="modal-body">
+					<p>
+						Digita nuovamente la password: <br> <input type="password"
+							class="form-control" id="passwordNuovaConf"
+							name="passwordNuovaConf">
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn">Salva</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Annulla</button>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
 
 	<div class="container-fluid p-0">
 
@@ -153,8 +198,7 @@
 											</div>
 
 										</div>
-									</div>
-								</td>
+									</div></td>
 						</tr>
 				</table>
 
