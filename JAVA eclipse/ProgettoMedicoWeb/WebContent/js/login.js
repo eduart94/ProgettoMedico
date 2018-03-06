@@ -18,9 +18,9 @@ function doLogin(formData, isMedico) {
 		console.log(esito);
 		if(esito.success){
 			localStorage.setItem('soggetto', JSON.stringify(esito.oggettoRisultante));
-			localStorage.setItem('isMedico', JSON.stringify(isMedico));
+			
 			if (isMedico) {
-				location.href= 'profmedico.html';
+				location.href= 'AreaRiservataMed.html';
 			} else {
 				location.href= 'profmedico.html';
 			}
