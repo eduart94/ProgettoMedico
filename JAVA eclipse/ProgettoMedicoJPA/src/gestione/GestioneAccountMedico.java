@@ -101,6 +101,65 @@ public class GestioneAccountMedico {
 		return _return;
 		
 	}
+	
+	public EsitoOperazione modificapsw(String email, String password) {
+		EsitoOperazione eo =  new EsitoOperazione();
+		try {
+			EntityManager em = JPAUtil.getInstance().getEm();
+			Medico m = em.find(Medico.class, email);
+			if(m != null) {
+				m.setPassword(password);
+				em.getTransaction().begin();
+				em.persist(m);
+				em.getTransaction().commit();
+				eo.setSuccess(true);
+				eo.setMessaggio("Password modificata correttamente");
+				eo.setOggettoRisultante(m);
+			}
+			else {
+				eo.setSuccess(false);
+				eo.setMessaggio("l'utente non esiste");
+				eo.setOggettoRisultante(null);
+			}
+			
+			}catch(Exception ex) {
+				eo.setSuccess(false);
+				eo.setMessaggio("Qualcosa è andato storto" + ex.getMessage());
+				eo.setOggettoRisultante(null);
+		}
+		return eo;
+	
+		
+		
+	}
+	public EsitoOperazione modificadati(String email, String numeroTelefono) {
+		EsitoOperazione eo =new EsitoOperazione();
+		try {
+			EntityManager em = JPAUtil.getInstance().getEm();
+			Medico m = em.find(Medico.class, email);
+			if(m != null) {
+				m.setNumeroTelefono(numeroTelefono);
+				em.getTransaction().begin();
+				em.persist(m);
+				em.getTransaction().commit();
+				eo.setSuccess(true);
+				eo.setMessaggio("Modifica avvenuta con successo");
+				eo.setOggettoRisultante(m);				
+	}
+		else {
+			eo.setSuccess(false);
+			eo.setMessaggio("l'utente non esiste");
+			eo.setOggettoRisultante(null);
+		}
+		
+	}catch(Exception ex) {
+		eo.setSuccess(false);
+		eo.setMessaggio("Qualcosa è andato storto");
+		eo.setOggettoRisultante(null);
+	}
+		return eo;
+		
+	}
 
 	
 }
