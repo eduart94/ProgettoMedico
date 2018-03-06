@@ -27,11 +27,31 @@ h2 {
 	font-size: 3.5rem
 }
 
+.nav-item{
+	cursor: pointer;
+}
+
+
 .subheading {
 	text-transform: uppercase;
 	font-weight: 500;
 	font-family: 'Saira Extra Condensed', serif;
 	font-size: 1.35rem
+}
+
+	.modifica{
+	font-size: 1rem;
+	color: rgb(73,189,213);
+	cursor: pointer;
+}
+
+.form-control{
+	margin-top: 20px;
+}
+
+.hoverTable tr:hover{
+	background-color:rgb(73,189,213);
+	
 }
 
 .list-social-icons a {
