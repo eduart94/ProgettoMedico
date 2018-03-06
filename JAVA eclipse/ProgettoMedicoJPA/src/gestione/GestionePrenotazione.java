@@ -87,21 +87,20 @@ public class GestionePrenotazione {
 			eo.setMessaggio("prenotazione cancellata");
 			eo.setOggettoRisultante(null);
 			try {
-				if(prenotazione != null) {
-					eo.setSuccess(false);
-					eo.setMessaggio("Eliminazione prenotazione fallita");
-					eo.setOggettoRisultante(prenotazione);
+				if(prenotazione == null) {
+					eo.setSuccess(true);
+					eo.setMessaggio("sicuramente eliminata la prenotazione");
+					eo.setOggettoRisultante(null);
 				}else {
 					eo.setSuccess(false);
-					eo.setMessaggio("sicuramente eliminata la prenotazione");
+					eo.setMessaggio("Eliminazione prenotazione fallita");
 					eo.setOggettoRisultante(prenotazione);
 				}
 			}catch(Exception ex) {
 				
 			}
 			
-		}
-		else {
+		}else {
 			eo.setSuccess(false);
 			eo.setMessaggio("non tua prenotazione");
 			eo.setOggettoRisultante(null);
