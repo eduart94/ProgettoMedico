@@ -8,6 +8,15 @@ if(soggetto){
 	$('#tipMedico').html(soggetto.tipologia)
 	$('#telefonoMedico').html(soggetto.numeroTelefono)
 	$('#emailMedico').html(soggetto.email)
+	var e ={}
+	e.emailMed = soggetto.email
+	console.log(e)
+	$.ajax({
+		url: 'elencoAmbulatori',
+		method: 'post',
+		data: e
+	}).done(function(ambulatorio){
+	})
 }
 
 // logout medico
@@ -21,3 +30,5 @@ function logout(){
 		console.log("errore");
 	}
 }
+
+// 

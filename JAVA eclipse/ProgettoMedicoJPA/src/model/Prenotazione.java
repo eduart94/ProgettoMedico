@@ -51,7 +51,6 @@ public class Prenotazione implements Serializable {
 	private Disponibilita disponibilita;
 	
 	@OneToMany(mappedBy= "prenotazione")
-	@JoinColumn(nullable=false)
 	@JsonIgnore
 	private List<SlotCalendar> slotCalendar;
 

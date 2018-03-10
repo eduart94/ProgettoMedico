@@ -41,7 +41,6 @@ public class Utente implements Serializable {
 
 	//bi-directional many-to-one association to Prenotazione
 	@OneToMany(mappedBy="utente")
-	@JoinColumn(nullable=false)
 	private List<Prenotazione> prenotaziones;
 	
 	

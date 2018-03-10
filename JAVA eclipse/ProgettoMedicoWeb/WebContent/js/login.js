@@ -22,7 +22,7 @@ function doLogin(formData, isMedico) {
 			if (isMedico) {
 				location.href= 'AreaRiservataMed.html';
 			} else {
-				location.href= 'profmedico.html';
+				location.href= 'ProfiloUtente1.html';
 			}
 		}else{
 			$('#pnlErrLogin').show('fast').delay(2000).hide('fast');
