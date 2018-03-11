@@ -9,7 +9,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Medico</title>
+<title>Prenota Visita</title>
 
 <!-- Bootstrap core CSS -->
 <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -57,11 +57,52 @@
 				<li class="nav-item"><a class="nav-link js-scroll-trigger"
 					href="#experience">Prenota</a></li>
 				<li class="nav-item"><a class="nav-link js-scroll-trigger"
+					data-toggle="modal" data-target="#myModal2">Modifica Password</a></li>
+				<li class="nav-item"><a class="nav-link js-scroll-trigger"
 					href="Login.html">Login/Logout</a></li>
 
 			</ul>
 		</div>
 	</nav>
+	
+	<div class="modal fade" id="myModal2" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+
+				</div>
+				<div class="modal-body">
+					<p>
+						Inserisci la tua password attuale: <br> <input
+							type="password" class="form-control" id="passwordAttuale"
+							name="passwordAttuale">
+					</p>
+				</div>
+				<div class="modal-body">
+					<p>
+						Inserisci la nuova password: <br> <input type="password"
+							class="form-control" id="passwordNuova" name="passwordNuova">
+					</p>
+				</div>
+				<div class="modal-body">
+					<p>
+						Digita nuovamente la password: <br> <input type="password"
+							class="form-control" id="passwordNuovaConf"
+							name="passwordNuovaConf">
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn">Salva</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Annulla</button>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
 
 	<div class="container-fluid p-0">
 
@@ -74,50 +115,53 @@
 				<h2>
 					<div class="container">
 						<div class="row">
-							<div class="col-lg-12">
-								<div class="star-rating">
-									<span class="fa fa-star-o" data-rating="1"></span> <span
-										class="fa fa-star-o" data-rating="2"></span> <span
-										class="fa fa-star-o" data-rating="3"></span> <span
-										class="fa fa-star-o" data-rating="4"></span> <span
-										class="fa fa-star-o" data-rating="5"></span> <input
-										type="hidden" name="whatever1" class="rating-value"
-										value="2.56">
-								</div>
-							</div>
+							<div class="col-lg-12"></div>
 						</div>
 					</div>
 				</h2>
+				<br>
 
 				<div class="subheading mb-5">
-					via, Milano 13, Pioltello <a href="#">nome@Cognome.it</a>
+					<p>
+						<b>Indirizzo: </b> <span id="indirizzoMedico">via, Milano
+							13, Pioltello</span> <br>
+					</p>
+					<p>
+						<b>Numero di Telefono: </b><span id="telefonoMedico">+39123456</span>
+						<span class="modifica" data-toggle="modal" data-target="#myModal3">Modifica</span><br>
+					</p>
+					<p>
+					 <b>Email: </b><span id="emailMedico" name="emailMed">nome@Cognome.it</span>
+					</p>
+
 				</div>
 
-				<p class="mb-5">Dermatologo</p>
-
-				<ul class="list-inline list-social-icons mb-0">
-					<li class="list-inline-item"><a href="#"> <span
-							class="fa-stack fa-lg"> <i
-								class="fa fa-circle fa-stack-2x"></i> <i
-								class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-						</span>
-					</a></li>
-					<li class="list-inline-item"><a href="#"> <span
-							class="fa-stack fa-lg"> <i
-								class="fa fa-circle fa-stack-2x"></i> <i
-								class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-						</span>
-					</a></li>
-					<li class="list-inline-item"><a href="#"> <span
-							class="fa-stack fa-lg"> <i
-								class="fa fa-circle fa-stack-2x"></i> <i
-								class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-						</span>
-					</a></li>
-
-				</ul>
 			</div>
 		</section>
+		
+		<div class="modal fade" id="myModal3" role="dialog">
+		<div class="modal-dialog">
+
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+
+				</div>
+				<div class="modal-body">
+					<p>
+						Inserisci il nuovo numero: <br> <input type="tel"
+							class="form-control" id="numeroTelefono" name="numeroTelefono">
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn">Salva</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Annulla</button>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
 
 		<section class="resume-section p-3 p-lg-5 d-flex flex-column"
 			id="experience">
@@ -126,11 +170,11 @@
 
 				<div class="field-wrap" style="margin-right: 1000px;">
 					<label>
-						<h3>Data :</h3> <br>
+						<h3>Data:</h3> <br>
 					</label> <input class="date1" type="date" required autocomplete="off" />
 				</div>
 				<div style="margin-top: 20px;">
-					<h3>Ora :</h3>
+					<h3>Ora:</h3>
 					</label> <input class="time" type="time" required autocomplete="off"
 						style="margin-top: 20px;" />
 				</div>
@@ -182,11 +226,15 @@
 	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 	<!-- Plugin JavaScript -->
-	<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+	<script src="vendor/jquery-easing/jquery.easing.min.js">
+		
+	</script>
+
 
 	<!-- Custom scripts for this template -->
 	<script src="js/resume.min.js"></script>
-	
+
+
 
 </body>
 
