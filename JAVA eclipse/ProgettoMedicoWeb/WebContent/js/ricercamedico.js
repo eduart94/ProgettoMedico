@@ -16,7 +16,7 @@ $(function() {
 					{title: '', 
 						render: function(data, type, row) {
 							
-							return '<span class="btn btn-primary" onclick="prenota(\'' + row.email + '\')">Prenota</span>';
+							return '<span class="btn btn-primary" id="bottonePrenotaMedico" onclick="prenota(\'' + row.email + '\')">Prenota</span>';
 						}}
 					]
 				
@@ -26,7 +26,11 @@ $(function() {
 	});
 });
 
-
+//gestiamo il tasto prenota nella ricerca medico
 function prenota(emailMedico) {
-	console.log(emailMedico);
+	top.location.href = 'index.html';
 }
+
+
+
+

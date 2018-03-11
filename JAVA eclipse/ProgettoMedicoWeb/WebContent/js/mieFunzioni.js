@@ -22,6 +22,7 @@ if(soggetto){
 // logout medico
 
 function logout(){
+	if(soggetto){
 	var domanda = window.confirm("Vuoi uscire dalla pagina?")
 	if(domanda){
 		top.location.href = 'Login.html';
@@ -29,6 +30,22 @@ function logout(){
 	}else{
 		console.log("errore");
 	}
+	}else{
+		console.log("non hai effettuato l'accesso");
+	}
 }
 
-// 
+// funzione per fare login o logout nella pagina di prenotazione.
+
+function loginOLogout(){
+	if(soggetto){
+		esito = logout();
+	}else{
+		top.location.href = 'registerPage.html';
+	}
+}
+
+// funzione per modificare il numero di telefono
+
+
+
