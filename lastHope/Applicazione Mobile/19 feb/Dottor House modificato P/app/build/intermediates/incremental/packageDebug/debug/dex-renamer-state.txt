@@ -1,0 +1,4 @@
+#Mon Mar 12 16:07:48 CET 2018
+base.0=C\:\\Users\\User\\Desktop\\Applicazione Mobile\\19 feb\\Dottor House modificato P\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

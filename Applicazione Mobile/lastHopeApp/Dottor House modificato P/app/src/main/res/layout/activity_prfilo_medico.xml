@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/profilo_medico"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/profilePicMedico"
+        android:layout_width="100dp"
+        android:layout_height="135dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#eeeeee" />
+
+    <TextView
+        android:id="@+id/nomeMedico"
+        android:layout_width="wrap_content"
+
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/profilePicMedico"
+        android:layout_marginStart="43dp"
+        android:layout_toEndOf="@+id/tipologia_medico"
+        android:paddingLeft="20dp"
+        android:text="Nome" />
+
+    <TextView
+        android:id="@+id/cognomeMedico"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/nomeMedico"
+        android:layout_below="@+id/nomeMedico"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="7dp"
+        android:text="Cognome" />
+
+    <TextView
+        android:id="@+id/emailMedico"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/cognomeMedico"
+        android:layout_below="@+id/cognomeMedico"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="7dp"
+        android:text="Email" />
+
+    <TextView
+        android:id="@+id/telefonoMedico"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/emailMedico"
+        android:layout_below="@+id/emailMedico"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="7dp"
+        android:text="Tel" />
+
+    <TextView
+        android:id="@+id/tipologia_medico"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/profilePicMedico"
+        android:layout_below="@+id/telefonoMedico"
+        android:layout_marginTop="7dp"
+        android:text="Tipologia" />
+
+    <TextView
+        android:id="@+id/citta_medico"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/tipologia_medico"
+        android:layout_below="@+id/tipologia_medico"
+        android:layout_marginTop="7dp"
+        android:text="Città" />
+
+    <TextView
+        android:id="@+id/indirizzo_medico"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/tipologia_medico"
+        android:layout_below="@+id/citta_medico"
+        android:layout_marginTop="7dp"
+        android:text="Indirizzo" />
+
+    <TextView
+        android:id="@+id/txtData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/indirizzo_medico"
+        android:layout_below="@+id/indirizzo_medico"
+        android:layout_marginTop="64dp"
+        android:text="Scegli una data:"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editTextData"
+        android:clickable="true"
+        android:focusable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtData"
+        android:layout_alignParentEnd="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        />
+
+    <TextView
+        android:id="@+id/txtOra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtData"
+        android:layout_below="@+id/txtData"
+        android:layout_marginTop="47dp"
+        android:text="Scegli un orario:"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editTextOra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtOra"
+        android:layout_alignParentEnd="true"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+</RelativeLayout>
