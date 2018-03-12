@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-	<persistence-unit name="ProgettoMedicoJPA" transaction-type="RESOURCE_LOCAL">
-		<class>model.Utente</class>
-		<class>model.Ambulatorio</class>
-		<class>model.Citta</class>
-		<class>model.Disponibilita</class>
-		<class>model.Medico</class>
-		<class>model.Prenotazione</class>
-		<class>model.SlotCalendar</class>
+	<persistence-unit name="Progetto_medico" transaction-type="RESOURCE_LOCAL">
+		<class>it.appmedica.model.Ambulatorio</class>
+		<class>it.appmedica.model.Medico</class>
+		<class>it.appmedica.model.Prenotazione</class>
+		<class>it.appmedica.model.Utente</class>
+		<class>it.appmedica.model.Citta</class>
+		<class>it.appmedica.model.Disponibilita</class>
+		<class>it.appmedica.model.SlotCalendar</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/progettomedico"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>
 			<property name="javax.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>
 			<property name="javax.persistence.schema-generation.database.action" value="create"/>
-			<property name="javax.persistence.jdbc.password" value="0123456789"/>
+<!-- 			<property name="eclipselink.logging.level" value="FINEST"/>
+			<property name="eclipselink.logging.level.sql" value="FINEST"/>
+			<property name="eclipselink.logging.parameters" value="true"/> -->
 		</properties>
 	</persistence-unit>
 </persistence>

@@ -60,7 +60,7 @@
 					data-toggle="modal" data-target="#myModal2"><strong> Modifica Password</strong> </a></li>
 
 				<li class="nav-item"><a class="nav-link js-scroll-trigger"
-					href=" Login.html"><strong> Logout</strong> </a></li>
+					onClick="logout()"><strong> Logout</strong> </a></li>
 
 			</ul>
 		</div>
@@ -112,13 +112,13 @@
 		<section class="resume-section p-3 p-lg-5 d-flex d-column" id="sectionUtente">
 			<div class="contentwrap">
 
-				<h1 class="mb-0">
-					Nome <span class="text-primary">Cognome</span>
+				<h1 class="mb-0" id="nomeUtente">
+					Nome <span class="text-primary" id="cognUtente">Cognome</span>
 				</h1>
 
 
 				<div class="subheading mb-5">
-					via, Milano 13, Pioltello <br> <a href="#">nome@Cognome.it</a>
+				<a href="#" id="emailUtente">nome@Cognome.it</a>
 				</div>
 
 				<ul class="list-inline list-social-icons mb-0">
@@ -150,8 +150,7 @@
 			<div class="my-auto">
 				<h2 class="mb-5">Effettua la Prenotazione</h2>
 
-
-				<table class="responsive-table">
+				<table id="listaPrenotazioni" class="responsive-table">
 					<thead>
 						<tr>
 							<th scope="col">Nome Medico</th>
@@ -162,47 +161,10 @@
 							<th scope="col">Opzione Elimina</th>
 						</tr>
 					</thead>
-
 					<tbody>
-						<tr>
-							<th scope="nomeMedico">Doc Dain</th>
-							<td data-title="motivazione"></td>
-							<td data-title="data" data-type="date"></td>
-							<td data-title="ora" data-type="time"></td>
-							<td data-title="indirizzo"></td>
-							<td><div class="container">
-
-									<!-- Trigger the modal with a button -->
-									<button type="button" class="btn btn-info btn-lg"
-										data-toggle="modal" data-target="#modal2">Elimina</button>
-
-									<!-- Modal -->
-									<div class="modal fade" id="modal2" role="dialog">
-										<div class="modal-dialog">
-
-											<!-- Modal content-->
-											<div class="modal-content">
-												<div class="modal-header">
-													<button type="button" class="close" data-dismiss="modal">&times;</button>
-
-												</div>
-												<div class="modal-body">
-													<p>Sei sicuro di voler eliminare la prenotazione?</p>
-												</div>
-												<div class="modal-footer">
-													<button type="button" class="btn">Conferma</button>
-													<button type="button" class="btn btn-default"
-														data-dismiss="modal">Annulla</button>
-
-												</div>
-											</div>
-
-										</div>
-									</div></td>
-						</tr>
+						<!-- Popolazione dal JS -->
+					</tbody>
 				</table>
-
-
 			</div>
 
 			<div class="table-storico">
@@ -219,6 +181,7 @@
 							<th scope="col">Indirizzo</th>
 							<th scope="col">Recensione</th>
 						</tr>
+					</thead>
 					<tbody>
 						<tr>
 							<th scope="nomeMedico">Doc Dain</th>
@@ -268,15 +231,36 @@
 
 										</div>
 									</div>
+								</div>
 							</td>
 						</tr>
-					</thead>
+					</tbody>
 				</table>
 			</div>
 
 		</section>
 
 
+		<div class="modal fade" id="modalDelete" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body">
+						<p>Sei sicuro di voler eliminare la prenotazione?</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn">Conferma</button>
+						<button type="button" class="btn btn-default"
+							data-dismiss="modal">Annulla</button>
+
+					</div>
+				</div>
+			</div>
+		</div>
+									
 		<!-- Bootstrap core JavaScript -->
 		<script src="vendor/jquery/jquery.min.js"></script>
 		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
