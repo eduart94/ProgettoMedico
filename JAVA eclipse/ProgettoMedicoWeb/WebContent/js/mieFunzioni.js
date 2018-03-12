@@ -19,6 +19,17 @@ if(soggetto){
 	})
 }
 
+
+// profilo personale del medico
+
+var utente = localStorage.getItem('utente');
+if(utente){
+	utente = JSON.parse(utente)
+	$('nomeUtente').html(utente.nome)
+	$('cognUtente').html(utente.cognome)
+	$('emailUtente').html(utente.email)
+}
+
 // logout medico
 
 function logout(){
@@ -28,6 +39,17 @@ function logout(){
     	localStorage.clear();
 	}else{
 		console.log("errore");
+	}
+}
+//logout utente
+
+function logoutUtente(){
+	var domanda = window.confirm('vuoi uscire dalla tua area personale?');
+	if(domanda){
+		top.location.href='Login.html'
+			localStorage.clear();
+	}else{
+		console.log('problema ad effettuare il logout');
 	}
 }
 // loginOLogout

@@ -52,15 +52,19 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav">
 				<li class="nav-item"><a class="nav-link js-scroll-trigger"
-					href="#about"> <strong>PROFILO UTENTE </strong></a></li>
-				<li class="nav-item"><a class="nav-link js-scroll-trigger"
-					href="#experience"><strong> MIE VISITE</strong> </a></li>
-					
-				<li class="nav-item"><a class="nav-link js-scroll-trigger"
-					data-toggle="modal" data-target="#myModal2"><strong> Modifica Password</strong> </a></li>
+					href="#about"> <strong>Profilo</strong></a></li>
 
 				<li class="nav-item"><a class="nav-link js-scroll-trigger"
-					onClick="logout()"><strong> Logout</strong> </a></li>
+					href="#experience"><strong>Le mie visite</strong> </a></li>
+				<li class="nav-item"><a class="nav-link js-scroll-trigger"
+					href="ricercamedico.html"><strong>Prenota una visita</strong> </a></li>
+
+				<li class="nav-item"><a class="nav-link js-scroll-trigger"
+					data-toggle="modal" data-target="#myModal2"><strong>
+							Modifica Password</strong> </a></li>
+
+				<li class="nav-item"><a class="nav-link js-scroll-trigger"
+					onClick="logoutUtente()"><strong> Logout</strong> </a></li>
 
 			</ul>
 		</div>
@@ -80,25 +84,25 @@
 				<div class="modal-body">
 					<p>
 						Inserisci la tua password attuale: <br> <input
-							type="password" class="form-control" id="passwordAttuale"
-							name="passwordAttuale">
+							type="password" class="form-control" id="passwordAttualeUtente"
+							name="passwordAttualeUtente">
 					</p>
 				</div>
 				<div class="modal-body">
 					<p>
 						Inserisci la nuova password: <br> <input type="password"
-							class="form-control" id="passwordNuova" name="passwordNuova">
+							class="form-control" id="passwordNuovaUtente" name="passwordNuovaUtente">
 					</p>
 				</div>
 				<div class="modal-body">
 					<p>
 						Digita nuovamente la password: <br> <input type="password"
-							class="form-control" id="passwordNuovaConf"
-							name="passwordNuovaConf">
+							class="form-control" id="passwordNuovaConfUtente"
+							name="passwordNuovaConfUtente">
 					</p>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn">Salva</button>
+					<button type="button" class="btn" id="salvaPasswordUtente">Salva</button>
 					<button type="button" class="btn btn-default" data-dismiss="modal">Annulla</button>
 
 				</div>
@@ -109,16 +113,18 @@
 
 	<div class="container-fluid p-0">
 
-		<section class="resume-section p-3 p-lg-5 d-flex d-column" id="sectionUtente">
+		<section class="resume-section p-3 p-lg-5 d-flex d-column"
+			id="sectionUtente">
 			<div class="contentwrap">
 
 				<h1 class="mb-0" id="nomeUtente">
-					Nome <span class="text-primary" id="cognUtente">Cognome</span>
+					<span id="nomeUtente">Nome</span> 
+					<span class="text-primary" id="cognUtente">Cognome</span>
 				</h1>
 
 
 				<div class="subheading mb-5">
-				<a href="#" id="emailUtente">nome@Cognome.it</a>
+					<a href="#" id="emailUtente">nome@Cognome.it</a>
 				</div>
 
 				<ul class="list-inline list-social-icons mb-0">
@@ -253,14 +259,13 @@
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn">Conferma</button>
-						<button type="button" class="btn btn-default"
-							data-dismiss="modal">Annulla</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Annulla</button>
 
 					</div>
 				</div>
 			</div>
 		</div>
-									
+
 		<!-- Bootstrap core JavaScript -->
 		<script src="vendor/jquery/jquery.min.js"></script>
 		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -270,6 +275,8 @@
 
 		<!-- Custom scripts for this template -->
 		<script src="js/resume.min.js"></script>
+		<script src="js/mieFunzioni.js"></script>
+		<script src="js/modificaPasswordUtente.js"></script>
 </body>
 
 
