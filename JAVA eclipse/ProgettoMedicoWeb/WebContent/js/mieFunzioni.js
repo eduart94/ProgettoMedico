@@ -30,5 +30,20 @@ function logout(){
 		console.log("errore");
 	}
 }
+// loginOLogout
 
-// 
+function loginOLogout(){
+	if(soggetto){
+		esito = logout();
+	}else{
+		console.log('non hai ancora effettuato accesso');
+		alert('devi effettuare l accesso');
+		window.location='Login.html'
+		
+	}
+}
+
+
+
+
+
