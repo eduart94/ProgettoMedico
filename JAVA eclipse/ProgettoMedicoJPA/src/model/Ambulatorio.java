@@ -48,12 +48,10 @@ public class Ambulatorio implements Serializable {
 
 	//bi-directional many-to-one association to Prenotazione
 	@OneToMany(mappedBy="ambulatorio", cascade=CascadeType.ALL)
-	@JoinColumn(nullable=false)
 	@JsonIgnore
 	private List<Prenotazione> prenotaziones;
 	
 	@OneToMany(mappedBy="ambulatorio", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
-	@JoinColumn(nullable=false)
 	@JsonIgnore
 	private List<Disponibilita> disponibilita;
 	

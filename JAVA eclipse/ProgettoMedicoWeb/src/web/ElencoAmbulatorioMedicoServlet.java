@@ -11,20 +11,21 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import model.Ambulatorio;
 import model.Citta;
 import programma.JPAUtil;
 
 /**
  * Servlet implementation class elencoCitta
  */
-@WebServlet("/elencoCitta")
-public class ElencoCittaServlet extends HttpServlet {
+@WebServlet("/elencoAmbulatori")
+public class ElencoAmbulatorioMedicoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ElencoCittaServlet() {
+    public ElencoAmbulatorioMedicoServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,16 +33,15 @@ public class ElencoCittaServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		List<Citta> elenco = JPAUtil.getInstance().getEm()
-				.createQuery("select c from Citta c", Citta.class)
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	String email = request.getParameter("emailMed");
+	System.out.println("ciao");
+	List<Ambulatorio> elenco = JPAUtil.getInstance().getEm()
+				.createQuery("SELECT a FROM Medico m join medico_has_ambulatorio mh on m.email = mh.Medico_email join Ambulatorio a on mh.Ambulatorio_id = a.IDAMBULATORIO where m.email=:email;", Ambulatorio.class).setParameter("email", email)
 				.getResultList();
-		
 		ObjectMapper mapper = new ObjectMapper();
-		String json = mapper.writeValueAsString(elenco);
 		response.setContentType("application/json");
-		response.getWriter().append(json);
+		response.getWriter().append(mapper.writeValueAsString(elenco));
 				
 	}
 

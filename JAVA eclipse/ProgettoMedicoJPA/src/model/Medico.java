@@ -61,11 +61,9 @@ public class Medico implements Serializable {
 	//bi-directional many-to-one association to Prenotazione
 	@OneToMany(mappedBy="medico", cascade=CascadeType.ALL)
 	@JsonIgnore
-	@JoinColumn(nullable=false)
 	private List<Prenotazione> prenotaziones;
 	
 	@OneToMany(mappedBy="medico", cascade=CascadeType.ALL)
-	@JoinColumn(nullable=false)
 	private List<SlotCalendar> slotCalendar;
 
 	public String getEmail() {

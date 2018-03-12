@@ -29,7 +29,6 @@ public class Citta {
 	private String paese;
 	
 	@OneToMany(mappedBy="citta", cascade= CascadeType.ALL, fetch= FetchType.LAZY)
-	@JoinColumn(nullable=false )
 	private List<Ambulatorio> ambulatori;
 	
 	public int getIdCitta() {

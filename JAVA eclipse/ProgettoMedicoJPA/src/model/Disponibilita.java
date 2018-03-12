@@ -55,7 +55,6 @@ public class Disponibilita {
 	private Ambulatorio ambulatorio;
 	
 	@OneToMany(mappedBy="disponibilita", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
-	@JoinColumn(nullable=false)
 	@JsonIgnore
 	private List<Prenotazione> prenotazione;
 	

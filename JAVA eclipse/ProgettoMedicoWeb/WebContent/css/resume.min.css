@@ -27,11 +27,21 @@ h2 {
 	font-size: 3.5rem
 }
 
+.nav-item{
+	cursor: pointer;
+}
+
 .subheading {
 	text-transform: uppercase;
 	font-weight: 500;
 	font-family: 'Saira Extra Condensed', serif;
 	font-size: 1.35rem
+}
+
+	.modifica{
+	font-size: 1rem;
+	color: rgb(73,189,213);
+	cursor: pointer;
 }
 
 .list-social-icons a {
@@ -112,7 +122,7 @@ section.resume-section .resume-item .resume-date {
 
 @media ( min-width :768px) {
 	section.resume-section {
-		min-height: 100vh
+		min-height: 50vh
 	}
 	section.resume-section .resume-item .resume-date {
 		min-width: 18rem
@@ -141,3 +151,5 @@ a {
 a:active, a:focus, a:hover {
 	color: #824027
 }
+
+
