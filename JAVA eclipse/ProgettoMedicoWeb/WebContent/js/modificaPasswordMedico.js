@@ -3,12 +3,12 @@ if(soggetto){
 	soggetto = JSON.parse(soggetto);
 $('#salvaNuovaPassword').click(function(e){
 
-var passwordAttuale= soggetto.password;
+var passwordAttuale= document.getElementById('passwordAttuale').value;
 var passwordNuova = document.getElementById('passwordNuova').value;
 var confermaPassword = document.getElementById('passwordNuovaConf').value;
 
-if((passwordAttuale=="")|| (passwordAttuale!=soggetto.password)){
-	window.alert('password errata');
+if((passwordAttuale=="")||(passwordAttuale!=soggetto.password)){
+	window.alert('La password da modificare non è corretta!');
 	document.modulo.pw.focus();
 	return false;
 }
@@ -31,19 +31,24 @@ if(passwordNuova!=confermaPassword){
 }
 else{
 	e.preventDefault();
+	var oggetto = {
+			email: soggetto.email,
+			numeroTelefono: soggetto.numeroTelefono,
+			password: $('#passwordNuova').val()
+	};
+	console.log('debug funzionalità di myModal' + JSON.stringify(oggetto));
 	$.ajax({
 		url: 'ModificaDatiMedico',
 		method: 'post',
-		data: $('#modalRegistraPassword').serialize()
+		data: oggetto
 	})
 	.done(function(esito){
 		console.log(esito);
 		if(esito.success) {
 			localStorage.setItem('soggetto', JSON.stringify(esito.oggettoRisultante));
 			window.alert("Password cambiata correttamente");
-			location.href ='AreaPersonaleMed.html';
-			localStorage.clear();
-		}
+			location.href ='AreaRiservataMed.html';
+	}
 		
 		else
 			window.alert("Cambio Password fallito");
