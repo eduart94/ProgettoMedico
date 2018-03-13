@@ -1,43 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="src" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/generated/source/buildConfig/androidTest/debug"/>
-	<classpathentry kind="src" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/generated/source/buildConfig/debug"/>
-	<classpathentry kind="src" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/generated/source/r/androidTest/debug"/>
-	<classpathentry kind="src" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/generated/source/r/debug"/>
-	<classpathentry kind="src" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/src/androidTest/java"/>
-	<classpathentry kind="src" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/src/main/java"/>
-	<classpathentry kind="src" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/src/test/java"/>
 	<classpathentry kind="src" path="JAVA eclipse/ProgettoMedicoJPA/src"/>
-	<classpathentry kind="src" path="JAVA eclipse/ProgettoMedicoWeb/src"/>
-	<classpathentry kind="lib" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/generated/mockable-android-25.v3.jar"/>
-	<classpathentry kind="lib" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/generated/mockable-android-26.v3.jar"/>
-	<classpathentry kind="lib" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"/>
-	<classpathentry kind="lib" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"/>
-	<classpathentry kind="lib" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/intermediates/transforms/dexBuilder/debug/112.jar"/>
-	<classpathentry kind="lib" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/intermediates/transforms/dexBuilder/debug/113.jar"/>
-	<classpathentry kind="lib" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/intermediates/transforms/dexBuilder/debug/114.jar"/>
-	<classpathentry kind="lib" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/intermediates/transforms/dexBuilder/debug/115.jar"/>
-	<classpathentry kind="lib" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/intermediates/transforms/dexBuilder/debug/116.jar"/>
-	<classpathentry kind="lib" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/intermediates/transforms/dexBuilder/debug/117.jar"/>
-	<classpathentry kind="lib" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/intermediates/transforms/dexBuilder/debug/118.jar"/>
-	<classpathentry kind="lib" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/intermediates/transforms/dexBuilder/debug/119.jar"/>
-	<classpathentry kind="lib" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/intermediates/transforms/dexBuilder/debug/120.jar"/>
-	<classpathentry kind="lib" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/intermediates/transforms/dexBuilder/debug/121.jar"/>
-	<classpathentry kind="lib" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/intermediates/transforms/dexBuilder/debug/122.jar"/>
-	<classpathentry kind="lib" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/intermediates/transforms/dexBuilder/debug/123.jar"/>
-	<classpathentry kind="lib" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/intermediates/transforms/dexBuilder/debug/124.jar"/>
-	<classpathentry kind="lib" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/intermediates/transforms/dexBuilder/debug/125.jar"/>
-	<classpathentry kind="lib" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/intermediates/transforms/dexBuilder/debug/126.jar"/>
-	<classpathentry kind="lib" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/intermediates/transforms/mergeJavaRes/debug/0.jar"/>
-	<classpathentry kind="lib" path="Applicazione Mobile/19 feb/Dottor House modificato P/gradle/wrapper/gradle-wrapper.jar"/>
-	<classpathentry kind="lib" path="JAVA eclipse/ProgettoMedicoLibrerie/bin/jackson-annotations-2.9.4.jar"/>
-	<classpathentry kind="lib" path="JAVA eclipse/ProgettoMedicoLibrerie/bin/jackson-core-2.9.4.jar"/>
-	<classpathentry kind="lib" path="JAVA eclipse/ProgettoMedicoLibrerie/bin/jackson-databind-2.9.4.jar"/>
-	<classpathentry kind="lib" path="JAVA eclipse/ProgettoMedicoLibrerie/bin/mariadb-java-client-2.2.0.jar"/>
 	<classpathentry kind="lib" path="JAVA eclipse/ProgettoMedicoLibrerie/src/jackson-annotations-2.9.4.jar"/>
 	<classpathentry kind="lib" path="JAVA eclipse/ProgettoMedicoLibrerie/src/jackson-core-2.9.4.jar"/>
 	<classpathentry kind="lib" path="JAVA eclipse/ProgettoMedicoLibrerie/src/jackson-databind-2.9.4.jar"/>
 	<classpathentry kind="lib" path="JAVA eclipse/ProgettoMedicoLibrerie/src/mariadb-java-client-2.2.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/EclipseLink 2.5.2"/>
+	<classpathentry kind="con" path="org.eclipse.datatools.connectivity.jdt.DRIVERLIBRARY/MySQL JDBC Driver"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="output" path="Applicazione Mobile/19 feb/Dottor House modificato P/app/build/intermediates/classes/debug"/>
 </classpath>

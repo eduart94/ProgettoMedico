@@ -49,6 +49,40 @@
 							</form>
 							<br> <a href="#" class="pull-right btn btn-block btn-danger"
 								id="btnLoginMedico"> Login </a> <br>
+								
+								<button type="button" class=" pull-left btn-link" data-toggle="modal" data-target="#recPassMed">
+								<strong>Recupera Password</strong>
+							</button>
+							
+							<!-- Modal di recupera pass -->
+	<div class="modal fade" id="recPassMed" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content" id="modalContentId">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+<span>RECUPERA PASSWORD MEDICO</span>
+				</div>
+				<div class="modal-body">
+					<p>
+						<span>Inserisci l'email</span> <br> <input type="tel"
+							class="form-control" id="numeroTelefonoMedico" name="numeroTelefono">
+					</p>
+					<p>
+						Inserisci nuova password <br> <input type="tel"
+							class="form-control" id="numeroTelefonoMedico" name="numeroTelefono">
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn" id="salvaNumeroMedico">Salva</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Annulla</button>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
 
 							<button type="submit" class=" pull-right btn-link">
 								<a href="registerPage.html"><strong>Registrati</strong></a>
@@ -75,6 +109,42 @@
 							<br> <a href="#"
 								class="pull-right btn btn-block btn-success"
 								id="btnLoginPaziente">Login </a> <br>
+								
+								<button type="button" class=" pull-left btn-link" data-toggle="modal" data-target="#recPassUt">
+								<strong>Recupera Password</strong>
+							</button>
+							
+							<!-- Modal di recupera pass -->
+	<div class="modal fade" id="recPassUt" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content" id="modalContentId">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+<span>RECUPERA PASSWORD UTENTE</span>
+				</div>
+				<div class="modal-body">
+					<p>
+						<span>Inserisci l'email</span> <br> <input type="tel"
+							class="form-control" id="EmailUtente" name="emailutente">
+					</p>
+					<p>
+						Inserisci nuova password <br> <input type="tel"
+							class="form-control" id="NuovaPasswordUtente" name="nuovapasswordutente">
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn" id="salvaNumeroMedico">Salva</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Annulla</button>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+								
 							<button type="submit" class=" pull-right btn-link">
 								<a href="registerPage.html"><strong>Registrati</strong></a>
 							</button>
@@ -86,6 +156,7 @@
 					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 		<script
 			src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
