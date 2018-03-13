@@ -1,9 +1,11 @@
 package gestione;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 
+import model.Ambulatorio;
 import model.Medico;
 import model.Utente;
 import programma.JPAUtil;
@@ -129,6 +131,13 @@ public class GestioneAccountMedico {
 		eo.setOggettoRisultante(e);
 	}
 		return eo;
+	}
+	
+	public List<Ambulatorio> medicoAmbulatori(String email) {
+		EntityManager em = JPAUtil.getInstance().getEm();
+		Medico m = em.find(Medico.class, email);
+		List<Ambulatorio> ambulatoriMedico = m.getAmbulatorios();
+		return ambulatoriMedico;
 	}
 
 	

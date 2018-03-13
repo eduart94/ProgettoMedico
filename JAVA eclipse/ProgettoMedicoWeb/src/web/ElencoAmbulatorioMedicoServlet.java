@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import gestione.GestioneAccountMedico;
 import model.Ambulatorio;
 import model.Citta;
 import programma.JPAUtil;
@@ -21,6 +22,8 @@ import programma.JPAUtil;
 @WebServlet("/elencoAmbulatori")
 public class ElencoAmbulatorioMedicoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	GestioneAccountMedico gam = new GestioneAccountMedico();
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -35,13 +38,11 @@ public class ElencoAmbulatorioMedicoServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	String email = request.getParameter("emailMed");
-	System.out.println("ciao");
-	List<Ambulatorio> elenco = JPAUtil.getInstance().getEm()
-				.createQuery("SELECT a FROM Medico m join medico_has_ambulatorio mh on m.email = mh.Medico_email join Ambulatorio a on mh.Ambulatorio_id = a.IDAMBULATORIO where m.email=:email;", Ambulatorio.class).setParameter("email", email)
-				.getResultList();
+	
+	    List<Ambulatorio> ambulatori = gam.medicoAmbulatori(email);
 		ObjectMapper mapper = new ObjectMapper();
 		response.setContentType("application/json");
-		response.getWriter().append(mapper.writeValueAsString(elenco));
+		response.getWriter().append(mapper.writeValueAsString(ambulatori));
 				
 	}
 

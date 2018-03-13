@@ -10,12 +10,23 @@ if(soggetto){
 	$('#emailMedico').html(soggetto.email)
 	var e ={}
 	e.emailMed = soggetto.email
-	console.log(e)
-	$.ajax({
+    $.ajax({
 		url: 'elencoAmbulatori',
 		method: 'post',
 		data: e
-	}).done(function(ambulatorio){
+	}).done(function(ambulatori){
+		console.log(ambulatori)
+		
+		$.each(ambulatori, function(i,ambulatorio){
+			var indirizzo = ambulatorio.indirizzo
+			var citta = ambulatorio.citta.nome
+			console.log(indirizzo);
+			console.log(citta);
+			var appendi = '<p>'+indirizzo + ',' + citta +'</p>'
+			$('#indirizzoMedico').append(appendi);
+		})
+			
+		
 	})
 }
 
@@ -25,9 +36,9 @@ if(soggetto){
 var utente = localStorage.getItem('utente');
 if(utente){
 	utente = JSON.parse(utente)
-	$('nomeUtente').html(utente.nome)
-	$('cognUtente').html(utente.cognome)
-	$('emailUtente').html(utente.email)
+	$('#nomeUtente').html(utente.nome)
+	$('#cognUtente').html(utente.cognome)
+	$('#emailUtente').html(utente.email)
 }
 
 // logout medico
@@ -64,7 +75,6 @@ function loginOLogout(){
 		
 	}
 }
-
 
 
 
