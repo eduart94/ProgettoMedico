@@ -7,6 +7,65 @@
 </head>
 <body class="filter">
 
+	<!-- Modal di recupera pass -->
+	<div class="modal fade" id="recPassMed" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content" id="modalContentId">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<span>RECUPERA PASSWORD MEDICO</span>
+				</div>
+				<div class="modal-body">
+					<p>
+						<span>Inserisci l'email</span> <br> <input type="tel"
+							class="form-control" id="emMedico" name="emMedico">
+					</p>
+					<p>
+						Inserisci nuova password <br> <input type="tel"
+							class="form-control" id="recPassMed" name="recPassMed">
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn" id="salvaPasswordMedico">Salva</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Annulla</button>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- Modal di recupera pass -->
+	<div class="modal fade" id="recPassUt" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content" id="modalContentId">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<span>RECUPERA PASSWORD UTENTE</span>
+				</div>
+				<div class="modal-body">
+					<p>
+						<span>Inserisci l'email</span> <br> <input type="tel"
+							class="form-control" id="EmailUtente" name="EmailUtente">
+					</p>
+					<p>
+						Inserisci nuova password <br> <input type="tel"
+							class="form-control" id="recPassUtente" name="recPassUtente">
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn" id="salPassUtente">Salva</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Annulla</button>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
 	<div class="container" style="margin-top: 5%;">
 		<div class="row">
 			<div class="col-sm-4"></div>
@@ -49,40 +108,11 @@
 							</form>
 							<br> <a href="#" class="pull-right btn btn-block btn-danger"
 								id="btnLoginMedico"> Login </a> <br>
-								
-								<button type="button" class=" pull-left btn-link" data-toggle="modal" data-target="#recPassMed">
+
+							<button type="button" class=" pull-left btn-link"
+								data-toggle="modal" data-target="#recPassMed">
 								<strong>Recupera Password</strong>
 							</button>
-							
-							<!-- Modal di recupera pass -->
-	<div class="modal fade" id="recPassMed" role="dialog">
-		<div class="modal-dialog">
-
-			<!-- Modal content-->
-			<div class="modal-content" id="modalContentId">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-<span>RECUPERA PASSWORD MEDICO</span>
-				</div>
-				<div class="modal-body">
-					<p>
-						<span>Inserisci l'email</span> <br> <input type="tel"
-							class="form-control" id="numeroTelefonoMedico" name="numeroTelefono">
-					</p>
-					<p>
-						Inserisci nuova password <br> <input type="tel"
-							class="form-control" id="numeroTelefonoMedico" name="numeroTelefono">
-					</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn" id="salvaNumeroMedico">Salva</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Annulla</button>
-
-				</div>
-			</div>
-
-		</div>
-	</div>
 
 							<button type="submit" class=" pull-right btn-link">
 								<a href="registerPage.html"><strong>Registrati</strong></a>
@@ -109,45 +139,17 @@
 							<br> <a href="#"
 								class="pull-right btn btn-block btn-success"
 								id="btnLoginPaziente">Login </a> <br>
-								
-								<button type="button" class=" pull-left btn-link" data-toggle="modal" data-target="#recPassUt">
+
+							<button type="button" class=" pull-left btn-link"
+								data-toggle="modal" data-target="#recPassUt">
 								<strong>Recupera Password</strong>
 							</button>
-							
-							<!-- Modal di recupera pass -->
-	<div class="modal fade" id="recPassUt" role="dialog">
-		<div class="modal-dialog">
 
-			<!-- Modal content-->
-			<div class="modal-content" id="modalContentId">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-<span>RECUPERA PASSWORD UTENTE</span>
-				</div>
-				<div class="modal-body">
-					<p>
-						<span>Inserisci l'email</span> <br> <input type="tel"
-							class="form-control" id="EmailUtente" name="emailutente">
-					</p>
-					<p>
-						Inserisci nuova password <br> <input type="tel"
-							class="form-control" id="NuovaPasswordUtente" name="nuovapasswordutente">
-					</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn" id="salvaNumeroMedico">Salva</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Annulla</button>
-
-				</div>
-			</div>
-
-		</div>
-	</div>
-
-								
 							<button type="submit" class=" pull-right btn-link">
 								<a href="registerPage.html"><strong>Registrati</strong></a>
 							</button>
+							
+							
 							<div id="pnlErrLogin" class="alert alert-danger"
 								style="display: none" role="alert">
 								<strong>Problemi di accesso!</strong> L'accesso non è riuscito.
@@ -157,12 +159,12 @@
 				</div>
 			</div>
 		</div>
-		</div>
-		<script
-			src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script
-			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src="js/login.js"></script>
-		  
+	</div>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/login.js"></script>
+
 </body>
 </html>
