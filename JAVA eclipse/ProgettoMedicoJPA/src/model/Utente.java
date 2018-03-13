@@ -3,6 +3,9 @@ package model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.Date;
 import java.util.List;
 
@@ -41,6 +44,7 @@ public class Utente implements Serializable {
 
 	//bi-directional many-to-one association to Prenotazione
 	@OneToMany(mappedBy="utente")
+	@JsonIgnore
 	private List<Prenotazione> prenotaziones;
 	
 	

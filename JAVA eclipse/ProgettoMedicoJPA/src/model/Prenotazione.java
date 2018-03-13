@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import model.Disponibilita;
 
 import java.sql.Time;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -25,6 +26,9 @@ public class Prenotazione implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
+	
+	@Transient
+	private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	
 	@Column(nullable=false)
 	private int recensione;
@@ -81,10 +85,14 @@ public class Prenotazione implements Serializable {
 
 	
 
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	//bi-directional many-to-one association to Ambulatorio
 	@ManyToOne
 	@JoinColumn(nullable=false)
-	@JsonIgnore
+	
 	private Ambulatorio ambulatorio;
 
 	//bi-directional many-to-one association to Medico
@@ -96,10 +104,13 @@ public class Prenotazione implements Serializable {
 	//bi-directional many-to-one association to Utente
 	@ManyToOne
 	@JoinColumn(nullable=false)
-	@JsonIgnore
 	private Utente utente;
 
 	public Prenotazione() {
+	}
+	
+	public String getDataStringa() {
+		return sdf.format(this.data);
 	}
 
 	public int getId() {
