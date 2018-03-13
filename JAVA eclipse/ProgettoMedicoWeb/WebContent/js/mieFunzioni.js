@@ -1,4 +1,4 @@
-// area riservata medico 
+// Dati del medico
 
 var soggetto = localStorage.getItem('soggetto');
 if(soggetto){
@@ -15,13 +15,11 @@ if(soggetto){
 		method: 'post',
 		data: e
 	}).done(function(ambulatori){
-		console.log(ambulatori)
+		
 		
 		$.each(ambulatori, function(i,ambulatorio){
 			var indirizzo = ambulatorio.indirizzo
 			var citta = ambulatorio.citta.nome
-			console.log(indirizzo);
-			console.log(citta);
 			var appendi = '<p>'+indirizzo + ',' + citta +'</p>'
 			$('#indirizzoMedico').append(appendi);
 		})
@@ -30,6 +28,29 @@ if(soggetto){
 	})
 }
 
+//Prenotazioni del medico
+if(soggetto){
+	
+	var medico = {}
+	medico.email = soggetto.email
+	$.ajax({
+		url:'PrenotazioniMedico',
+		method:'post',
+		data:medico
+    })
+    .done(function(prenotazioni){
+    	
+    	$.each(prenotazioni,function(i,prenotazione){
+    		var data = prenotazione.data
+    		var motivazione = prenotazione.motivazione
+    		var ora = prenotazione.ora
+    		console.log(data);
+    		console.log(motivazione);
+    		console.log(ora);
+    		
+    	})
+    })
+}
 
 // profilo personale del medico
 

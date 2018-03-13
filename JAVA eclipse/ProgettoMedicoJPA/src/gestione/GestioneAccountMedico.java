@@ -7,6 +7,7 @@ import javax.persistence.EntityManager;
 
 import model.Ambulatorio;
 import model.Medico;
+import model.Prenotazione;
 import model.Utente;
 import programma.JPAUtil;
 
@@ -138,6 +139,13 @@ public class GestioneAccountMedico {
 		Medico m = em.find(Medico.class, email);
 		List<Ambulatorio> ambulatoriMedico = m.getAmbulatorios();
 		return ambulatoriMedico;
+	}
+	
+	public List<Prenotazione> prenotazioniMedico(String email){
+		EntityManager em= JPAUtil.getInstance().getEm();
+		Medico m = em.find(Medico.class, email);
+		List<Prenotazione> medicoPrenotazione = m.getPrenotaziones();
+		return medicoPrenotazione;
 	}
 
 	
