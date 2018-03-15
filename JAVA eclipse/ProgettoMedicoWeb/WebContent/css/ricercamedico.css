@@ -15,7 +15,7 @@ h2{
     padding-top: 17px;
     position: relative;
     border-top-width: 270px;
-    background-color: rgba(0,0,0,.1);
+    background-color: white;
     }
  
     
@@ -28,14 +28,18 @@ h2{
 }
 .btn{
     border-right-width: 1px;
-    margin-left: 247px;
 }
 .navbar{
-    background-color:rgb(73,189,213);
+    background-color:#759cc6;
    
 }
 #loginnav{
-    margin-left: 1250px;
+    margin-left: auto;
+    color: white;
+}
+#registernav{
+	margin-right: auto;
+	color: white;
 }
 
 table.dataTable thead th, table.dataTable tfoot th {
