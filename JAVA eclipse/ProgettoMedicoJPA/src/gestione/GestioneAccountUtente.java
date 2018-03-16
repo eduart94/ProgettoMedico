@@ -1,12 +1,14 @@
 package gestione;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.NonUniqueResultException;
 import javax.persistence.TypedQuery;
 
+import model.Prenotazione;
 import model.Utente;
 import programma.JPAUtil;
 
@@ -215,6 +217,13 @@ public class GestioneAccountUtente {
 		eo.setOggettoRisultante(e);
 	}
 		return eo;
+	}
+	
+	public List<Prenotazione> prenotazioniUtente(String email){
+		EntityManager em = JPAUtil.getInstance().getEm();
+		Utente u = em.find(Utente.class, email);
+		List<Prenotazione> prenotazioni = u.getPrenotaziones();
+		return prenotazioni;
 	}
 }
 	

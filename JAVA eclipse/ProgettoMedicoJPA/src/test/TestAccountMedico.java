@@ -15,7 +15,7 @@ public class TestAccountMedico {
 	public void testRegistrazione() {
 		GestioneAccountMedico gam = new GestioneAccountMedico(); 
 		EsitoOperazione eo = gam.registraMedico("eduart94@", "ciao1", "eduart", "blu", new Date(1994-03-03) , "123456789", "oculista");
-		assertFalse(eo.isSuccess());
+		assertTrue(eo.isSuccess());
 		
 		eo = gam.registraMedico("flavio92@", "ciao2", "flavio", "verdi", new Date(1995-03-03) , "66666789", "dermatologo");
 		assertTrue(eo.isSuccess());

@@ -41,7 +41,7 @@ public class Ambulatorio implements Serializable {
 	private Citta citta;
 
 	//bi-directional many-to-many association to Medico
-	@ManyToMany(mappedBy="ambulatorios", cascade=CascadeType.ALL)
+	@ManyToMany(mappedBy="ambulatorios")
 	@JoinColumn(nullable=false)
 	@JsonIgnore
 	private List<Medico> medicos;

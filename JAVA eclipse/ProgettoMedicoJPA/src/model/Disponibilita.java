@@ -49,7 +49,7 @@ public class Disponibilita {
 		this.prenotazione = prenotazione;
 	}
 
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(nullable=false)
 	@JsonIgnore
 	private Ambulatorio ambulatorio;

@@ -18,7 +18,7 @@ $('#salvaPasswordMedico').click(function(e){
 		document.modulo.confermaPassword.focus();
 		return false;
 	}
-	if(confermaPassword!=passwordNuova){
+	if(passwordNuova!=confermaPassword){
 		alert("La password confermata è diversa da quella scelta, controllare.");
 		   document.modulo.confermaPassword.value = "";
 		   document.modulo.confermaPassword.focus();

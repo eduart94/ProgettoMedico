@@ -10,6 +10,7 @@ import model.Disponibilita;
 
 import java.sql.Time;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.util.Date;
 import java.util.List;
 
@@ -50,13 +51,17 @@ public class Prenotazione implements Serializable {
 	private String motivazione;
 	
 	@JoinColumn(nullable=false)
-	@ManyToOne(cascade=CascadeType.ALL)
-	@JsonIgnore
+	@ManyToOne
 	private Disponibilita disponibilita;
 	
 	@OneToMany(mappedBy= "prenotazione")
 	@JsonIgnore
 	private List<SlotCalendar> slotCalendar;
+	
+	public boolean getIniziato() {
+		Instant instant = this.data.toInstant();
+		return instant.isBefore(Instant.now());
+	}
 
 	public Disponibilita getDisponibilita() {
 		return disponibilita;
@@ -92,13 +97,11 @@ public class Prenotazione implements Serializable {
 	//bi-directional many-to-one association to Ambulatorio
 	@ManyToOne
 	@JoinColumn(nullable=false)
-	
 	private Ambulatorio ambulatorio;
 
 	//bi-directional many-to-one association to Medico
 	@ManyToOne
 	@JoinColumn(nullable=false)
-	@JsonIgnore
 	private Medico medico;
 
 	//bi-directional many-to-one association to Utente

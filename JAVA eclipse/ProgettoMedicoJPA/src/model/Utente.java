@@ -2,6 +2,8 @@ package model;
 
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+
 import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -21,7 +23,10 @@ public class Utente implements Serializable {
     @Id
 	@Column(name="email", nullable = false)
 	private String email;
-	
+    
+    @Transient
+	private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+    
 	@Column(name="password", nullable = false)
 	private String password;
 	
@@ -48,7 +53,9 @@ public class Utente implements Serializable {
 	private List<Prenotazione> prenotaziones;
 	
 	
-
+	public String getDataStringa() {
+		return sdf.format(this.dataNascita);
+	}
 	
 	public String getEmail() {
 		return email;

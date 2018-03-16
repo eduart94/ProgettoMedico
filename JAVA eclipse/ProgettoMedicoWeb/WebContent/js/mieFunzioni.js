@@ -39,7 +39,7 @@ if(soggetto){
 		data:medico
     })
     .done(function(prenotazioni){
-    	console.log(prenotazioni)
+    	
     	$.each(prenotazioni,function(i,prenotazione){
     		var data = prenotazione.dataStringa
     		var motivazione = prenotazione.motivazione
@@ -64,11 +64,80 @@ if(soggetto){
 
 var utente = localStorage.getItem('utente');
 if(utente){
-	utente = JSON.parse(utente)
+	utente= JSON.parse(utente)
 	$('#nomeUtente').html(utente.nome)
 	$('#cognUtente').html(utente.cognome)
 	$('#emailUtente').html(utente.email)
+	
+	var u = {};
+	u.emailUtente= utente.email;
+	$.ajax({
+		url:'UtentePrenotazioni',
+		method:'post',
+		data:u
+	})
+	.done(function(visite){
+		
+		$.each(visite,function(i,visita){
+			var nomeMedico = visita.medico.nome;
+			var cognMedico = visita.medico.cognome;
+			var motivazione = visita.motivazione;
+			var data = visita.dataStringa;
+			var ora  = visita.ora;
+			var indirizzo = visita.ambulatorio.indirizzo;
+			var citta = visita.ambulatorio.citta.nome;
+			var emailMedico= visita.medico.email;
+			var visitaIniziata= visita.iniziato;
+			var id = visita.id;
+			
+			var appendiStorico = '<tr id="'+id+'" class="trVisite"><td>'+nomeMedico+' '+cognMedico+'</td>'+
+			'<td>'+emailMedico+'</td>'+
+			'<td>'+motivazione+'</td>'+
+			'<td data-type="date">'+data+'</td>'+
+			'<td data-type="time">'+ora+'</td>'+
+			'<td>'+indirizzo+'</td>'+
+			'<td><div class="container">'+
+			'<button type="button" class="btn btn-info btn-lg"data-toggle="modal" data-target="#myModal">Recensione</button>'+
+				'</div>'+
+			'</td></tr>'
+				
+				var appendiDaEffettuare = '<tr id ="'+id+'" class="trVisite"><td>'+nomeMedico+' '+cognMedico+'</td>'+
+				'<td>'+emailMedico+'</td>'+
+				'<td>'+motivazione+'</td>'+
+				'<td data-type="date">'+data+'</td>'+
+				'<td data-type="time">'+ora+'</td>'+
+				'<td>'+indirizzo+'</td>'+
+				'<td><div class="container">'+
+				'<button type="button" class="btn btn-info btn-lg" id="btnEliminaPrenotazione">Elimina</button>'+
+					'</div>'+
+				'</td></tr>'
+		if(visitaIniziata==true){
+		$('#tabellaStorico').append(appendiStorico);
+			}else{
+				$('#listaPrenotazioni').append(appendiDaEffettuare);
+			}
+		})
+	})
+	$('#btnEliminaPrenotazione').click(function(e){
+		var idPrenotazione  = this.id
+		var visitaDaEliminare ={
+				emailUtente: utente.email,
+				id : idPrenotazione
+		};
+	
+	$.ajax({
+		url:'EliminaPrenotazione',
+		method:'post',
+		data:visitaDaEliminare
+	})
+	.done(function(elimina){
+		console.log(elimina)
+	})
+	})
 }
+
+// elimina la prenotazione
+
 
 // logout medico
 
