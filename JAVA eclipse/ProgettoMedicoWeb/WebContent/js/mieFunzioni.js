@@ -77,8 +77,8 @@ if(utente){
 		data:u
 	})
 	.done(function(visite){
-		
-		$.each(visite,function(i,visita){
+		localStorage.setItem('visite', JSON.stringify(visite))
+	$.each(visite,function(i,visita){
 			var nomeMedico = visita.medico.nome;
 			var cognMedico = visita.medico.cognome;
 			var motivazione = visita.motivazione;
@@ -108,7 +108,7 @@ if(utente){
 				'<td data-type="time">'+ora+'</td>'+
 				'<td>'+indirizzo+'</td>'+
 				'<td><div class="container">'+
-				'<button type="button" class="btn btn-info btn-lg" id="btnEliminaPrenotazione">Elimina</button>'+
+				'<button type="button" class="btn btn-info btn-lg btnEliminaPrenotazione" >Elimina</button>'+
 					'</div>'+
 				'</td></tr>'
 		if(visitaIniziata==true){
@@ -116,24 +116,36 @@ if(utente){
 			}else{
 				$('#listaPrenotazioni').append(appendiDaEffettuare);
 			}
+			$('.btnEliminaPrenotazione').click(function(){
+				var domanda = window.confirm('vuoi eliminare la prenotazione?');
+				if(domanda){
+				var visitaDaEliminare ={
+						emailUtente: utente.email,
+						id : visita.id
+				};
+				console.log(visitaDaEliminare);
+			
+			$.ajax({
+				url:'EliminaPrenotazione',
+				method:'post',
+				data:visitaDaEliminare
+			})
+			.done(function(elimina){
+				console.log(elimina)
+				if(elimina.success){
+					localStorage.setItem('visite', JSON.stringify(visite))
+					location.href='ProfiloUtente1.html'
+				
+				}else{
+					window.alert('cancellazione non avvenuta!!!')
+				}
+			
+			})
+			}
+			})
 		})
 	})
-	$('#btnEliminaPrenotazione').click(function(e){
-		var idPrenotazione  = this.id
-		var visitaDaEliminare ={
-				emailUtente: utente.email,
-				id : idPrenotazione
-		};
 	
-	$.ajax({
-		url:'EliminaPrenotazione',
-		method:'post',
-		data:visitaDaEliminare
-	})
-	.done(function(elimina){
-		console.log(elimina)
-	})
-	})
 }
 
 // elimina la prenotazione

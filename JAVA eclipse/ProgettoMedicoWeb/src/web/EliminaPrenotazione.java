@@ -29,6 +29,7 @@ public class EliminaPrenotazione extends HttpServlet {
 		
 		String email = request.getParameter("emailUtente");
 		int idPrenotazione = Integer.parseInt(request.getParameter("id"));
+		
 		EsitoOperazione eo = gp.cancellaPrenotazione(email, idPrenotazione);
 		
 		response.setContentType("application/json");
