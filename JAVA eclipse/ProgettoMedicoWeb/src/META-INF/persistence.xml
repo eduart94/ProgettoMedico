@@ -3,10 +3,8 @@
 	<persistence-unit name="ProgettoMedicoWeb" transaction-type="RESOURCE_LOCAL">
 		<class>model.Ambulatorio</class>
 		<class>model.Citta</class>
-		<class>model.Disponibilita</class>
 		<class>model.Medico</class>
 		<class>model.Prenotazione</class>
-		<class>model.SlotCalendar</class>
 		<class>model.Utente</class>
 		<properties>
 			<property name="javax.persistence.schema-generation.database.action" value="create"/>

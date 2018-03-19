@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import model.Disponibilita;
+
 
 import java.sql.Time;
 import java.text.SimpleDateFormat;
@@ -50,35 +50,15 @@ public class Prenotazione implements Serializable {
 	@Column(nullable = false)
 	private String motivazione;
 	
-	@JoinColumn(nullable=false)
-	@ManyToOne
-	private Disponibilita disponibilita;
+
 	
-	@OneToMany(mappedBy= "prenotazione")
-	@JsonIgnore
-	private List<SlotCalendar> slotCalendar;
 	
 	public boolean getIniziato() {
 		Instant instant = this.data.toInstant();
 		return instant.isBefore(Instant.now());
 	}
 
-	public Disponibilita getDisponibilita() {
-		return disponibilita;
-	}
-
-	public void setDisponibilita(Disponibilita disponibilita) {
-		this.disponibilita = disponibilita;
-	}
-
-	public List<SlotCalendar> getSlotCalendar() {
-		return slotCalendar;
-	}
-
-	public void setSlotCalendar(List<SlotCalendar> slotCalendar) {
-		this.slotCalendar = slotCalendar;
-	}
-
+	
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}

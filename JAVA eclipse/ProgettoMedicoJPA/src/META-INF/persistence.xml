@@ -4,10 +4,8 @@
 		<class>model.Utente</class>
 		<class>model.Ambulatorio</class>
 		<class>model.Citta</class>
-		<class>model.Disponibilita</class>
 		<class>model.Medico</class>
 		<class>model.Prenotazione</class>
-		<class>model.SlotCalendar</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/progettomedico"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>

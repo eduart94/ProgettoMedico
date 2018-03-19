@@ -41,6 +41,9 @@ h2{
 	margin-right: auto;
 	color: white;
 }
+#profilonav{
+	color: white;
+}
 
 table.dataTable thead th, table.dataTable tfoot th {
     font-weight: normal;

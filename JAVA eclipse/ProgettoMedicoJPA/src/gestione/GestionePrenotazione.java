@@ -23,19 +23,19 @@ public class GestionePrenotazione {
 		
 	}
 	public EsitoOperazione nuovaPrenotazione(Date data, Time ora, String motivazione, int recensione, 
-			String emailMedico, String emailUtente, int idDisponibilita, int idAmbulatorio) {
+			String emailMedico, String emailUtente, int idAmbulatorio) {
 	
 		EsitoOperazione eo = new EsitoOperazione();
 		EntityManager em = JPAUtil.getInstance().getEm();
 		
 		Medico m = em.find(Medico.class, emailMedico);
 		Utente u = em.find(Utente.class, emailUtente);
-		Disponibilita d = em.find(Disponibilita.class, idDisponibilita);
+		
 		Ambulatorio a = em.find(Ambulatorio.class, idAmbulatorio);
 		
 		Prenotazione p = new Prenotazione();
 		p.setAmbulatorio(a);
-		p.setDisponibilita(d);
+
 		p.setUtente(u);
 		p.setMedico(m);
 		p.setData(data);

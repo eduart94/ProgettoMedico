@@ -26,6 +26,8 @@
 <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
 <link href="vendor/simple-line-icons/css/simple-line-icons.css"
 	rel="stylesheet">
+<!-- link per le stelle> 
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
 <!-- Custom styles for this template -->
 <link href="css/profiloUtente.css" rel="stylesheet">
@@ -69,42 +71,46 @@
 			</ul>
 		</div>
 	</nav>
-	
+
 	<!-- Modal recensione scelta stelle-->
-									<div class="modal fade" id="myModal" role="dialog">
-										<div class="modal-dialog">
+	<div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
 
-											<!-- Modal content-->
-											<div class="modal-content">
-												<div class="modal-header">
-													<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
 
-												</div>
-												<div class="modal-body">
+				</div>
 
-													<div class="row">
-														<div class="col-lg-12">
-															<div class="star-rating">
-																<span class="fa fa-star" data-rating="1"></span> <span
-																	class="fa fa-star-o" data-rating="2"></span> <span
-																	class="fa fa-star-o" data-rating="3"></span> <span
-																	class="fa fa-star-o" data-rating="4"></span> <span
-																	class="fa fa-star-o" data-rating="5"></span> <input
-																	type="hidden" name="whatever1" class="rating-value"
-																	value="1">
-															</div>
-														</div>
-													</div>
+				<div class="stars">
 
-												</div>
-												<div class="modal-footer">
-													<button type="button" class="btn">Conferma</button>
+					<form action="">
 
-												</div>
-											</div>
+						<input class="star star-5" id="star-5" type="radio" name="star" />
 
-										</div>
-									</div>
+						<label class="star star-5" for="star-5"></label> <input
+							class="star star-4" id="star-4" type="radio" name="star" /> <label
+							class="star star-4" for="star-4"></label> <input
+							class="star star-3" id="star-3" type="radio" name="star" /> <label
+							class="star star-3" for="star-3"></label> <input
+							class="star star-2" id="star-2" type="radio" name="star" /> <label
+							class="star star-2" for="star-2"></label> <input
+							class="star star-1" id="star-1" type="radio" name="star" /> <label
+							class="star star-1" for="star-1"></label>
+
+					</form>
+
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn">Conferma</button>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
 
 	<!-- popup modifica password -->
 
@@ -127,7 +133,8 @@
 				<div class="modal-body">
 					<p>
 						Inserisci la nuova password: <br> <input type="password"
-							class="form-control" id="passwordNuovaUtente" name="passwordNuovaUtente">
+							class="form-control" id="passwordNuovaUtente"
+							name="passwordNuovaUtente">
 					</p>
 				</div>
 				<div class="modal-body">
@@ -154,8 +161,8 @@
 			<div class="contentwrap">
 
 				<h1 class="mb-0">
-					<span id="nomeUtente">Nome</span> 
-					<span class="text-primary" id="cognUtente">Cognome</span>
+					<span id="nomeUtente">Nome</span> <span class="text-primary"
+						id="cognUtente">Cognome</span>
 				</h1>
 
 
@@ -226,10 +233,10 @@
 							<th scope="col">Recensione</th>
 						</tr>
 					</thead>
-					<tbody id =tabellaStorico>
-						
-							
-						
+					<tbody id=tabellaStorico>
+
+
+
 					</tbody>
 				</table>
 			</div>

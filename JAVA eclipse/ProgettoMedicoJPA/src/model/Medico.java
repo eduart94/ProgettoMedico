@@ -63,9 +63,7 @@ public class Medico implements Serializable {
 	@JsonIgnore
 	private List<Prenotazione> prenotaziones;
 	
-	@OneToMany(mappedBy="medico", cascade=CascadeType.ALL)
-	private List<SlotCalendar> slotCalendar;
-
+	
 	public String getEmail() {
 		return email;
 	}
@@ -140,14 +138,7 @@ public class Medico implements Serializable {
 		this.prenotaziones = prenotaziones;
 	}
 
-	public List<SlotCalendar> getSlotCalendar() {
-		return slotCalendar;
-	}
-
-	public void setSlotCalendar(List<SlotCalendar> slotCalendar) {
-		this.slotCalendar = slotCalendar;
-	}
-
+	
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}

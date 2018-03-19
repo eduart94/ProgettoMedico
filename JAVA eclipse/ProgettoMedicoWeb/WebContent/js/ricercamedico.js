@@ -19,8 +19,8 @@ $(function() {
 							return '<span class="btn btn-primary" onclick="prenota(\'' + row.email + '\')">Prenota</span>';
 						}}
 					]
-				
-			});
+		  });
+			$('#tuttiDottori').append('<span><h1>La tua ricerca</h1></span><br>')
 		});
 		
 	});

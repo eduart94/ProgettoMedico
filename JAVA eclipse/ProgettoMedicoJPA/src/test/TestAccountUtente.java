@@ -15,7 +15,7 @@ public class TestAccountUtente {
 	@Test
 	public void testRegistrazione() {
 		GestioneAccountUtente gau = new GestioneAccountUtente();
-		EsitoOperazione eo = gau.registraUtente("franco00@", "password1", "franco", "machi", new Date(2000-12-12), "123456");
+		EsitoOperazione eo = gau.registraUtente("franco00@", "password", "franco", "machi", new Date(2000-12-12), "123456");
 		assertTrue(eo.isSuccess());
 		
 		eo = gau.registraUtente("luigi99@", "password4", "luigi", "miti",  new Date(2000-12-12), "123456");

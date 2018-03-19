@@ -51,9 +51,6 @@ public class Ambulatorio implements Serializable {
 	@JsonIgnore
 	private List<Prenotazione> prenotaziones;
 	
-	@OneToMany(mappedBy="ambulatorio", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
-	@JsonIgnore
-	private List<Disponibilita> disponibilita;
 	
 
 	

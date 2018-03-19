@@ -2,21 +2,27 @@
 
 var soggetto = localStorage.getItem('soggetto');
 if(soggetto){
+	// proietto sul file html i dati presi dal database usando il localstorage
 	soggetto= JSON.parse(soggetto)
 	$('#cognMedico').html(soggetto.cognome)
 	$('#nomMedico').html(soggetto.nome)
 	$('#tipMedico').html(soggetto.tipologia)
 	$('#telefonoMedico').html(soggetto.numeroTelefono)
 	$('#emailMedico').html(soggetto.email)
+	
+	// creo un oggetto e che ha come parametro solo la mail
 	var e ={}
 	e.emailMed = soggetto.email
+	
+	// faccio una chiamata ajax per ottenere tutti gli ambulatori
     $.ajax({
 		url: 'elencoAmbulatori',
 		method: 'post',
 		data: e
 	}).done(function(ambulatori){
 		
-		
+	// faccio un ciclo for each e per ogni ambulatorio ottengo il suo indirizzo che poi proietto su html
+		//poi lo appendo sul tag <p> con l'id sottostante
 		$.each(ambulatori, function(i,ambulatorio){
 			var indirizzo = ambulatorio.indirizzo
 			var citta = ambulatorio.citta.nome
@@ -30,16 +36,18 @@ if(soggetto){
 
 //Prenotazioni del medico
 if(soggetto){
-	
+	// se il soggetto(medico) esiste nel localStorage
+	// creo un oggetto chimato medico, a cui passo una mail
 	var medico = {}
 	medico.email = soggetto.email
+	// faccio una chiamata ajax per ottenere tutte le prenotazioni a lui associate tramite mail
 	$.ajax({
 		url:'PrenotazioniMedico',
 		method:'post',
 		data:medico
     })
     .done(function(prenotazioni){
-    	
+    	// faccio un ciclo foreach e per ogni prenotazione ottengo i dati sottoelencati 
     	$.each(prenotazioni,function(i,prenotazione){
     		var data = prenotazione.dataStringa
     		var motivazione = prenotazione.motivazione
