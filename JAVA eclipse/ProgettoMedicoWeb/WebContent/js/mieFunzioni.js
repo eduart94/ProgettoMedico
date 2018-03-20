@@ -136,8 +136,9 @@ if(utente){
 						emailUtente: emailUt,
 						id : idPre
 				};
+				
 				console.log('visita da eliminare = '+ visitaDaEliminare);
-			
+				
 			$.ajax({
 				url:'EliminaPrenotazione',
 				method:'post',
@@ -146,8 +147,15 @@ if(utente){
 			.done(function(elimina){
 				console.log(elimina)
 				if(elimina.success){
-					localStorage.setItem('visite', null)
-					location.href='ProfiloUtente1.html'
+					var arrVisite= [];
+					$.each(visite,function(i,visita){
+						if(visita.id == idPre){
+							
+						}else{
+							arrVisite.push(visita);
+							localStorage.setItem('visite',JSON.stringify(visite));
+						}
+					})
 				
 				}else{
 					window.alert('cancellazione non avvenuta!!!')
