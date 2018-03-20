@@ -97,6 +97,7 @@ if(utente){
 			var emailMedico= visita.medico.email;
 			var visitaIniziata= visita.iniziato;
 			var id = visita.id;
+			var emailUtente = visita.utente.email
 			
 			var appendiStorico = '<tr id="'+id+'" class="trVisite"><td>'+nomeMedico+' '+cognMedico+'</td>'+
 			'<td>'+emailMedico+'</td>'+
@@ -105,7 +106,7 @@ if(utente){
 			'<td data-type="time">'+ora+'</td>'+
 			'<td>'+indirizzo+'</td>'+
 			'<td><div class="container">'+
-			'<button type="button" class="btn btn-info btn-lg"data-toggle="modal" data-target="#myModal">Recensione</button>'+
+			'<button type="button" class="btn btn-info btn-lg aggiungiRecensione" idPrenotazione="'+id+'"data-toggle="modal" data-target="#myModal">Recensione</button>'+
 				'</div>'+
 			'</td></tr>'
 				
@@ -116,7 +117,7 @@ if(utente){
 				'<td data-type="time">'+ora+'</td>'+
 				'<td>'+indirizzo+'</td>'+
 				'<td><div class="container">'+
-				'<button type="button" class="btn btn-info btn-lg btnEliminaPrenotazione" >Elimina</button>'+
+				'<button type="button" class="btn btn-info btn-lg btnEliminaPrenotazione" idPre="'+id+'" emailUt="'+emailUtente+'" >Elimina</button>'+
 					'</div>'+
 				'</td></tr>'
 		if(visitaIniziata==true){
@@ -124,14 +125,18 @@ if(utente){
 			}else{
 				$('#listaPrenotazioni').append(appendiDaEffettuare);
 			}
+		 })
+		 		// eliminazione delle singole visite
 			$('.btnEliminaPrenotazione').click(function(){
 				var domanda = window.confirm('vuoi eliminare la prenotazione?');
 				if(domanda){
+				var emailUt= $(this).attr('emailUt');
+				var idPre= $(this).attr('idPre');
 				var visitaDaEliminare ={
-						emailUtente: utente.email,
-						id : visita.id
+						emailUtente: emailUt,
+						id : idPre
 				};
-				console.log(visitaDaEliminare);
+				console.log('visita da eliminare = '+ visitaDaEliminare);
 			
 			$.ajax({
 				url:'EliminaPrenotazione',
@@ -141,7 +146,7 @@ if(utente){
 			.done(function(elimina){
 				console.log(elimina)
 				if(elimina.success){
-					localStorage.setItem('visite', JSON.stringify(visite))
+					localStorage.setItem('visite', null)
 					location.href='ProfiloUtente1.html'
 				
 				}else{
@@ -151,7 +156,41 @@ if(utente){
 			})
 			}
 			})
+			
+		// aggiungi la recensione all'utente
+		$('.aggiungiRecensione').click(function(){
+			var idRecensione= $(this).attr('idPrenotazione')
+			$('.recensione').click(function(){
+			    
+			    console.log('id= ' + idRecensione)
+				val = $(".star:checked").val();
+				console.log("Voto: " + val);
+				var recensione={
+						id:idRecensione,
+						voto:val
+				};
+				console.log(recensione)
+				$.ajax({
+			url: 'RecensionePrenotazione',
+			method: 'post',
+			data: recensione
 		})
+		.done(function(recensisci){
+			console.log(recensisci);
+			if(recensisci.success){
+				localStorage.setItem('visite', JSON.stringify(visite))
+				alert('recensione effettuata')
+				location.href='ProfiloUtente1.html'
+			
+			}else{
+				window.alert('recensione non effettuata!')
+			}
+		})
+			})
+			
+			
+		})
+
 	})
 	
 }
