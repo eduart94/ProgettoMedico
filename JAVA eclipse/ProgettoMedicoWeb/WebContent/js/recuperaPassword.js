@@ -1,7 +1,7 @@
 $('#salvaPasswordMedico').click(function(e){
 	var email= document.getElementById('emMedico').value;
-	var passwordNuova = document.getElementById('recPassMed').value;
-	var confermaPassword = document.getElementById('recConfermaPassMed').value;
+	var passwordNuova = document.getElementById('recPassMedico').value;
+	var confermaPassword = document.getElementById('recConfPassMed').value;
 	
 	if((email=="")||(email=="undefined")){
 		window.alert('compilare il campo email');
