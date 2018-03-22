@@ -134,6 +134,35 @@ public class GestioneAccountMedico {
 		return eo;
 	}
 	
+	public EsitoOperazione aggiornaDatiMedico(String email, String password) {
+		EsitoOperazione eo = new EsitoOperazione();
+		try {
+			EntityManager em = JPAUtil.getInstance().getEm();
+			Medico m = em.find(Medico.class, email);
+			if(m != null) {
+				m.setPassword(password);
+				
+				
+				em.getTransaction().begin();
+				em.persist(m);
+				em.getTransaction().commit();
+				
+				eo.setSuccess(true);
+				eo.setMessaggio("modifica avvenuta con successo");
+				eo.setOggettoRisultante(m);
+			}else {
+				eo.setSuccess(false);
+				eo.setMessaggio("medico non trovato");
+				eo.setOggettoRisultante(null);
+			}
+	}catch(Exception e) {
+		eo.setSuccess(false);
+		eo.setMessaggio("qualcosa non sta andando = " + e.getMessage());
+		eo.setOggettoRisultante(e);
+	}
+		return eo;
+	}
+	
 	public List<Ambulatorio> medicoAmbulatori(String email) {
 		EntityManager em = JPAUtil.getInstance().getEm();
 		Medico m = em.find(Medico.class, email);
