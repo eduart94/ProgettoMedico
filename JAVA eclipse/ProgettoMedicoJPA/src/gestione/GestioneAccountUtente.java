@@ -219,6 +219,33 @@ public class GestioneAccountUtente {
 		return eo;
 	}
 	
+	public EsitoOperazione aggiornaPasswordUtente(String email, String password) {
+		EsitoOperazione eo = new EsitoOperazione();
+		try {
+			EntityManager em = JPAUtil.getInstance().getEm();
+			Utente u = em.find(Utente.class, email);
+			if(u!=null) {
+				u.setPassword(password);
+				em.getTransaction().begin();
+				em.persist(u);
+				em.getTransaction().commit();
+				
+				eo.setSuccess(true);
+				eo.setMessaggio("Modifiche all'utente avvenute con successo");
+				eo.setOggettoRisultante(u);
+			}else {
+				eo.setSuccess(false);
+				eo.setMessaggio("utente non trovato ");
+				eo.setOggettoRisultante(null);
+			}
+	}catch(Exception e) {
+		eo.setSuccess(false);
+		eo.setMessaggio("la modifica non è andata a buon fine = " + e.getMessage());
+		eo.setOggettoRisultante(e);
+	}
+		return eo;
+	}
+	
 	public List<Prenotazione> prenotazioniUtente(String email){
 		EntityManager em = JPAUtil.getInstance().getEm();
 		Utente u = em.find(Utente.class, email);
