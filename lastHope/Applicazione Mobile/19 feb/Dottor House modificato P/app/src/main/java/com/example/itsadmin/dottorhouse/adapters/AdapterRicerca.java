@@ -9,9 +9,9 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.example.itsadmin.dottorhouse.R;
-import com.example.itsadmin.dottorhouse.database.DatabaseAdapter;
 
 import com.example.itsadmin.dottorhouse.models.ModelMedico;
+import com.example.itsadmin.dottorhouse.models.ModelPrenotazione;
 import com.example.itsadmin.dottorhouse.models.ModelRicerca;
 
 import java.util.ArrayList;
@@ -21,10 +21,10 @@ public class AdapterRicerca extends ArrayAdapter<ModelMedico> {
     Context c;
     ArrayList<ModelMedico> lista_medico;
 
-    public AdapterRicerca(Context c, ArrayList<ModelMedico> lmr) {
-        super(c, R.layout.item_ricerca, lmr);
+    public AdapterRicerca(Context c, ArrayList<ModelMedico> lista_medico) {
+        super(c, R.layout.item_ricerca, lista_medico);
 
-        lista_medico = lmr;
+        this.lista_medico = lista_medico;
         this.c = c;
     }
 

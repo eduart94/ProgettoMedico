@@ -27,5 +27,17 @@ public class login extends Activity {
         transaction.commit();
     }
 
+    @Override
+    public void onBackPressed() {
 
+        try{
+            if(getIntent().getExtras().getInt("from")==1){
+
+            finishAffinity();
+        }
+        } catch (NullPointerException e){
+            super.onBackPressed();
+        }
+
+    }
 }

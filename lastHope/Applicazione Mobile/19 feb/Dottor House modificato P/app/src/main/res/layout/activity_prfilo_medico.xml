@@ -82,26 +82,48 @@
         android:text="Indirizzo" />
 
     <TextView
-        android:id="@+id/txtData"
+        android:id="@+id/txtMotivazione"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/indirizzo_medico"
         android:layout_below="@+id/indirizzo_medico"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="35dp"
+        android:text="Motivazione:"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editTextMotivazione"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtData"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:clickable="true"
+        android:ems="10"
+        android:inputType="text" />
+
+
+    <TextView
+        android:id="@+id/txtData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/indirizzo_medico"
+        android:layout_below="@+id/txtMotivazione"
+        android:layout_marginTop="40dp"
         android:text="Scegli una data:"
         android:textSize="16sp" />
 
     <EditText
         android:id="@+id/editTextData"
-        android:clickable="true"
-        android:focusable="false"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/txtData"
+        android:layout_above="@+id/txtOra"
         android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:clickable="true"
         android:ems="10"
-        android:inputType="textPersonName"
-        />
+        android:focusable="false"
+        android:inputType="date" />
 
     <TextView
         android:id="@+id/txtOra"
@@ -109,7 +131,7 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/txtData"
         android:layout_below="@+id/txtData"
-        android:layout_marginTop="47dp"
+        android:layout_marginTop="40dp"
         android:text="Scegli un orario:"
         android:textSize="16sp" />
 
@@ -118,8 +140,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/txtOra"
-        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/editTextData"
+        android:clickable="true"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:focusable="false"
+        android:inputType="date" />
+
+    <Button
+        android:id="@+id/btnPrenota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextOra"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:text="Prenota" />
 
 </RelativeLayout>

@@ -2,54 +2,52 @@ package com.example.itsadmin.dottorhouse.models;
 
 import android.provider.ContactsContract;
 
-import java.sql.Date;
+import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by itsadmin on 14/02/2018.
- */
+import java.sql.Date;
 
 public class ModelPrenotazione {
 
-    Date data;
-    String ora;
+    int idPrenotazione;
+    int recensione;
     String motivazione;
-    String citta;
+    String ora;
+    String emailMedico;
+    String emailUtente;
+    @SerializedName("data")
+    String dataStringa;
+    String nomePaese;
     String indirizzo;
-    String medico;
-    String tipologia;
-    int visita_effettuata;
 
-
-    public ModelPrenotazione(){
-
-
+    public ModelPrenotazione() {
     }
 
-    public ModelPrenotazione(Date data, String ora, String motivazione, String email_utente, String email_medico, String citta, String tipologia, String medico, String indirizzo, int visita_effettuata) {
-        this.data = data;
-        this.ora = ora;
+    public ModelPrenotazione(int idPrenotazione, int recensione, String motivazione, String ora, String emailMedico, String emailUtente, String dataStringa, String nomePaese, String indirizzo) {
+        this.idPrenotazione = idPrenotazione;
+        this.recensione = recensione;
         this.motivazione = motivazione;
-        this.citta = citta;
-        this.indirizzo = indirizzo;
-        this.medico = medico;
-        this.tipologia = tipologia;
-        this.visita_effettuata = visita_effettuata;
-    }
-
-    public Date getData() {
-        return data;
-    }
-
-    public void setData(Date data) {
-        this.data = data;
-    }
-
-    public String getOra() {
-        return ora;
-    }
-
-    public void setOra(String ora) {
         this.ora = ora;
+        this.emailMedico = emailMedico;
+        this.emailUtente = emailUtente;
+        this.dataStringa = dataStringa;
+        this.nomePaese = nomePaese;
+        this.indirizzo = indirizzo;
+    }
+
+    public int getIdPrenotazione() {
+        return idPrenotazione;
+    }
+
+    public void setIdPrenotazione(int idPrenotazione) {
+        this.idPrenotazione = idPrenotazione;
+    }
+
+    public int getRecensione() {
+        return recensione;
+    }
+
+    public void setRecensione(int recensione) {
+        this.recensione = recensione;
     }
 
     public String getMotivazione() {
@@ -60,17 +58,44 @@ public class ModelPrenotazione {
         this.motivazione = motivazione;
     }
 
-
-    public int getVisita_effettuata() {
-        return visita_effettuata;
+    public String getOra() {
+        return ora;
     }
 
-    public String getCitta() {
-        return citta;
+    public void setOra(String ora) {
+        this.ora = ora;
     }
 
-    public void setCitta(String citta) {
-        this.citta = citta;
+    public String getEmailMedico() {
+        return emailMedico;
+    }
+
+    public void setEmailMedico(String emailMedico) {
+        this.emailMedico = emailMedico;
+    }
+
+    public String getEmailUtente() {
+        return emailUtente;
+    }
+
+    public void setEmailUtente(String emailUtente) {
+        this.emailUtente = emailUtente;
+    }
+
+    public String getDataStringa() {
+        return dataStringa;
+    }
+
+    public void setDataStringa(String dataStringa) {
+        this.dataStringa = dataStringa;
+    }
+
+    public String getNomePaese() {
+        return nomePaese;
+    }
+
+    public void setNomePaese(String nomePaese) {
+        this.nomePaese = nomePaese;
     }
 
     public String getIndirizzo() {
@@ -79,26 +104,5 @@ public class ModelPrenotazione {
 
     public void setIndirizzo(String indirizzo) {
         this.indirizzo = indirizzo;
-    }
-
-    public String getMedico() {
-        return medico;
-    }
-
-    public void setMedico(String medico) {
-        this.medico = medico;
-    }
-
-    public String getTipologia() {
-        return tipologia;
-    }
-
-    public void setTipologia(String tipologia) {
-        this.tipologia = tipologia;
-    }
-
-    public void setVisita_effettuata(int visita_effettuata) {
-        this.visita_effettuata = visita_effettuata;
-
     }
 }

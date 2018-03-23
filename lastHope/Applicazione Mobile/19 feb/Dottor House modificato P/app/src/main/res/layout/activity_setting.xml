@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.itsadmin.dottorhouse.Settings">
+
+    <FrameLayout
+
+        android:id="@+id/toolBarSett"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <android.support.v7.widget.Toolbar
+
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/colorPrimaryDark"
+            android:title="@string/app_name"
+            android:titleTextColor="#FFF">
+
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/backMian"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dp"
+                android:background="@drawable/back_left"
+                android:backgroundTint="#FFF" />
+
+            <TextView
+                android:id="@+id/impostazione"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="serif"
+                android:text="Impostazioni"
+                android:textAlignment="center"
+                android:textColor="#FFF"
+                android:textSize="18dp"
+                android:textStyle="italic" />
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/nomeSett"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/toolBarSett"
+        android:layout_height="30dp"
+        android:paddingLeft="20dp"
+        android:text="Nome"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="100dp"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/cognomeSett"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/nome"
+        android:layout_below="@+id/nomeSett"
+        android:paddingLeft="20dp"
+        android:text="Cognome"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="100dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/emailSett"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/cognome"
+        android:layout_below="@+id/cognomeSett"
+        android:paddingLeft="20dp"
+        android:text="Email"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="100dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/textModifica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailSett"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="serif"
+        android:text="Modifica Indirizzo Email"
+        android:textColor="@android:color/black"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/textEmailAtt"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textModifica"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Inserire indirizzo email attuale"
+        android:gravity="center"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/textEmailNew"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textEmailAtt"
+        android:layout_below="@+id/textEmailAtt"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Inserire nuovo indirizzo email"
+        android:gravity="center"
+        android:inputType="textEmailAddress" />
+
+    <Button
+        android:id="@+id/btnConfermaEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textEmailNew"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="10dp"
+        android:text="Conferma" />
+
+    <TextView
+        android:id="@+id/textModificaPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnConfermaEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="serif"
+        android:text="Modifica Password"
+        android:textColor="@android:color/black"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/txtPassAtt"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@+id/textModificaPass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_alignStart="@+id/textEmailAtt"
+        android:hint="Inserire password attuale"
+        android:gravity="center"
+        android:inputType="textPassword"
+        />
+
+    <EditText
+        android:id="@+id/modificaPassNew"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@+id/txtPassAtt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_alignStart="@+id/textEmailAtt"
+        android:hint="Inserire nouva password"
+        android:gravity="center"
+        android:inputType="textPassword"
+        />
+
+    <Button
+        android:id="@+id/btnConfermaPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/modificaPassNew"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="10dp"
+        android:text="Conferma" />
+
+
+</RelativeLayout>

@@ -42,14 +42,32 @@
         android:paddingLeft="20dp"
         android:text="Email" />
 
+    <TextView
+        android:id="@+id/storicoPrenotazioni"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/mail"
+        android:fontFamily="serif"
+        android:gravity="bottom|left"
+        android:text="Storico prenotazioni"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:textStyle="italic" />
+
     <ListView
         android:id="@+id/listaPren"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:layout_below="@id/profilePic">
+        android:layout_below="@id/storicoPrenotazioni">
+
+
 
     </ListView>
+
+
+
 
 
 

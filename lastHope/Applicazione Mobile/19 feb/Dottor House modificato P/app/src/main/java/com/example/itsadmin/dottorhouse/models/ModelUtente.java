@@ -1,31 +1,50 @@
 package com.example.itsadmin.dottorhouse.models;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.sql.Date;
 
-/**
- * Created by itsadmin on 15/02/2018.
- */
 
 public class ModelUtente {
-    String nome;
-    String cognome;
-    Date data_di_nascita;
-    String email_utente;
-    String numero_telefono;
-    String citta;
+
+    @SerializedName("emailUtente")
+    String email;
+    @SerializedName("passwordUtente")
     String password;
+    @SerializedName("nomeUtente")
+    String nome;
+    @SerializedName("cognomeUtente")
+    String cognome;
+    String dataNascita;
+    String numeroTelefono;
+
 
     public ModelUtente(){
     }
 
-    public ModelUtente(String nome, String cognome, Date data_di_nascita, String email, String numero_telefono, String citta, String password){
-        this.nome=nome;
-        this.cognome=cognome;
-        this.data_di_nascita=data_di_nascita;
-        this.email_utente =email;
-        this.numero_telefono=numero_telefono;
-        this.citta=citta;
-        this.password=password;
+    public ModelUtente(String email, String password, String nome, String cognome, String dataNascita, String numeroTelefono) {
+        this.email = email;
+        this.password = password;
+        this.nome = nome;
+        this.cognome = cognome;
+        this.dataNascita = dataNascita;
+        this.numeroTelefono = numeroTelefono;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getNome() {
@@ -44,43 +63,26 @@ public class ModelUtente {
         this.cognome = cognome;
     }
 
-    public Date getData_di_nascita() {
-        return data_di_nascita;
+    public String getDataNascita() {
+        return dataNascita;
     }
 
-    public void setData_di_nascita(Date data_di_nascita) {
-        this.data_di_nascita = data_di_nascita;
+    public void setDataNascita(String dataNascita) {
+        this.dataNascita = dataNascita;
     }
 
-    public String getEmail() {
-        return email_utente;
+    public String getNumeroTelefono() {
+        return numeroTelefono;
     }
 
-    public void setEmail(String email) {
-        this.email_utente = email;
+    public void setNumeroTelefono(String numeroTelefono) {
+        this.numeroTelefono = numeroTelefono;
     }
 
-    public String getNumero_telefono() {
-        return numero_telefono;
-    }
+    @Override
+    public String toString (){
 
-    public void setNumero_telefono(String numero_telefono) {
-        this.numero_telefono = numero_telefono;
-    }
 
-    public String getCitta() {
-        return citta;
-    }
-
-    public void setCitta(String citta) {
-        this.citta = citta;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+        return "ciao, sono " +nome+" e la mia mail è "+email;
     }
 }

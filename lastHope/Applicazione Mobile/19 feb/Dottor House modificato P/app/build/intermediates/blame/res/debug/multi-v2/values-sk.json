@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\User\\Desktop\\Applicazione Mobile\\19 feb\\Dottor House modificato P\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sk\\values-sk.xml",
+            "outputFile": "C:\\Users\\User\\git\\ProgettoMedico\\lastHope\\Applicazione Mobile\\19 feb\\Dottor House modificato P\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sk\\values-sk.xml",
             "map": [
                 {
                     "source": "C:\\Users\\User\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\319f45e2d8f9279a40bf7b1355422924\\res\\values-sk\\values-sk.xml",

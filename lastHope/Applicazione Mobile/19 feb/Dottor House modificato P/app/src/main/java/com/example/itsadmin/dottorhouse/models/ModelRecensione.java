@@ -1,22 +1,17 @@
 package com.example.itsadmin.dottorhouse.models;
 
-/**
- * Created by itsadmin on 15/02/2018.
- */
 
 public class ModelRecensione {
 
     String emailMedico;
     int valutazione;
-    String commento;
 
     public ModelRecensione(){
     }
 
-    public ModelRecensione(String emailMedico, int valutazione, String commento){
+    public ModelRecensione(String emailMedico, int valutazione){
         this.emailMedico=emailMedico;
         this.valutazione=valutazione;
-        this.commento=commento;
     }
 
     public String getEmailMedico() {
@@ -35,11 +30,4 @@ public class ModelRecensione {
         this.valutazione = valutazione;
     }
 
-    public String getCommento() {
-        return commento;
-    }
-
-    public void setCommento(String commento) {
-        this.commento = commento;
-    }
 }

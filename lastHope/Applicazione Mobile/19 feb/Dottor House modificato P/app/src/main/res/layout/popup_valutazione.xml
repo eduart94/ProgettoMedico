@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:id="@+id/popup_valutazione">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/textRecensisci"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Valuta"
+            android:textSize="20dp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textRecensisci"
+            android:layout_alignStart="@+id/textRecensisci"
+            android:layout_marginTop="24dp"
+            android:stepSize="1"/>
+
+        <Button
+            android:id="@+id/btnOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textRecensisci"
+            android:layout_below="@+id/ratingBar"
+            android:layout_marginBottom="30dp"
+            android:text="Ok" />
+
+        <Button
+            android:id="@+id/btnAnnulla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btnOK"
+            android:layout_marginStart="74dp"
+            android:layout_toEndOf="@+id/btnOK"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="10dp"
+            android:text="Annulla" />
+
+    </RelativeLayout>
+
+</FrameLayout>

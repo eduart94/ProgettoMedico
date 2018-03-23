@@ -1,30 +1,33 @@
 package com.example.itsadmin.dottorhouse.models;
 
-/**
- * Created by itsadmin on 15/02/2018.
- */
+
+import com.google.gson.annotations.SerializedName;
 
 public class ModelMedico {
 
+    @SerializedName("nomeMedico")
     String nome;
+    @SerializedName("cognomeMedico")
     String cognome;
-    String emailMedico;
+    @SerializedName("emailMedico")
+    String email;
+    @SerializedName("numeroTelefono")
     String numero_telefono;
     String tipologia;
-    String citta;
     String indirizzo;
+    String citta;
 
-    public ModelMedico(){
+    public ModelMedico() {
     }
 
-    public ModelMedico( String nome, String cognome, String emailMedico, String numero_telefono, String tipologia, String citta, String indirizzo){
-        this.nome=nome;
-        this.cognome=cognome;
-        this.emailMedico=emailMedico;
-        this.numero_telefono=numero_telefono;
-        this.tipologia=tipologia;
-        this.citta=citta;
-        this.indirizzo=indirizzo;
+    public ModelMedico(String nome, String cognome, String email, String numero_telefono, String tipologia, String INDIRIZZO, String NOME) {
+        this.nome = nome;
+        this.cognome = cognome;
+        this.email = email;
+        this.numero_telefono = numero_telefono;
+        this.tipologia = tipologia;
+        this.indirizzo = indirizzo;
+        this.citta = citta;
     }
 
     public String getNome() {
@@ -43,12 +46,12 @@ public class ModelMedico {
         this.cognome = cognome;
     }
 
-    public String getEmailMedico() {
-        return emailMedico;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmailMedico(String emailMedico) {
-        this.emailMedico = emailMedico;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getNumero_telefono() {
@@ -67,14 +70,6 @@ public class ModelMedico {
         this.tipologia = tipologia;
     }
 
-    public String getCitta() {
-        return citta;
-    }
-
-    public void setCitta(String citta) {
-        this.citta = citta;
-    }
-
     public String getIndirizzo() {
         return indirizzo;
     }
@@ -83,9 +78,12 @@ public class ModelMedico {
         this.indirizzo = indirizzo;
     }
 
-    @Override
-    public String toString(){
+    public String getCitta() {
+        return citta;
+    }
 
-        return "Ciao sono "+nome;
+    public void setCitta(String citta) {
+        this.citta = citta;
     }
 }
+

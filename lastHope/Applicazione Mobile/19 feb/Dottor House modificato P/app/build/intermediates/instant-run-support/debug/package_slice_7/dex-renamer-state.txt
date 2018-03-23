@@ -1,0 +1,4 @@
+#Fri Mar 23 17:18:28 CET 2018
+base.0=C\:\\Users\\User\\git\\ProgettoMedico\\lastHope\\Applicazione Mobile\\19 feb\\Dottor House modificato P\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\8
+path.0=classes.dex
+renamed.0=classes.dex
