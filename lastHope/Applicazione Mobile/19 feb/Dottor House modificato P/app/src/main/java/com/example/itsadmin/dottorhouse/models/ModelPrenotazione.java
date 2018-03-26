@@ -18,11 +18,14 @@ public class ModelPrenotazione {
     String dataStringa;
     String nomePaese;
     String indirizzo;
+    String tipologia;
+    String nomeMedico;
+    String cognomeMedico;
 
     public ModelPrenotazione() {
     }
 
-    public ModelPrenotazione(int idPrenotazione, int recensione, String motivazione, String ora, String emailMedico, String emailUtente, String dataStringa, String nomePaese, String indirizzo) {
+    public ModelPrenotazione(int idPrenotazione, int recensione, String motivazione, String ora, String emailMedico, String emailUtente, String dataStringa, String nomePaese, String indirizzo, String tipologia, String nomeMedico, String cognomeMedico) {
         this.idPrenotazione = idPrenotazione;
         this.recensione = recensione;
         this.motivazione = motivazione;
@@ -32,6 +35,9 @@ public class ModelPrenotazione {
         this.dataStringa = dataStringa;
         this.nomePaese = nomePaese;
         this.indirizzo = indirizzo;
+        this.tipologia = tipologia;
+        this.nomeMedico=nomeMedico;
+        this.cognomeMedico=cognomeMedico;
     }
 
     public int getIdPrenotazione() {
@@ -104,5 +110,29 @@ public class ModelPrenotazione {
 
     public void setIndirizzo(String indirizzo) {
         this.indirizzo = indirizzo;
+    }
+
+    public String getTipologia() {
+        return tipologia;
+    }
+
+    public void setTipologia(String tipologia) {
+        this.tipologia = tipologia;
+    }
+
+    public String getNomeMedico() {
+        return nomeMedico;
+    }
+
+    public void setNomeMedico(String nomeMedico) {
+        this.nomeMedico = nomeMedico;
+    }
+
+    public String getCognomeMedico() {
+        return cognomeMedico;
+    }
+
+    public void setCognomeMedico(String cognomeMedico) {
+        this.cognomeMedico = cognomeMedico;
     }
 }

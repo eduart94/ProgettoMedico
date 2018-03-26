@@ -23,6 +23,9 @@ import com.example.itsadmin.dottorhouse.API.PrenotazioniAPI;
 
 
 import com.example.itsadmin.dottorhouse.Interfacce.Interfaccia;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -73,6 +76,7 @@ public class frag_home extends Fragment implements Interfaccia{
     }
 
     private void AggiornaPrenotazioni(){
+
         Retrofit.Builder builder=new Retrofit.Builder().baseUrl("http://192.168.0.80/scripts/").addConverterFactory(GsonConverterFactory.create());
         Retrofit retrofit= builder.build();
         PrenotazioniAPI prenotazioniAPI= retrofit.create(PrenotazioniAPI.class);
@@ -99,6 +103,8 @@ public class frag_home extends Fragment implements Interfaccia{
             @Override
             public void onFailure(Call<ArrayList<ModelPrenotazione>> call, Throwable t) {
                 System.out.println("NON FUNZIONA");
+                System.out.println(t.getMessage());
+                System.out.println(t.getCause());
 
 
             }

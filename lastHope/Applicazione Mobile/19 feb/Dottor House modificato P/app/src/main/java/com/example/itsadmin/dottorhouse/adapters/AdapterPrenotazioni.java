@@ -61,8 +61,8 @@ public class AdapterPrenotazioni extends ArrayAdapter<ModelPrenotazione>{
         ora.setText("Ora: " + lista.get(position).getOra()+"");
         citta.setText("Città: " + lista.get(position).getNomePaese()+"");
         indirizzo.setText("Indirizzo: " + lista.get(position).getIndirizzo()+"");
-//        medico.setText("Medico: " + lista.get(position).get
-//        tipologia.setText("Tipologia: " + lista.get(position).get
+        medico.setText("Medico: " + lista.get(position).getNomeMedico()+" "+ lista.get(position).getCognomeMedico()+"");
+        tipologia.setText("Tipologia: " + lista.get(position).getTipologia()+"");
         motivazione.setText("Motivazione: " + lista.get(position).getMotivazione()+"");
         emailMedico.setText(c.getSharedPreferences("Preferenze", Context.MODE_PRIVATE).getString("tipologia", null));
 

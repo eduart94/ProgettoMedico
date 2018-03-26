@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.icu.util.Calendar;
 import android.os.Bundle;
@@ -166,6 +167,8 @@ public class ProfiloMedico extends Activity{
                 }else{
 
                    InviaPrenotazione();
+                    Intent vediHome = new Intent(ProfiloMedico.this, MainActivity.class);
+                    startActivity(vediHome);
                 }
             }
         });

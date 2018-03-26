@@ -62,10 +62,10 @@ public class AdapterStorico extends ArrayAdapter<ModelPrenotazione> {
         data.setText("Data: " + lista.get(position).getDataStringa()+"");
         citta.setText("Città: " + lista.get(position).getNomePaese()+"");
         indirizzo.setText("Indirizzo: " +lista.get(position).getIndirizzo()+"");
-//        medico.setText("Medico: " +lista.get(position).getNome()+ " " + lista.get(position).getMedico().getCognome()+"");
-//        tipologia.setText("Tipologia: " +lista.get(position).getMedico().getTipologia()+"");
+        medico.setText("Medico: " +lista.get(position).getNomeMedico()+ " " + lista.get(position).getCognomeMedico()+"");
+        tipologia.setText("Tipologia: " +lista.get(position).getTipologia()+"");
         motivazione.setText("Motivazione: " +lista.get(position).getMotivazione()+"");
-        emailMedico.setText(c.getSharedPreferences("Preferenze", Context.MODE_PRIVATE).getString("EmailMedico", null));
+        emailMedico.setText("Email: " +lista.get(position).getEmailMedico()+"");
 
         btnRecensisci.setOnClickListener(new View.OnClickListener() {
             @Override
